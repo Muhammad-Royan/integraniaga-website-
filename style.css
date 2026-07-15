@@ -421,7 +421,21 @@ footer a {
 
 @media(max-width: 900px) {
 
-    .nav-menu {
+   .nav-container {
+    flex-direction: column;
+    gap: 15px;
+}
+
+  .logo-area {
+    justify-content: center;
+    width: 100%;
+}
+
+  .company-name {
+    text-align: center;
+}
+
+   .nav-menu {
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
