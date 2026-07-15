@@ -151,14 +151,14 @@ img {
 }
 
 .hero-content h1 {
-    font-size: 55px;
-    line-height: 1.2;
+    font-size: 60px;
+    line-height: 1.15;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 35px;
 }
 
