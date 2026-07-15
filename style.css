@@ -422,11 +422,13 @@ footer a {
 @media(max-width: 900px) {
 
     .nav-menu {
-        display: none;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
     }
 
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     .hero-content p {
