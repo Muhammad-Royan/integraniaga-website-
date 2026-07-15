@@ -225,6 +225,7 @@ img {
     background: white;
     padding: 30px;
     border-radius: 15px;
+    border-top: 3px solid var(--secondary);
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
