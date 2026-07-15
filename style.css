@@ -283,6 +283,7 @@ img {
     background: white;
     border-radius: 18px;
     overflow: hidden;
+    border-top: 3px solid var(--secondary);
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
