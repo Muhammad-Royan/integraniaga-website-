@@ -1801,7 +1801,9 @@ background-position: center;
     width:120px;
     margin-bottom:20px;
 
-    animation:logoFade 1.2s ease;
+    animation: logoZoom 1.2s ease;
+
+}
 
 }
 
@@ -1809,11 +1811,13 @@ background-position: center;
 .loading-screen h2{
 
     font-size:32px;
-    color:#0f5132;
+    color:white;
     text-align:center;
     font-weight:700;
 
-    animation:textFade 1.4s ease;
+    animation: textUp 1.4s ease;
+
+}
 
 }
 
