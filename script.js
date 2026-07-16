@@ -27,3 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+
+window.addEventListener("load", function () {
+
+    const loadingScreen = document.querySelector(".loading-screen");
+
+    if (loadingScreen) {
+
+        setTimeout(() => {
+
+            loadingScreen.classList.add("hide");
+
+        }, 1200);
+
+    }
+
+});
