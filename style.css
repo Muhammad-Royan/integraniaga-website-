@@ -1779,7 +1779,15 @@ section{
     justify-content:center;
     align-items:center;
 
-    background:#ffffff;
+    background:
+linear-gradient(
+    rgba(15, 81, 50, 0.92),
+    rgba(10, 40, 20, 0.92)
+),
+url("jomonkoikkara-coconut-tree-1538034_1920.jpg");
+
+background-size: cover;
+background-position: center;
 
     z-index:9999;
 
