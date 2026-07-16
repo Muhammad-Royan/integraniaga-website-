@@ -1441,3 +1441,236 @@ section{
     box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 }
+
+
+/* =========================================
+   CSS FINISHING PART 3
+   MOBILE & FINAL TOUCH
+========================================= */
+
+
+/* ---------- BUTTON EFFECT ---------- */
+
+.btn-primary,
+.btn-secondary{
+
+    transition:0.3s ease;
+
+}
+
+
+.btn-primary:hover,
+.btn-secondary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ---------- CARD EFFECT ---------- */
+
+
+.value-card,
+.spec-item,
+.advantage-card,
+.contact-item,
+.packaging-card{
+
+    transition:0.3s ease;
+
+}
+
+
+
+.value-card:hover,
+.spec-item:hover,
+.advantage-card:hover,
+.contact-item:hover,
+.packaging-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+
+@media(max-width:900px){
+
+
+    .logo-area{
+
+        gap:10px;
+
+    }
+
+
+    .logo-area img{
+
+        width:55px;
+        height:55px;
+
+    }
+
+
+    .company-name h2{
+
+        font-size:18px;
+
+    }
+
+
+    .company-name p{
+
+        font-size:12px;
+
+    }
+
+
+
+
+    .hero{
+
+        flex-direction:column;
+        text-align:center;
+        padding-top:150px;
+
+    }
+
+
+    .hero-content,
+    .hero-image{
+
+        width:100%;
+
+    }
+
+
+    .hero-content h1{
+
+        font-size:38px;
+
+    }
+
+
+    .hero-image img{
+
+        margin-top:40px;
+
+    }
+
+
+
+
+    .about-intro,
+    .product-detail{
+
+        flex-direction:column;
+
+    }
+
+
+    .about-image,
+    .about-text,
+    .product-image,
+    .product-description{
+
+        width:100%;
+
+    }
+
+
+
+    .values-container,
+    .advantages-container,
+    .contact-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .packaging-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .spec-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    section{
+
+        padding:60px 5%;
+
+    }
+
+
+    .page-hero{
+
+        padding:120px 5% 70px;
+
+    }
+
+
+
+    .page-hero h1{
+
+        font-size:34px;
+
+    }
+
+
+
+    .hero-content h1{
+
+        font-size:32px;
+
+    }
+
+
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+        text-align:center;
+
+    }
+
+
+
+}
