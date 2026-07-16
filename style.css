@@ -1,18 +1,6 @@
-/* =========================================
-   PT INTEGRA NIAGA KOMODITAS
-   Main Website Styles
-========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-:root {
-    --primary: #0f5132;
-    --secondary: #d4af37;
-    --dark: #111827;
-    --light: #ffffff;
-    --gray: #f3f4f6;
-    --text: #374151;
-}
+/* ===============================
+   GLOBAL RESET
+================================ */
 
 * {
     margin: 0;
@@ -20,474 +8,1069 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text);
-    background: var(--light);
-    line-height: 1.7;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #ffffff;
+    line-height: 1.6;
+
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+
+html {
+
+    scroll-behavior: smooth;
+
 }
+
+
 
 img {
+
     max-width: 100%;
     display: block;
+
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
 }
 
-/* =========================
+
+
+
+
+
+
+/* ===============================
+   COLOR SYSTEM
+================================ */
+
+
+:root {
+
+    --primary-green: #174d2b;
+    --dark-green: #10361e;
+    --gold: #c89b3c;
+    --light-gold: #e8c878;
+    --text-dark: #222;
+    --white: #ffffff;
+
+}
+
+
+
+
+
+
+
+/* ===============================
    NAVBAR
-========================= */
+================================ */
 
-.navbar {
+
+header {
+
+    position: absolute;
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+
 }
 
-.nav-container {
+
+
+.navbar {
+
+    width: 90%;
+    margin: auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0;
+
+    padding: 20px 0;
+
 }
+
+
+
+
 
 .logo-area {
+
     display: flex;
     align-items: center;
     gap: 15px;
+
 }
+
+
+
 
 .logo-area img {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
+
+    width: 75px;
+    height: auto;
+
 }
 
-.company-name {
-    font-size: 18px;
+
+
+
+.company-name h2 {
+
+    font-size: 20px;
+    color: var(--white);
     font-weight: 700;
-    color: var(--primary);
+
 }
 
-.company-name span {
-    display: block;
-    font-size: 12px;
-    color: var(--secondary);
-    font-weight: 600;
+
+
+.company-name p {
+
+    font-size: 13px;
+    color: var(--white);
+    opacity: 0.9;
+
 }
 
-.nav-menu {
+
+
+
+
+
+.nav-links {
+
     display: flex;
-    gap: 25px;
-    align-items: center;
+    list-style: none;
+    gap: 28px;
+
 }
 
-.nav-menu a {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--dark);
+
+
+
+.nav-links a {
+
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+
     transition: 0.3s;
+
 }
 
-.nav-menu a:hover {
-    color: var(--primary);
+
+
+
+.nav-links a:hover {
+
+    color: var(--light-gold);
+
 }
 
-.btn-primary {
-    background: var(--primary);
-    color: white !important;
-    padding: 12px 24px;
-    border-radius: 30px;
-    transition: 0.3s;
-}
 
-.btn-primary:hover {
-    background: #083d25;
-}
+/* ===============================
+   HERO SECTION
+================================ */
 
-/* =========================
-   HERO
-========================= */
 
 .hero {
-    min-height: 85vh;
+
+    min-height: 100vh;
+
+    position: relative;
+
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    justify-content: space-between;
+
+    padding: 140px 8% 80px;
+
+    overflow: hidden;
+
 }
+
+
+
+/* Background coconut tree blur */
+
 
 .hero::before {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background: rgba(0,0,0,0.45);
+
+    background-image:
+    linear-gradient(
+        rgba(15, 50, 30, 0.75),
+        rgba(15, 50, 30, 0.65)
+    ),
+    url("../images/jomonkoikkara-coconut-tree-1538034_1920.jpg");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter: blur(1px);
+
+    transform: scale(1.05);
+
+    z-index: -2;
+
 }
+
+
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(10,40,20,0.8),
+        rgba(10,40,20,0.35)
+    );
+
+
+    z-index: -1;
+
+}
+
+
+
+
 
 .hero-content {
-    position: relative;
+
+    width: 50%;
+
     color: white;
-    max-width: 700px;
-    padding-top: 80px;
+
 }
+
+
+
+
 
 .hero-content h1 {
-    font-size: 60px;
-    line-height: 1.15;
-    font-weight: 800;
+
+    font-size: 52px;
+
+    line-height: 1.2;
+
     margin-bottom: 25px;
+
+    font-weight: 700;
+
 }
+
+
+
+
 
 .hero-content p {
-    font-size: 22px;
+
+    font-size: 18px;
+
+    max-width: 600px;
+
     margin-bottom: 35px;
+
+    color: rgba(255,255,255,0.9);
+
 }
+
+
+
+
 
 .hero-buttons {
+
     display: flex;
-    gap: 15px;
+
+    gap: 20px;
+
 }
 
-.btn-outline {
-    border: 2px solid white;
-    padding: 12px 25px;
-    border-radius: 30px;
+
+
+
+
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: var(--gold);
+
     color: white;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
     font-weight: 600;
+
     transition: 0.3s;
+
 }
 
-.btn-outline:hover {
+
+
+
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+.btn-secondary {
+
+    display: inline-block;
+
+    border: 1px solid white;
+
+    color: white;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.btn-secondary:hover {
+
     background: white;
-    color: var(--dark);
+
+    color: var(--primary-green);
+
 }
 
-/* =========================
-   SECTION
-========================= */
 
-.section {
-    padding: 90px 0;
+
+
+
+
+
+.hero-image {
+
+    width: 42%;
+
+    position: relative;
+
 }
+
+
+
+
+
+.hero-image img {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: auto;
+
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
+
+   }
+
+   /* ===============================
+   INTRO SECTION
+================================ */
+
+
+.intro-section {
+
+    padding: 90px 8%;
+    background: #ffffff;
+
+}
+
 
 .section-title {
+
     text-align: center;
-    margin-bottom: 50px;
+    max-width: 800px;
+    margin: 0 auto 60px;
+
 }
+
 
 .section-title h2 {
-    font-size: 38px;
-    color: var(--dark);
-    margin-bottom: 10px;
-}
-.section-title h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--secondary);
-    margin: 15px auto 0;
-}
-.section-title p {
-    color: #6b7280;
-}
 
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    border-top: 3px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 14px;
-}
-/* =========================
-   ABOUT
-========================= */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 50px;
-    align-items: center;
-}
-
-.about-image img {
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.about-content h2 {
-    font-size: 38px;
-    color: var(--dark);
-    margin-bottom: 20px;
-}
-
-.about-content p {
+    font-size: 36px;
+    color: var(--primary-green);
     margin-bottom: 15px;
+
 }
 
 
-/* =========================
-   PRODUCTS
-========================= */
+.section-title p {
 
-.product-grid {
+    color: #666;
+    font-size: 17px;
+
+}
+
+
+
+.intro-content {
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+
+.intro-image {
+
+    width: 45%;
+
+}
+
+
+.intro-image img {
+
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+
+
+.intro-text {
+
+    width: 55%;
+
+}
+
+
+.intro-text h3 {
+
+    font-size: 30px;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+
+}
+
+
+.intro-text p {
+
+    color: #555;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* ===============================
+   ADVANTAGES
+================================ */
+
+
+.advantages-section {
+
+    padding: 80px 8%;
+    background: #f8f7f2;
+    text-align: center;
+
+}
+
+
+
+.advantages-section h2 {
+
+    color: var(--primary-green);
+    font-size: 36px;
+    margin-bottom: 50px;
+
+}
+
+
+
+.advantages-container {
+
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
+
 }
 
-.product-card {
+
+
+.advantage-card {
+
     background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    border-top: 3px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    padding: 35px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+
+
+.advantage-card h3 {
+
+    color: var(--gold);
+    margin-bottom: 15px;
+
 }
 
-.product-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+
+
+
+
+
+
+/* ===============================
+   PRODUCT SPECIFICATION
+================================ */
+
+
+.product-summary {
+
+    padding: 90px 8%;
+    text-align: center;
+
 }
 
-.product-info {
-    padding: 25px;
+
+
+.product-summary h2 {
+
+    color: var(--primary-green);
+    font-size: 36px;
+    margin-bottom: 45px;
+
 }
 
-.product-info h3 {
-    color: var(--dark);
+
+
+.spec-container {
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+}
+
+
+
+.spec-item {
+
+    padding: 30px 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+
+}
+
+
+
+.spec-item span {
+
+    display: block;
+    color: #777;
     margin-bottom: 10px;
-}
 
-.product-info p {
-    font-size: 14px;
 }
 
 
-/* =========================
+
+.spec-item strong {
+
+    color: var(--primary-green);
+
+}
+
+
+
+
+
+
+
+/* ===============================
    PACKAGING
-========================= */
+================================ */
 
-.packaging-grid {
+
+.packaging-section {
+
+    padding: 90px 8%;
+    background: #f8f7f2;
+
+}
+
+
+
+.packaging-container {
+
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 35px;
+    gap: 40px;
+
 }
 
-.packaging-box {
-    background: var(--gray);
+
+
+.packaging-card {
+
+    background: white;
     padding: 30px;
-    border-radius: 20px;
-}
-
-.packaging-box img {
     border-radius: 15px;
-    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+.packaging-card img {
+
+    height: 260px;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
+    object-fit: contain;
+    margin-bottom: 25px;
 
-.packaging-box h3 {
-    color: var(--primary);
 }
 
 
-/* =========================
+
+.packaging-card h3 {
+
+    color: var(--primary-green);
+    margin-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
    QUALITY
-========================= */
+================================ */
 
-.quality-grid {
+
+.quality-section {
+
+    padding: 90px 8%;
+
+}
+
+
+
+.quality-content {
+
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+
+.quality-content h2 {
+
+    color: var(--primary-green);
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.quality-list {
+
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+
+   }
+
+/* ===============================
+   MARKET SECTION
+================================ */
+
+
+.market-section {
+
+    padding: 80px 8%;
+    text-align: center;
+    background: #ffffff;
+
+}
+
+
+
+.market-section h2 {
+
+    color: var(--primary-green);
+    font-size: 36px;
+    margin-bottom: 45px;
+
+}
+
+
+
+.market-container {
+
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 25px;
+
 }
 
-.quality-item {
+
+
+.market-item {
+
+    padding: 30px 20px;
+    background: #f8f7f2;
+    border-radius: 12px;
+
+}
+
+
+
+.market-item h3 {
+
+    color: var(--primary-green);
+    font-size: 18px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   CTA SECTION
+================================ */
+
+
+.cta-section {
+
+    padding: 90px 8%;
+    background: var(--primary-green);
     text-align: center;
-    padding: 30px;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-}
-
-.quality-item .icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box {
-    background: var(--dark);
     color: white;
-    padding: 50px;
-    border-radius: 25px;
+
+}
+
+
+
+.cta-content h2 {
+
+    font-size: 38px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.cta-content p {
+
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: rgba(255,255,255,0.9);
+
+}
+
+
+
+
+
+
+/* ===============================
+   CONTACT PREVIEW
+================================ */
+
+
+.contact-preview {
+
+    padding: 80px 8%;
     text-align: center;
+
 }
 
-.contact-box h2 {
+
+
+.contact-preview h2 {
+
+    color: var(--primary-green);
+    font-size: 36px;
+    margin-bottom: 40px;
+
+}
+
+
+
+.contact-container {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+
+}
+
+
+
+.contact-item {
+
+    padding: 30px;
+    border-radius: 12px;
+    background: #f8f7f2;
+
+}
+
+
+
+.contact-item h3 {
+
+    color: var(--gold);
     margin-bottom: 15px;
-}
 
-.contact-box p {
-    margin-bottom: 25px;
 }
 
 
-/* =========================
+
+
+
+
+
+/* ===============================
    FOOTER
-========================= */
+================================ */
+
 
 footer {
-    background: #0b1220;
+
+    background: #10361e;
     color: white;
-    padding: 40px 0;
+    padding: 40px 8%;
+
 }
+
+
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 30px;
-}
 
-footer h3 {
-    margin-bottom: 15px;
-}
-
-footer p,
-footer a {
-    font-size: 14px;
-    color: #d1d5db;
 }
 
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+
+.footer-content h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.footer-content p {
+
+    opacity: 0.9;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+
 
 @media(max-width: 900px) {
 
-   .nav-container {
-    flex-direction: column;
-    gap: 15px;
-}
 
-  .logo-area {
-    justify-content: center;
-    width: 100%;
-}
+    .navbar {
 
-  .company-name {
-    text-align: center;
-}
+        flex-direction: column;
+        gap: 20px;
 
-   .nav-menu {
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
     }
+
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+
+    }
+
+
+
+    .hero {
+
+        flex-direction: column;
+        text-align: center;
+        padding-top: 180px;
+
+    }
+
+
+
+    .hero-content,
+    .hero-image {
+
+        width: 100%;
+
+    }
+
+
 
     .hero-content h1 {
-        font-size: 36px;
+
+        font-size: 38px;
+
     }
 
-    .hero-content p {
-        font-size: 17px;
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
     }
 
-    .cards {
-        grid-template-columns: repeat(2,1fr);
+
+
+    .intro-content {
+
+        flex-direction: column;
+
     }
 
-    .about-grid,
-    .packaging-grid {
+
+
+    .intro-image,
+    .intro-text {
+
+        width: 100%;
+
+    }
+
+
+
+    .advantages-container,
+    .spec-container,
+    .packaging-container,
+    .quality-list,
+    .market-container,
+    .contact-container {
+
         grid-template-columns: 1fr;
+
     }
 
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .quality-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
 
     .footer-content {
-        grid-template-columns: 1fr;
+
+        flex-direction: column;
+        text-align: center;
+
     }
+
+
 }
+
 
 
 @media(max-width: 500px) {
 
-    .cards {
-        grid-template-columns: 1fr;
+
+    .logo-area img {
+
+        width: 60px;
+
     }
 
-    .quality-grid {
-        grid-template-columns: 1fr;
+
+
+    .company-name h2 {
+
+        font-size: 16px;
+
     }
+
+
 
     .hero-content h1 {
-        font-size: 32px;
+
+        font-size: 30px;
+
     }
+
+
 
     .hero-buttons {
+
         flex-direction: column;
+
     }
 
-}
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        width: 100%;
+
+    }
+
+
+   }
