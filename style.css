@@ -1674,3 +1674,93 @@ section{
 
 
 }
+
+
+/* =========================================
+   PRODUCT GALLERY
+========================================= */
+
+.product-gallery-section{
+    text-align:center;
+}
+
+
+.product-gallery-section h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+
+.product-gallery-section p{
+    margin-bottom:40px;
+}
+
+
+.gallery-container{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+
+
+.gallery-item{
+
+    overflow:hidden;
+    border-radius:18px;
+
+}
+
+
+
+.gallery-item img{
+
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    transition:0.3s ease;
+
+}
+
+
+
+.gallery-item img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+@media(max-width:900px){
+
+    .gallery-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:500px){
+
+    .gallery-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .gallery-item img{
+
+        height:240px;
+
+    }
+
+}
