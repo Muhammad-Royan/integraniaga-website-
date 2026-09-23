@@ -12,6 +12,7 @@ body {
     color: #333;
     background: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden; /* Mencegah layar bergeser ke area putih di kanan */
 }
 
 html {
@@ -44,7 +45,7 @@ a {
    NAVBAR & STICKY HEADER
 ================================ */
 header {
-    position: fixed; /* Berubah jadi fixed agar menempel saat di-scroll */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -53,7 +54,6 @@ header {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Kelas ini akan aktif lewat JavaScript saat di-scroll */
 header.scrolled {
     background-color: var(--primary-green);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -70,7 +70,7 @@ header.scrolled {
 }
 
 header.scrolled .navbar {
-    padding: 12px 0; /* Mengecil sedikit agar elegan saat di-scroll */
+    padding: 12px 0;
 }
 
 .logo-area {
@@ -110,12 +110,12 @@ header.scrolled .navbar {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 20px;
 }
 
 .nav-links a {
     color: var(--white);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: 0.3s;
 }
@@ -297,7 +297,8 @@ section {
 /* ===============================
    ABOUT & INTRO LAYOUTS
 ================================ */
-.intro-section, .about-intro, .product-detail {
+/* KESALAHAN SEBELUMNYA SUDAH DIPERBAIKI DI SINI */
+.intro-content, .about-intro, .product-detail {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -543,6 +544,66 @@ footer {
 /* =========================================
    ANIMASI SCROLL (REVEAL EFFECT)
 ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+
+/* ===============================
+   RESPONSIVE MOBILE (PASTIKAN TERSALIN SAMPAI BAWAH)
+================================ */
+@media(max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    .hero-content, .hero-image, .intro-image, .intro-text, .about-image, .about-text, .product-image, .product-description {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .intro-content, .about-intro, .product-detail {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .advantages-container, .spec-container, .packaging-container, .quality-list, .market-container, .contact-container, .gallery-container, .values-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
         flex-direction: column;
         text-align: center;
     }
@@ -579,5 +640,4 @@ footer {
         width: 100%;
         text-align: center;
     }
-   }
-
+}
