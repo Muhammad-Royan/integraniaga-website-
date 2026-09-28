@@ -1,643 +1,405 @@
 /* ===============================
-   GLOBAL RESET
+GLOBAL RESET & BASE STYLES
 ================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+​{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden; /* Mencegah layar bergeser ke area putih di kanan */
+​body {
+font-family: Arial, Helvetica, sans-serif;
+color: #333;
+background: #ffffff;
+line-height: 1.6;
+overflow-x: hidden;
 }
-
-html {
-    scroll-behavior: smooth;
+​html {
+scroll-behavior: smooth;
 }
-
-img {
-    max-width: 100%;
-    display: block;
+​img {
+max-width: 100%;
+display: block;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
+​a {
+text-decoration: none;
+color: inherit;
 }
-
-/* ===============================
-   COLOR SYSTEM
+​/* ===============================
+COLOR SYSTEM
 ================================ */
 :root {
-    --primary-green: #174d2b;
-    --dark-green: #10361e;
-    --gold: #c89b3c;
-    --light-gold: #e8c878;
-    --text-dark: #222;
-    --white: #ffffff;
+--primary-green: #174d2b;
+--dark-green: #10361e;
+--gold: #c89b3c;
+--light-gold: #e8c878;
+--text-dark: #222;
+--white: #ffffff;
 }
-
-/* ===============================
-   NAVBAR & STICKY HEADER
+​/* ===============================
+NAVBAR & STICKY HEADER
 ================================ */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: transparent;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1000;
+background: var(--primary-green);
+box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
-
-header.scrolled {
-    background-color: var(--primary-green);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+​.navbar {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 0;
 }
-
-.navbar {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    transition: padding 0.4s ease;
+​.logo-area {
+display: flex;
+align-items: center;
+gap: 15px;
 }
-
-header.scrolled .navbar {
-    padding: 12px 0;
+​.logo-area img {
+width: 55px;
+height: 55px;
+object-fit: contain;
+flex-shrink: 0;
 }
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+​.company-name {
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
-
-.logo-area img {
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
-    flex-shrink: 0;
+​.company-name h2 {
+font-size: 18px;
+color: var(--white);
+font-weight: 700;
+line-height: 1.2;
+margin: 0;
 }
-
-.company-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+​.company-name p {
+font-size: 12px;
+color: var(--white);
+opacity: 0.85;
+margin-top: 2px;
 }
-
-.company-name h2 {
-    font-size: 20px;
-    color: var(--white);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
+​.nav-links {
+display: flex;
+list-style: none;
+gap: 20px;
+align-items: center;
 }
-
-.company-name p {
-    font-size: 13px;
-    color: var(--white);
-    opacity: 0.9;
-    margin-top: 4px;
+​.nav-links a {
+color: var(--white);
+font-size: 14px;
+font-weight: 500;
+transition: 0.3s;
 }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+​.nav-links a:hover, .nav-links a.active {
+color: var(--gold);
 }
-
-.nav-links a {
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+​/* Mobile Menu Hamburger Button */
+#menu-btn {
+display: none;
+background: none;
+border: none;
+cursor: pointer;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 24px;
+z-index: 1100;
 }
-
-.nav-links a:hover {
-    color: var(--light-gold);
+​#menu-btn span {
+width: 100%;
+height: 3px;
+background: white;
+border-radius: 2px;
+transition: 0.3s;
 }
-
-/* ===============================
-   HERO SECTION (HOME)
+​/* Mobile Menu Dropdown Container */
+#mobile-menu {
+display: none;
+position: absolute;
+top: 100%;
+right: 5%;
+width: 250px;
+background: white;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+border-radius: 12px;
+flex-direction: column;
+padding: 15px 20px;
+z-index: 1050;
+border: 1px solid #eee;
+}
+​#mobile-menu a {
+padding: 12px 0;
+color: #333;
+font-weight: 600;
+border-bottom: 1px solid #f0f0f0;
+font-size: 14px;
+}
+​#mobile-menu a:hover, #mobile-menu a.active {
+color: var(--primary-green);
+}
+​/* ===============================
+FLOATING WHATSAPP BUTTON
+================================ */
+.whatsapp-float {
+position: fixed;
+bottom: 25px;
+right: 25px;
+background: #25D366;
+color: white;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+z-index: 999;
+transition: transform 0.3s ease;
+}
+​.whatsapp-float:hover {
+transform: scale(1.1);
+}
+​.whatsapp-float svg {
+width: 35px;
+height: 35px;
+fill: currentColor;
+}
+​/* ===============================
+HERO SECTION
 ================================ */
 .hero {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 140px 8% 80px;
-    overflow: hidden;
+min-height: 90vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 140px 8% 80px;
+background: var(--dark-green);
+color: white;
+overflow: hidden;
 }
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(15, 50, 30, 0.75), rgba(15, 50, 30, 0.65)), url("jomonkoikkara-coconut-tree-1538034_1920.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(1px);
-    transform: scale(1.05);
-    z-index: -2;
+​.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: url("jomonkoikkara-coconut-tree-1538034_1920.jpg");
+background-size: cover;
+background-position: center;
+opacity: 0.35;
+z-index: 0;
 }
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(10,40,20,0.8), rgba(10,40,20,0.15));
-    z-index: -1;
+​.hero-content {
+position: relative;
+z-index: 1;
+width: 55%;
 }
-
-.hero-content {
-    width: 50%;
-    color: white;
+​.hero-content h1 {
+font-size: 46px;
+line-height: 1.2;
+margin-bottom: 20px;
+font-weight: 700;
 }
-
-.hero-content h1 {
-    font-size: 52px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    font-weight: 700;
+​.hero-content p {
+font-size: 17px;
+max-width: 600px;
+margin-bottom: 30px;
+color: rgba(255,255,255,0.9);
 }
-
-.hero-content p {
-    font-size: 18px;
-    max-width: 600px;
-    margin-bottom: 35px;
-    color: rgba(255,255,255,0.9);
+​.hero-buttons {
+display: flex;
+gap: 15px;
 }
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
+​.btn-primary {
+display: inline-block;
+background: var(--gold);
+color: white;
+padding: 12px 28px;
+border-radius: 30px;
+font-weight: 600;
+transition: 0.3s ease;
 }
-
-.btn-primary {
-    display: inline-block;
-    background: var(--gold);
-    color: white;
-    padding: 14px 32px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s ease;
+​.btn-primary:hover {
+background: #b58830;
+transform: translateY(-2px);
 }
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(200, 155, 60, 0.3);
+​.btn-secondary {
+display: inline-block;
+border: 2px solid white;
+color: white;
+padding: 12px 28px;
+border-radius: 30px;
+font-weight: 600;
+transition: 0.3s ease;
 }
-
-.btn-secondary {
-    display: inline-block;
-    border: 1px solid white;
-    color: white;
-    padding: 14px 32px;
-    border-radius: 30px;
-    transition: 0.3s ease;
+​.btn-secondary:hover {
+background: white;
+color: var(--primary-green);
 }
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary-green);
+​.hero-image {
+position: relative;
+z-index: 1;
+width: 40%;
 }
-
-.hero-image {
-    width: 42%;
-    position: relative;
+​.hero-image img {
+width: 100%;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+border: 4px solid rgba(255,255,255,0.1);
 }
-
-.hero-image img {
-    width: 100%;
-    max-width: 520px;
-    margin: auto;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
-}
-
-/* ===============================
-   PAGE HERO (ABOUT, PRODUCT, ETC)
+​/* ===============================
+PAGE HERO (OTHER PAGES)
 ================================ */
 .page-hero {
-    position: relative;
-    padding: 140px 8% 90px;
-    text-align: center;
-    overflow: hidden;
-    color: #ffffff;
-    min-height: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+padding: 140px 8% 70px;
+background: var(--dark-green);
+color: white;
+text-align: center;
 }
-
-.page-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(15,81,50,.72), rgba(15,81,50,.55)), url("jomonkoikkara-coconut-tree-1538034_1920.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(2px);
-    transform: scale(1.08);
-    z-index: -2;
+​.page-hero h1 {
+font-size: 40px;
+margin-bottom: 12px;
 }
-
-.page-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.10);
-    z-index: -1;
+​.page-hero p {
+font-size: 16px;
+max-width: 700px;
+margin: auto;
+color: #ddd;
 }
-
-.page-hero h1 {
-    font-size: 48px;
-    margin-bottom: 18px;
-    color: #fff;
-}
-
-.page-hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* ===============================
-   GENERAL SECTIONS
+​/* ===============================
+GENERAL SECTIONS & INQUIRY FORM
 ================================ */
 section {
-    padding: 80px 8%;
+padding: 80px 8%;
 }
-
-.section-title {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 45px;
+​.inquiry-section {
+background: #f9f9f9;
 }
-
-.section-title h2 {
-    font-size: 36px;
-    color: var(--primary-green);
-    margin-bottom: 15px;
+​.inquiry-box {
+max-width: 750px;
+margin: auto;
+background: white;
+padding: 40px;
+border-radius: 24px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+border: 1px solid #eaeaea;
 }
-
-.section-title p {
-    color: #666;
-    font-size: 17px;
+​.inquiry-header {
+text-align: center;
+margin-bottom: 30px;
 }
-
-/* ===============================
-   ABOUT & INTRO LAYOUTS
-================================ */
-/* KESALAHAN SEBELUMNYA SUDAH DIPERBAIKI DI SINI */
-.intro-content, .about-intro, .product-detail {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background: #ffffff;
+​.inquiry-header h2 {
+font-size: 30px;
+color: var(--primary-green);
+margin-bottom: 10px;
 }
-
-.intro-image, .about-image, .product-image {
-    width: 45%;
+​.inquiry-header p {
+color: #666;
+font-size: 15px;
 }
-
-.intro-image img, .about-image img, .product-image img {
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    width: 100%;
+​.form-group {
+margin-bottom: 20px;
 }
-
-.intro-text, .about-text, .product-description {
-    width: 55%;
+​.form-group label {
+display: block;
+font-size: 14px;
+font-weight: 600;
+color: #444;
+margin-bottom: 8px;
 }
-
-.intro-text h3, .about-text h2, .product-description h2 {
-    font-size: 30px;
-    color: var(--primary-green);
-    margin-bottom: 20px;
+​.form-group input, .form-group textarea {
+width: 100%;
+padding: 12px 16px;
+border: 1px solid #ddd;
+border-radius: 12px;
+font-size: 15px;
+outline: none;
+transition: border-color 0.3s;
 }
-
-.intro-text p, .about-text p, .product-description p {
-    color: #555;
-    margin-bottom: 18px;
-    line-height: 1.8;
+​.form-group input:focus, .form-group textarea:focus {
+border-color: var(--primary-green);
+box-shadow: 0 0 0 3px rgba(23,77,43,0.1);
 }
-
-/* ===============================
-   GRID CONTAINERS (CARDS)
-================================ */
-.advantages-section {
-    background: #f8f7f2;
-    text-align: center;
+​.submit-btn {
+width: 100%;
+background: var(--primary-green);
+color: white;
+padding: 14px;
+border: none;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.3s;
 }
-
-.advantages-section h2, .market-section h2, .contact-preview h2 {
-    color: var(--primary-green);
-    font-size: 36px;
-    margin-bottom: 40px;
+​.submit-btn:hover {
+background: var(--dark-green);
 }
-
-.advantages-container, .values-container, .contact-container, .quality-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.advantage-card, .value-card, .contact-item {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.advantage-card:hover, .value-card:hover, .contact-item:hover, .spec-item:hover, .packaging-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.advantage-card h3, .value-card h3, .contact-item h3 {
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-/* ===============================
-   SPECIFICATIONS
-================================ */
-.product-summary {
-    background: #ffffff;
-    text-align: center;
-}
-
-.product-summary h2 {
-    color: var(--primary-green);
-    font-size: 36px;
-    margin-bottom: 45px;
-}
-
-.spec-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.spec-item {
-    padding: 30px 20px;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-    transition: 0.3s ease;
-}
-
-.spec-item span, .spec-item strong:first-child {
-    display: block;
-    color: #777;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.spec-item strong {
-    color: var(--primary-green);
-}
-
-/* ===============================
-   PACKAGING
-================================ */
-.packaging-section {
-    background: #f8f7f2;
-}
-
-.packaging-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.packaging-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.packaging-card img {
-    height: 260px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 25px;
-}
-
-.packaging-card h3 {
-    color: var(--primary-green);
-    margin-bottom: 15px;
-}
-
-/* ===============================
-   MARKET SECTION
-================================ */
-.market-section {
-    text-align: center;
-    background: #ffffff;
-}
-
-.market-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.market-item {
-    padding: 30px 20px;
-    background: #f8f7f2;
-    border-radius: 12px;
-}
-
-.market-item h3 {
-    color: var(--primary-green);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* ===============================
-   GALLERY
-================================ */
-.product-gallery-section {
-    text-align: center;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 18px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-    transition: 0.4s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.08);
-}
-
-/* ===============================
-   CTA SECTION
-================================ */
-.cta-section {
-    background: var(--primary-green);
-    text-align: center;
-    color: white;
-}
-
-.cta-content h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
-}
-
-.cta-content p {
-    max-width: 700px;
-    margin: 0 auto 35px;
-    color: rgba(255,255,255,0.9);
-}
-
-/* ===============================
-   FOOTER
+​/* ===============================
+FOOTER
 ================================ */
 footer {
-    background: #10361e;
-    color: white;
-    padding: 40px 8%;
+background: var(--dark-green);
+color: white;
+padding: 40px 8%;
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+​.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: auto;
 }
-
-.footer-content p {
-    opacity: 0.9;
+​.footer-content p {
+font-size: 14px;
+color: #ccc;
 }
-
-/* =========================================
-   ANIMASI SCROLL (REVEAL EFFECT)
-========================================= */
+​/* ===============================
+SCROLL REVEAL ANIMATIONS
+================================ */
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.7s ease-out;
 }
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+​.reveal.active {
+opacity: 1;
+transform: translateY(0);
 }
-
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-
-
-/* ===============================
-   RESPONSIVE MOBILE 
+​/* ===============================
+RESPONSIVE DESIGN (MOBILE)
 ================================ */
 @media(max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 200px;
-    }
-
-    .hero-content, .hero-image, .intro-image, .intro-text, .about-image, .about-text, .product-image, .product-description {
-        width: 100%;
-    }
-
-    .hero-content h1 {
-        font-size: 38px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .intro-content, .about-intro, .product-detail {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .advantages-container, .spec-container, .packaging-container, .quality-list, .market-container, .contact-container, .gallery-container, .values-container {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
+.nav-links {
+display: none;
 }
-
-@media(max-width: 500px) {
-    section {
-        padding: 60px 5%;
-    }
-
-    .page-hero {
-        padding: 160px 5% 70px;
-    }
-
-    .logo-area img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .company-name h2 {
-        font-size: 16px;
-    }
-
-    .hero-content h1, .page-hero h1 {
-        font-size: 32px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
+#menu-btn {
+display: flex;
+}
+.hero {
+flex-direction: column;
+text-align: center;
+padding-top: 130px;
+}
+.hero-content, .hero-image {
+width: 100%;
+}
+.hero-buttons {
+justify-content: center;
+}
+.hero-image {
+margin-top: 40px;
+}
+.footer-content {
+flex-direction: column;
+text-align: center;
+gap: 15px;
+}
 }
