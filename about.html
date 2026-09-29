@@ -1,357 +1,125 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PT Integra Niaga Komoditas | Premium Indonesian Coconut Sugar Supplier & Exporter</title>
-​<meta name="description" content="PT Integra Niaga Komoditas is a premier Indonesian B2B exporter specializing in organic coconut palm sugar. Supplying direct importers, distributors, food & beverage manufacturers, bakeries, and confectionery industries worldwide. Strict moisture max 2.0% and mesh 16-18.">
-​<link rel="icon" type="image/png" href="b85d9b2a0_generated_76096bab.png">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-primary: '#174d2b',
-darkGreen: '#10361e',
-gold: '#c89b3c',
-goldHover: '#b58830',
-lightBg: '#f8fafc',
-}
-}
-}
-}
-</script>
-<style>
-.reveal {
-opacity: 0;
-transform: translateY(30px);
-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.active {
-opacity: 1;
-transform: translateY(0);
-}
-.reveal-left {
-opacity: 0;
-transform: translateX(-40px);
-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal-left.active {
-opacity: 1;
-transform: translateX(0);
-}
-.reveal-right {
-opacity: 0;
-transform: translateX(40px);
-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal-right.active {
-opacity: 1;
-transform: translateX(0);
-}
-.delay-100 { transition-delay: 150ms; }
-.delay-200 { transition-delay: 300ms; }
-.delay-300 { transition-delay: 450ms; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | PT Integra Niaga Komoditas - Premium Coconut Sugar Exporter</title>
+    <meta name="description" content="Learn about PT Integra Niaga Komoditas, bridging traditional Indonesian coconut farmers with global B2B markets through sustainable sourcing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased selection:bg-gold selection:text-white">
-​<!-- NAVBAR START -->
-<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-darkGreen/95 backdrop-blur-md shadow-lg transition-all duration-300">
-<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<a href="#home" class="flex items-center gap-3 group">
-<img src="b85d9b2a0_generated_76096bab.png" alt="PT Integra Niaga Komoditas Logo" class="w-12 h-12 object-contain group-hover:scale-105 transition">
-<div>
-<h2 class="text-white font-bold text-base md:text-lg leading-tight tracking-wide">PT Integra Niaga Komoditas</h2>
-<p class="text-gold text-xs font-semibold tracking-wider uppercase">Indonesian Coconut Sugar Supplier</p>
-</div>
-</a>
-<ul class="hidden lg:flex items-center space-x-8 text-white font-medium text-sm">
-<li><a href="#home" class="hover:text-gold transition font-semibold text-gold">Home</a></li>
-<li><a href="#about" class="hover:text-gold transition">About Us</a></li>
-<li><a href="#products" class="hover:text-gold transition">Products</a></li>
-<li><a href="#packaging" class="hover:text-gold transition">Packaging</a></li>
-<li><a href="#quality" class="hover:text-gold transition">Quality Control</a></li>
-<li><a href="#blog" class="hover:text-gold transition">Insights</a></li>
-<li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
-</ul>
-<div class="hidden lg:flex items-center gap-3">
-<a href="https://wa.me/628817941803" target="_blank" class="bg-gold hover:bg-goldHover text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md transition flex items-center gap-2">
-<span>💬 WhatsApp Sales</span>
-</a>
-</div>
-<button id="menu-btn" class="lg:hidden text-white flex flex-col justify-between w-7 h-6 z-50 focus:outline-none" aria-label="Toggle Menu">
-<span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
-<span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
-<span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
-</button>
-</nav>
-<div id="mobile-menu" class="hidden absolute top-full right-0 w-72 bg-white shadow-2xl rounded-bl-3xl border border-gray-100 flex flex-col py-6 px-6 lg:hidden z-40">
-<a href="#home" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Home</a>
-<a href="#about" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">About Us</a>
-<a href="#products" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Products</a>
-<a href="#packaging" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Packaging</a>
-<a href="#quality" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Quality Control</a>
-<a href="#blog" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Insights</a>
-<a href="#contact" class="py-3 text-primary font-bold hover:text-gold">Contact Us</a>
-<div class="mt-4 pt-4 border-t border-gray-100">
-<a href="https://wa.me/628817941803" target="_blank" class="w-full block text-center bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow">Chat via WhatsApp</a>
-</div>
-</div>
-</header>
-<!-- NAVBAR END -->
-​<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 z-50" aria-label="WhatsApp Contact">
-<svg viewBox="0 0 32 32" class="w-7 h-7 fill-current"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.13-2.115c2.353 1.252 5.02 1.915 7.87 1.915 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.43 0-4.81-0.652-6.892-1.889l-0.494-0.293-5.112 1.33 1.365-4.992-0.321-0.512c-1.341-2.135-2.049-4.622-2.049-7.175 0-7.364 5.992-13.356 13.356-13.356s13.356 5.992 13.356 13.356-5.992 13.356-13.356 13.356z"></path></svg>
-</a>
-​<!-- HERO SECTION -->
-<section id="home" class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-16 bg-darkGreen text-white overflow-hidden">
-<div class="absolute inset-0 z-0 opacity-30 bg-cover bg-center" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg');"></div>
-<div class="absolute inset-0 z-0 bg-gradient-to-t from-darkGreen via-darkGreen/80 to-darkGreen/50"></div>
-​<div class="max-w-5xl mx-auto text-center relative z-10 reveal">
-<span class="inline-block bg-gold/20 text-gold border border-gold/40 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest mb-6">
-Verified Indonesian B2B Export Partner
-</span>
-<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-Premium Export-Grade <span class="text-gold">Organic Coconut Sugar Granules</span>
-</h1>
-<p class="max-w-3xl mx-auto text-gray-200 text-base md:text-lg mb-10 leading-relaxed">
-As a specialized agricultural trading and export enterprise, PT Integra Niaga Komoditas supplies premium organic coconut palm sugar directly to international importers, national distributors, organic ingredient suppliers, food & beverage manufacturers, bakeries, and confectionery industries worldwide. Strict moisture max 2.0%, fine mesh 16-18, and guaranteed volume consistency.
-</p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<a href="#contact" class="w-full sm:w-auto bg-gold hover:bg-goldHover text-white px-8 py-4 rounded-full font-bold shadow-xl transition transform hover:-translate-y-0.5">
-Request Sample & Quote
-</a>
-<a href="#products" class="w-full sm:w-auto bg-transparent hover:bg-white/10 border-2 border-white text-white px-8 py-3.5 rounded-full font-bold transition">
-Explore Specifications
-</a>
-</div>
-</div>
-</section>
-​<!-- ABOUT US SECTION -->
-<section id="about" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="reveal-left">
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Corporate Profile & Global Reach</span>
-<h2 class="text-3xl md:text-4xl font-extrabold text-primary mt-4 mb-6 leading-tight">
-Your Trusted Trading Partner for Organic Coconut Sugar Granules
-</h2>
-<p class="text-gray-600 mb-4 leading-relaxed">
-<strong>PT Integra Niaga Komoditas</strong> operates as a dedicated B2B trading and export enterprise specializing in pure, unrefined <strong>Organic Coconut Palm Sugar Granules</strong>. We bridge traditional Indonesian farmer cooperatives directly with global markets, eliminating unnecessary intermediaries to guarantee uncompromising quality and traceability.
-</p>
-<p class="text-gray-600 mb-6 leading-relaxed">
-We supply our flagship product directly to <strong>international direct importers, regional distributors, organic ingredient suppliers, food manufacturers, beverage corporations, commercial bakeries, and confectionery producers</strong> who demand stable volume, reliable shipping schedules, and strict adherence to international food safety standards.
-</p>
-<div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
-<div>
-<h3 class="font-bold text-2xl text-primary">100%</h3>
-<p class="text-xs text-gray-500 uppercase tracking-wide">Pure & Organic Sap</p>
-</div>
-<div>
-<h3 class="font-bold text-2xl text-primary">FCL / LCL</h3>
-<p class="text-xs text-gray-500 uppercase tracking-wide">Global Shipping Ready</p>
-</div>
-</div>
-</div>
-<div class="reveal-right">
-<img src="FB_IMG_1784100143834.jpg" alt="PT Integra Niaga Komoditas Warehouse and Operations" class="rounded-3xl shadow-2xl w-full object-cover border-4 border-gray-100">
-</div>
-</div>
-</section>
-​<!-- PRODUCTS SECTION -->
-<section id="products" class="py-24 px-6 md:px-16 bg-lightBg">
-<div class="max-w-7xl mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 reveal">
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Our Core Product</span>
-<h2 class="text-3xl md:text-4xl font-extrabold text-primary mt-3 mb-4">Export-Grade Natural Coconut Sugar Granules</h2>
-<p class="text-gray-600">Processed under strict hygienic conditions, lab-tested, and custom-graded to meet the exacting standards of industrial food, beverage, bakery, and confectionery manufacturers.</p>
-</div>
-​<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 reveal">
-<div>
-<img src="hq720.jpg" alt="Natural Coconut Sugar Crystals" class="rounded-2xl shadow-lg w-full object-cover">
-</div>
-<div>
-<span class="text-xs bg-gold/20 text-gold font-bold px-3 py-1 rounded-full uppercase">Industrial Specification</span>
-<h3 class="text-2xl md:text-3xl font-bold text-primary mt-3 mb-4">Organic Coconut Palm Sugar Granules</h3>
-<p class="text-gray-600 mb-6 leading-relaxed">
-Harvested from fresh coconut blossom nectar, slow-evaporated, and precisely sieved to achieve optimal uniformity, solubility, and caramel flavor profile for industrial manufacturing.
-</p>
-<ul class="space-y-3 text-sm text-gray-700 mb-8">
-<li class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100">
-<span class="text-green-600 font-bold">✓</span> <strong>Mesh Uniformity:</strong> 16 - 18 Mesh (Fine & Consistent Granulation)
-</li>
-<li class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100">
-<span class="text-green-600 font-bold">✓</span> <strong>Moisture Content:</strong> Maximum 2.0% (Prevents Caking & Clumping during Transit)
-</li>
-<li class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100">
-<span class="text-green-600 font-bold">✓</span> <strong>Purity:</strong> 100% Unrefined, Chemical-Free, Additive-Free Organic Sap
-</li>
-<li class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100">
-<span class="text-green-600 font-bold">✓</span> <strong>Glycemic Index:</strong> Low GI (~35), Rich in Minerals & Electrolytes
-</li>
-</ul>
-<a href="#contact" class="inline-block bg-primary hover:bg-darkGreen text-white px-8 py-3.5 rounded-xl font-semibold shadow transition">
-Request Product Datasheet (COA)
-</a>
-</div>
-</div>
-</div>
-</section>
-​<!-- PACKAGING & LOGISTICS -->
-<section id="packaging" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 reveal">
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Logistics & Safety</span>
-<h2 class="text-3xl md:text-4xl font-extrabold text-primary mt-3 mb-4">Export-Ready Packaging Options</h2>
-<p class="text-gray-600">Multi-layer protective packaging designed to withstand long-distance maritime transit and maintain moisture integrity for global importers and distributors.</p>
-</div>
-​<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm reveal-left">
-<div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-xl mb-6">📦</div>
-<h3 class="text-2xl font-bold text-primary mb-3">Bulk Industrial Packaging</h3>
-<p class="text-gray-600 mb-6 leading-relaxed">Engineered for food manufacturers, bakeries, and industrial processors requiring 20kg or 25kg net weight configurations.</p>
-<ul class="space-y-2.5 text-sm text-gray-700">
-<li class="flex items-center gap-2">• Craft Paper Bag with Multi-wall Reinforcement</li>
-<li class="flex items-center gap-2">• Inner Food-Grade PE Liner (Double Heat Sealed)</li>
-<li class="flex items-center gap-2">• Palletized, Shrink-wrapped, and Fumigated for FCL Shipments</li>
-</ul>
-</div>
-<div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm reveal-right">
-<div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-xl mb-6">🏷️</div>
-<h3 class="text-2xl font-bold text-primary mb-3">Retail & OEM Private Label</h3>
-<p class="text-gray-600 mb-6 leading-relaxed">Customizable consumer-facing packaging solutions for organic distributors and supermarket chains, equipped with re-sealable zippers.</p>
-<ul class="space-y-2.5 text-sm text-gray-700">
-<li class="flex items-center gap-2">• Stand-up Pouches with Zipper (250g, 500g, 1kg)</li>
-<li class="flex items-center gap-2">• Complete OEM / Private Label Manufacturing Support</li>
-<li class="flex items-center gap-2">• Multi-language Regulatory Compliance Labeling</li>
-</ul>
-</div>
-</div>
-</section>
-​<!-- QUALITY CONTROL -->
-<section id="quality" class="py-24 px-6 md:px-16 bg-darkGreen text-white">
-<div class="max-w-7xl mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 reveal">
-<span class="text-xs bg-gold/20 text-gold font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Uncompromised Standard</span>
-<h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3 mb-4">Rigorous Quality Control</h2>
-<p class="text-gray-300">Every single production batch undergoes stringent laboratory testing before receiving international export clearance.</p>
-</div>
-​<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white/5 border border-white/10 p-8 rounded-3xl reveal delay-100">
-<div class="text-gold font-extrabold text-3xl mb-4">01</div>
-<h3 class="font-bold text-xl mb-3 text-gold">Laboratory Screening</h3>
-<p class="text-gray-300 text-sm leading-relaxed">Tested for precise moisture levels (\le 2.0\%), heavy metal compliance, and complete microbiological purity.</p>
-</div>
-<div class="bg-white/5 border border-white/10 p-8 rounded-3xl reveal delay-200">
-<div class="text-gold font-extrabold text-3xl mb-4">02</div>
-<h3 class="font-bold text-xl mb-3 text-gold">Full Traceability</h3>
-<p class="text-gray-300 text-sm leading-relaxed">Complete chain-of-custody tracking linking export batches directly to verified Indonesian farmer cooperatives.</p>
-</div>
-<div class="bg-white/5 border border-white/10 p-8 rounded-3xl reveal delay-300">
-<div class="text-gold font-extrabold text-3xl mb-4">03</div>
-<h3 class="font-bold text-xl mb-3 text-gold">Hygienic Sorting</h3>
-<p class="text-gray-300 text-sm leading-relaxed">State-of-the-art mesh screening and impurity removal facilities adhering to international food safety regulations.</p>
-</div>
-</div>
-</div>
-</section>
-​<!-- BLOG / INSIGHTS -->
-<section id="blog" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 reveal">
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Expertise & Guides</span>
-<h2 class="text-3xl md:text-4xl font-extrabold text-primary mt-3 mb-4">Export Insights & Articles</h2>
-<p class="text-gray-600">Explore professional guides and industry updates about importing organic sweeteners from Indonesia.</p>
-</div>
-​<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<article class="bg-lightBg rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between reveal delay-100">
-<div>
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1 rounded-full">Quality</span>
-<h3 class="text-xl font-bold text-primary mt-4 mb-3">Why Moisture Max 2.0% is Crucial for Coconut Sugar Export</h3>
-<p class="text-gray-600 text-sm mb-6 leading-relaxed">Learn how strict moisture control prevents caking and ensures safe maritime transit across global oceans.</p>
-</div>
-<a href="#contact" class="text-gold font-bold text-sm hover:underline flex items-center gap-1">Inquire About Specs →</a>
-</article>
-<article class="bg-lightBg rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between reveal delay-200">
-<div>
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1 rounded-full">Supply Chain</span>
-<h3 class="text-xl font-bold text-primary mt-4 mb-3">Bridging Indonesian Farmers to Global B2B Markets</h3>
-<p class="text-gray-600 text-sm mb-6 leading-relaxed">How PT Integra Niaga Komoditas maintains sustainable partnerships with local farmer cooperatives.</p>
-</div>
-<a href="#contact" class="text-gold font-bold text-sm hover:underline flex items-center gap-1">Partner With Us →</a>
-</article>
-<article class="bg-lightBg rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between reveal delay-300">
-<div>
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1 rounded-full">Industry</span>
-<h3 class="text-xl font-bold text-primary mt-4 mb-3">Clean-Label Sweeteners: The Rise of Organic Coconut Sugar</h3>
-<p class="text-gray-600 text-sm mb-6 leading-relaxed">Why international food and beverage manufacturers are shifting towards low-glycemic natural sweeteners.</p>
-</div>
-<a href="#contact" class="text-gold font-bold text-sm hover:underline flex items-center gap-1">Request Sample →</a>
-</article>
-</div>
-</section>
-​<!-- CONTACT & INQUIRY SECTION -->
-<section id="contact" class="py-24 px-6 md:px-16 bg-lightBg border-t border-gray-100">
-<div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 reveal">
-<div class="text-center mb-10">
-<span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Get in Touch</span>
-<h2 class="text-3xl font-extrabold text-primary mt-3 mb-2">Send an Export Inquiry</h2>
-<p class="text-gray-600 text-sm">Got an inquiry or require volume pricing? Fill out the form below or chat directly via WhatsApp.</p>
-</div>
-​<form action="https://wa.me/628817941803" method="GET" target="_blank" class="space-y-6">
-<div>
-<label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-<input type="text" placeholder="e.g., John Smith" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
-</div>
-<div>
-<label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-<input type="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
-</div>
-<div>
-<label class="block text-sm font-semibold text-gray-700 mb-2">Subject / Required Volume</label>
-<input type="text" placeholder="e.g., 20ft FCL Organic Coconut Sugar Granules" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
-</div>
-<div>
-<label class="block text-sm font-semibold text-gray-700 mb-2">Your Message / Specifications</label>
-<textarea rows="4" placeholder="Write your export inquiry, destination port, or specific requirements here..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
-</div>
-<button type="submit" class="w-full bg-primary hover:bg-darkGreen text-white py-4 rounded-xl font-bold shadow-lg transition">
-Send Inquiry via WhatsApp
-</button>
-</form>
-</div>
-</section>
-​<!-- FOOTER -->
-<footer class="bg-darkGreen text-white py-12 px-6 text-center">
-<div class="max-w-7xl mx-auto space-y-3">
-<p class="font-bold text-lg">PT Integra Niaga Komoditas</p>
-<p class="text-gray-300 text-sm">Indonesian Coconut Sugar Sourcing Partner for Global Markets.</p>
-<p class="text-gray-400 text-xs pt-4 border-t border-white/10">© 2026 PT Integra Niaga Komoditas. All Rights Reserved.</p>
-</div>
-</footer>
-​<script>
-// Mobile menu toggle
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-if(menuBtn && mobileMenu) {
-menuBtn.addEventListener('click', (e) => {
-e.stopPropagation();
-mobileMenu.classList.toggle('hidden');
-});
-window.addEventListener('click', (e) => {
-if(!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-mobileMenu.classList.add('hidden');
-}
-});
-}
-​// Scroll reveal observer
-const observer = new IntersectionObserver((entries, observer) => {
-entries.forEach(entry => {
-if(entry.isIntersecting) {
-entry.target.classList.add('active');
-observer.unobserve(entry.target);
-}
-});
-}, { threshold: 0.15 });
-​document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
-</script>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-600 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center border border-brand-100 group-hover:scale-105 transition-transform">
+                        <img src="1779858734641.png" alt="PT Integra Niaga Komoditas Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/100x100/15803d/ffffff?text=INK'">
+                    </div>
+                    <div>
+                        <span class="block font-extrabold text-slate-900 tracking-tight text-lg leading-tight">PT. INTEGRA NIAGA</span>
+                        <span class="block text-xs font-semibold text-brand-700 tracking-wider uppercase">Komoditas | Global Export</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 hover:text-brand-700 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-brand-700 font-semibold transition-colors">About Us</a>
+                    <a href="products.html" class="text-slate-600 hover:text-brand-700 font-medium transition-colors">Products & Specs</a>
+                    <a href="packaging.html" class="text-slate-600 hover:text-brand-700 font-medium transition-colors">Packaging</a>
+                    <a href="quality.html" class="text-slate-600 hover:text-brand-700 font-medium transition-colors">Quality Control</a>
+                    <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-brand-700 text-white font-medium hover:bg-brand-800 shadow-md shadow-brand-700/20 transition-all">Inquiry / Contact</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100"><i class="fa-solid fa-bars text-xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-slate-700 font-medium">Home</a>
+            <a href="about.html" class="block px-3 py-2 rounded-lg bg-brand-50 text-brand-700 font-medium">About Us</a>
+            <a href="products.html" class="block px-3 py-2 rounded-lg text-slate-700 font-medium">Products & Specs</a>
+            <a href="packaging.html" class="block px-3 py-2 rounded-lg text-slate-700 font-medium">Packaging</a>
+            <a href="quality.html" class="block px-3 py-2 rounded-lg text-slate-700 font-medium">Quality Control</a>
+            <a href="contact.html" class="block text-center px-4 py-3 rounded-xl bg-brand-700 text-white font-medium">Inquiry / Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-building"></i> Corporate Profile
+                </span>
+                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">About PT Integra Niaga Komoditas</h1>
+                <p class="text-slate-600 text-lg">Connecting ethical Indonesian agricultural sources with global manufacturing standards.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-900">Empowering Local Farmers, Supplying Global Markets</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        PT Integra Niaga Komoditas is an officially registered export trading enterprise based in Indonesia. We specialize in sourcing, processing, and exporting natural coconut sugar and agricultural commodities directly to food and beverage corporations worldwide.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Our direct partnership model with rural farming cooperatives ensures fair remuneration for harvesters while guaranteeing absolute transparency, traceability, and batch consistency for international importers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="block text-2xl font-bold text-brand-700">100%</span>
+                            <span class="text-xs text-slate-600">Pure Organic Nectar</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <span class="block text-2xl font-bold text-brand-700">Global</span>
+                            <span class="text-xs text-slate-600">B2B Shipment Standards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <img src="file_000000004b9472079bb4a819.png" alt="Sourcing & Production" class="rounded-2xl shadow-xl w-full h-[400px] object-cover">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="1779858734641.png" alt="Logo" class="w-8 h-8 object-contain">
+                <span class="text-white font-bold text-lg">PT Integra Niaga Komoditas</span>
+            </div>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="hover:text-white transition-colors">About</a>
+                <a href="products.html" class="hover:text-white transition-colors">Products</a>
+                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
