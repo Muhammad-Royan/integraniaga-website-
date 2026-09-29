@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | PT Integra Niaga Komoditas</title>
-<meta name="description" content="Contact PT Integra Niaga Komoditas for coconut sugar supply inquiries, quotations, and global B2B partnerships.">
+<meta name="description" content="Contact PT Integra Niaga Komoditas for organic coconut sugar supply inquiries, quotations, and global B2B partnerships via email info@integraniaga.online or WhatsApp.">
 <link rel="icon" type="image/png" href="b85d9b2a0_generated_76096bab.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -12,127 +12,146 @@ tailwind.config = {
 theme: {
 extend: {
 colors: {
-primary: '#174d2b',
-darkGreen: '#10361e',
-gold: '#c89b3c',
+primary: '#143820',
+darkGreen: '#0b2414',
+gold: '#d4af37',
+goldHover: '#c5a028',
+lightBg: '#f8fafc',
+charcoal: '#0f172a'
 }
 }
 }
 }
 </script>
-<style>
-.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-.reveal.active { opacity: 1; transform: translateY(0); }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased selection:bg-gold selection:text-white">
-​<!-- NAVBAR START -->
-<header class="fixed top-0 left-0 w-full z-50 bg-darkGreen/95 backdrop-blur-md shadow-lg transition-all duration-300">
+<body class="bg-lightBg text-charcoal font-sans antialiased selection:bg-gold selection:text-white">
+​<header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
 <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 <a href="index.html" class="flex items-center gap-3 group">
-<img src="b85d9b2a0_generated_76096bab.png" alt="Logo" class="w-12 h-12 object-contain group-hover:scale-105 transition">
+<img src="b85d9b2a0_generated_76096bab.png" alt="Logo" class="w-12 h-12 object-contain group-hover:scale-105 transition duration-300">
 <div>
-<h2 class="text-white font-bold text-base md:text-lg leading-tight tracking-wide">PT Integra Niaga Komoditas</h2>
-<p class="text-gold text-xs font-semibold tracking-wider uppercase">Indonesian Coconut Sugar Supplier</p>
+<h2 class="text-white font-bold text-base md:text-lg tracking-tight">PT Integra Niaga Komoditas</h2>
+<p class="text-gold text-xs font-semibold tracking-widest uppercase" data-i18n="tagline">Global Export Trading</p>
 </div>
 </a>
 <ul class="hidden lg:flex items-center space-x-8 text-white font-medium text-sm">
-<li><a href="index.html" class="hover:text-gold transition">Home</a></li>
-<li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
-<li><a href="products.html" class="hover:text-gold transition">Products</a></li>
-<li><a href="packaging.html" class="hover:text-gold transition">Packaging</a></li>
-<li><a href="quality.html" class="hover:text-gold transition">Quality Control</a></li>
-<li><a href="blog.html" class="hover:text-gold transition">Blog</a></li>
-<li><a href="contact.html" class="text-gold font-bold transition">Contact</a></li>
+<li><a href="index.html" class="hover:text-gold transition" data-i18n="home">Home</a></li>
+<li><a href="about.html" class="hover:text-gold transition" data-i18n="about">About Us</a></li>
+<li><a href="products.html" class="hover:text-gold transition" data-i18n="products">Products</a></li>
+<li><a href="packaging.html" class="hover:text-gold transition" data-i18n="packaging">Packaging</a></li>
+<li><a href="quality.html" class="hover:text-gold transition" data-i18n="quality">Quality Control</a></li>
+<li><a href="blog.html" class="hover:text-gold transition" data-i18n="blog">Blog</a></li>
+<li><a href="contact.html" class="text-gold font-bold transition" data-i18n="contact">Contact</a></li>
 </ul>
+<div class="hidden lg:flex items-center gap-4">
+<select id="lang-switch" class="bg-white/10 text-white text-xs font-semibold px-3 py-2 rounded-lg border border-white/20 focus:outline-none focus:border-gold cursor-pointer">
+<option value="en" class="text-black">🇬🇧 English</option>
+<option value="id" class="text-black">🇮🇩 Indonesia</option>
+<option value="ar" class="text-black">🇸🇦 العربية</option>
+<option value="zh" class="text-black">🇨🇳 中文</option>
+</select>
+<a href="https://wa.me/628817941803" target="_blank" class="bg-gold hover:bg-goldHover text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg transition" data-i18n="whatsapp">💬 WhatsApp</a>
+</div>
 <button id="menu-btn" class="lg:hidden text-white flex flex-col justify-between w-7 h-6 z-50 focus:outline-none" aria-label="Toggle Menu">
 <span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
 <span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
 <span class="w-full h-1 bg-white rounded transition-all duration-300"></span>
 </button>
 </nav>
-<div id="mobile-menu" class="hidden absolute top-full right-0 w-72 bg-white shadow-2xl rounded-bl-3xl border border-gray-100 flex flex-col py-6 px-6 lg:hidden z-40">
-<a href="index.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Home</a>
-<a href="about.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">About Us</a>
-<a href="products.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Products</a>
-<a href="packaging.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Packaging</a>
-<a href="quality.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Quality Control</a>
-<a href="blog.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary">Blog</a>
-<a href="contact.html" class="py-3 text-gold font-bold">Contact Us</a>
+<div id="mobile-menu" class="hidden absolute top-full right-0 w-80 bg-white shadow-2xl rounded-bl-3xl border border-gray-100 flex flex-col py-6 px-6 lg:hidden z-45">
+<a href="index.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="home">Home</a>
+<a href="about.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="about">About Us</a>
+<a href="products.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="products">Products</a>
+<a href="packaging.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="packaging">Packaging</a>
+<a href="quality.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="quality">Quality Control</a>
+<a href="blog.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100 hover:text-primary" data-i18n="blog">Blog</a>
+<a href="contact.html" class="py-3 text-gold font-bold border-b border-gray-100" data-i18n="contact">Contact</a>
+<div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<select id="mobile-lang-switch" class="bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-2 rounded-lg border border-gray-200">
+<option value="en">🇬🇧 English</option>
+<option value="id">🇮🇩 Indonesia</option>
+<option value="ar">🇸🇦 العربية</option>
+<option value="zh">🇨🇳 中文</option>
+</select>
+<a href="https://wa.me/628817941803" target="_blank" class="w-full text-center bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow" data-i18n="whatsapp">Chat via WhatsApp</a>
+</div>
 </div>
 </header>
-<!-- NAVBAR END -->
-​<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 z-50" aria-label="WhatsApp">
+​<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 z-50 animate-bounce" aria-label="WhatsApp">
 <svg viewBox="0 0 32 32" class="w-7 h-7 fill-current"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.13-2.115c2.353 1.252 5.02 1.915 7.87 1.915 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.43 0-4.81-0.652-6.892-1.889l-0.494-0.293-5.112 1.33 1.365-4.992-0.321-0.512c-1.341-2.135-2.049-4.622-2.049-7.175 0-7.364 5.992-13.356 13.356-13.356s13.356 5.992 13.356 13.356-5.992 13.356-13.356 13.356z"></path></svg>
 </a>
-​<!-- HERO -->
-<section class="pt-36 pb-20 bg-darkGreen text-white text-center px-6 reveal">
-<h1 class="text-4xl md:text-5xl font-extrabold mb-4">Contact Us</h1>
-<p class="max-w-2xl mx-auto text-gray-200 text-lg">Let's discuss your organic coconut sugar export requirements, bulk volume capacity, and strategic partnerships.</p>
+​<!-- HERO WITH BACKGROUND IMAGE -->
+<section class="relative pt-36 pb-24 bg-darkGreen text-white text-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg');"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-darkGreen via-darkGreen/80 to-darkGreen/40"></div>
+<div class="relative z-10 max-w-4xl mx-auto reveal">
+<span class="text-xs bg-gold/20 text-gold font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Get In Touch</span>
+<h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-4">Contact Our Export Team</h1>
+<p class="max-w-2xl mx-auto text-gray-200 text-base md:text-lg">Let's discuss your organic coconut sugar export requirements, bulk volume capacity, and strategic B2B partnerships.</p>
+</div>
 </section>
-​<!-- FORM SECTION -->
-<section class="py-24 px-6 md:px-16 bg-gray-50">
-<div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 reveal">
+​<section class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center luxury-card reveal-left">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">📧</div>
+<h3 class="font-bold text-lg text-primary mb-2">Official Email</h3>
+<a href="mailto:info@integraniaga.online" class="text-gray-600 text-sm hover:text-gold font-semibold transition">info@integraniaga.online</a>
+</div>
+<div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center luxury-card reveal">
+<div class="w-12 h-12 bg-[#25D366]/10 text-[#25D366] rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">💬</div>
+<h3 class="font-bold text-lg text-primary mb-2">WhatsApp Sales</h3>
+<a href="https://wa.me/628817941803" target="_blank" class="text-gray-600 text-sm hover:text-gold font-semibold transition">+62 881-7941-803</a>
+</div>
+<div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center luxury-card reveal-right">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">📍</div>
+<h3 class="font-bold text-lg text-primary mb-2">Operations Location</h3>
+<p class="text-gray-600 text-sm">Indonesia (Agricultural Sourcing & Export)</p>
+</div>
+</div>
+​<div class="max-w-3xl mx-auto bg-white p-8 md:p-14 rounded-3xl shadow-2xl border border-gray-100 reveal">
 <div class="text-center mb-10">
 <span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1 rounded-full uppercase">Direct Inquiry</span>
 <h2 class="text-3xl font-extrabold text-primary mt-3 mb-2">Send Us a Message</h2>
-<p class="text-gray-600 text-sm">Have questions or need a quotation? Fill out the form below to connect instantly</p>
+<p class="text-gray-600 text-sm">Connect with us via WhatsApp or drop us an email at <span class="font-semibold text-primary">info@integraniaga.online</span></p>
 </div>
 <form action="https://wa.me/628817941803" method="GET" target="_blank" class="space-y-6">
 <div>
-<label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-<input type="text" placeholder="Your Name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
+<label class="block text-sm font-semibold text-gray-700 mb-2">Full Name / Company</label>
+<input type="text" placeholder="Your Name or Company Name" required class="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
 </div>
 <div>
 <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-<input type="email" placeholder="name@company.com" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
+<input type="email" placeholder="name@company.com" required class="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
 </div>
 <div>
 <label class="block text-sm font-semibold text-gray-700 mb-2">Subject / Required Volume</label>
-<input type="text" placeholder="e.g., 20ft FCL Organic Coconut Sugar" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
+<input type="text" placeholder="e.g., 20ft FCL Organic Coconut Sugar" class="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none">
 </div>
 <div>
 <label class="block text-sm font-semibold text-gray-700 mb-2">Your Message</label>
-<textarea rows="4" placeholder="Write your export inquiry or specifications here..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+<textarea rows="4" placeholder="Write your export inquiry or specifications here..." class="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
 </div>
-<button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-lg hover:bg-darkGreen transition">
+<button type="submit" class="w-full bg-primary hover:bg-darkGreen text-white py-4 rounded-xl font-bold shadow-xl transition">
 Send Message via WhatsApp
 </button>
 </form>
 </div>
 </section>
-​<!-- FOOTER -->
-<footer class="bg-darkGreen text-white py-12 px-6 text-center">
-<div class="max-w-7xl mx-auto space-y-3">
-<p class="font-bold text-lg">PT Integra Niaga Komoditas</p>
-<p class="text-gray-300 text-sm">Indonesian Coconut Sugar Sourcing Partner for Global Markets.</p>
-<p class="text-gray-400 text-xs pt-4 border-t border-white/10">© 2026 PT Integra Niaga Komoditas. All Rights Reserved.</p>
+​<footer class="bg-darkGreen text-white py-16 px-6 text-center border-t border-white/10">
+<div class="max-w-7xl mx-auto space-y-6 reveal">
+<p class="font-extrabold text-xl tracking-tight">PT Integra Niaga Komoditas</p>
+<p class="text-gray-300 text-sm max-w-xl mx-auto">Indonesian Organic Coconut Sugar Sourcing Partner for Global Importers & Distributors.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6 text-xs text-gray-300 pt-2">
+<span>📧 Email: <a href="mailto:info@integraniaga.online" class="text-gold hover:underline font-semibold">info@integraniaga.online</a></span>
+<span>•</span>
+<span>💬 WhatsApp: <a href="https://wa.me/628817941803" target="_blank" class="text-gold hover:underline font-semibold">+62 881-7941-803</a></span>
+<span>•</span>
+<span>🔗 LinkedIn: <a href="https://linkedin.com/company/pt-integra-niaga-komoditas" target="_blank" class="text-gold hover:underline font-semibold">Company Profile</a></span>
+</div>
+<p class="text-gray-400 text-xs pt-6 border-t border-white/10">© 2026 PT Integra Niaga Komoditas. All Rights Reserved.</p>
 </div>
 </footer>
-​<script>
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-if(menuBtn && mobileMenu) {
-menuBtn.addEventListener('click', (e) => {
-e.stopPropagation();
-mobileMenu.classList.toggle('hidden');
-});
-window.addEventListener('click', (e) => {
-if(!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-mobileMenu.classList.add('hidden');
-}
-});
-}
-const observer = new IntersectionObserver((entries, observer) => {
-entries.forEach(entry => {
-if(entry.isIntersecting) {
-entry.target.classList.add('active');
-observer.unobserve(entry.target);
-}
-});
-}, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+​<script src="script.js"></script>
 </body>
 </html>
