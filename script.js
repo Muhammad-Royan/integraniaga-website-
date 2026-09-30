@@ -1,10 +1,9 @@
-```javascript
 /* ========================================================
    PT INTEGRA NIAGA KOMODITAS - INTERACTIVE UI & ENGINE
    ======================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Mobile Menu Toggle System
+    // 1. Mobile Menu Toggle System (Fixed & Reliable)
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     
@@ -90,4 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-```
