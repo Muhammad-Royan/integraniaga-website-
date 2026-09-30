@@ -4,136 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | PT Integra Niaga Komoditas</title>
-    <meta name="description" content="Explore export-grade natural coconut sugar with strict technical specifications (moisture max 2.0%, 16-18 mesh) from PT Integra Niaga Komoditas.">
-    <link rel="icon" type="image/png" href="b85d9b2a0_generated_76096bab.png">  
+    <title>Products & Specifications | PT Integra Niaga Komoditas</title>
+    <meta name="description" content="Export-grade organic coconut sugar granules (gula semut) with strict technical specifications from PT Integra Niaga Komoditas.">
+    <!-- INSERT YOUR LOGO IMAGE FILENAME BELOW -->
+    <link rel="icon" type="image/png" href="b85d9b2a0_generated_76096bab.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#174d2b',
-                        darkGreen: '#10361e',
-                        gold: '#c89b3c',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .reveal { opacity: 0; transform: translateY(35px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-left.active { opacity: 1; transform: translateX(0); }
-        .reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-right.active { opacity: 1; transform: translateX(0); }
-        .delay-100 { transition-delay: 150ms; }
-        .delay-200 { transition-delay: 300ms; }
-        .delay-300 { transition-delay: 450ms; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="text-gray-100 font-sans antialiased">
 
-<!-- NAVBAR START -->
-<header class="fixed top-0 left-0 w-full z-50 bg-[#174d2b] shadow-md transition-all duration-300">
-<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-        <img src="b85d9b2a0_generated_76096bab.png" alt="Logo" class="w-12 h-12 object-contain">
-        <div>
-            <h2 class="text-white font-bold text-lg leading-tight">PT Integra Niaga Komoditas</h2>
-            <p class="text-gray-200 text-xs">Indonesian Coconut Sugar Supplier</p>
-        </div>
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full z-50 glass-header shadow-lg transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+            <!-- INSERT YOUR LOGO IMAGE FILENAME BELOW -->
+            <img src="b85d9b2a0_generated_76096bab.png" alt="Logo" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+            <div>
+                <h1 class="text-white font-bold text-base md:text-lg leading-tight">PT Integra Niaga Komoditas</h1>
+                <p class="text-gold text-xs tracking-wider uppercase font-semibold">Indonesian Coconut Sugar Supplier</p>
+            </div>
+        </a>
+        <ul class="hidden md:flex items-center space-x-6 text-white font-medium text-sm">
+            <li><a href="index.html" class="hover:text-gold transition" data-i18n="navHome">HOME</a></li>
+            <li><a href="about.html" class="hover:text-gold transition" data-i18n="navAbout">ABOUT US</a></li>
+            <li><a href="products.html" class="text-gold font-bold transition" data-i18n="navProd">PRODUCT</a></li>
+            <li><a href="packaging.html" class="hover:text-gold transition" data-i18n="navPack">PACKAGING</a></li>
+            <li><a href="quality.html" class="hover:text-gold transition" data-i18n="navQual">QUALITY</a></li>
+            <li><a href="blog.html" class="hover:text-gold transition" data-i18n="navBlog">BLOG</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition" data-i18n="navCont">CONTACT</a></li>
+            <li>
+                <select id="lang-select" class="bg-dark-green text-gold text-xs font-bold px-2 py-1 rounded border border-gold/40 focus:outline-none">
+                    <option value="en">ENG</option>
+                    <option value="id">IDN</option>
+                </select>
+            </li>
+        </ul>
+        <button id="menu-btn" class="md:hidden text-white flex flex-col justify-between w-8 h-6 z-50 focus:outline-none" aria-label="Toggle Menu">
+            <span class="w-full h-1 bg-white rounded"></span>
+            <span class="w-full h-1 bg-white rounded"></span>
+            <span class="w-full h-1 bg-white rounded"></span>
+        </button>
+    </nav>
+    <div id="mobile-menu" class="hidden absolute top-full right-0 w-64 bg-dark-green shadow-2xl rounded-bl-2xl border border-gold/30 flex flex-col py-4 px-6 md:hidden z-40">
+        <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10" data-i18n="navHome">HOME</a>
+        <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10" data-i18n="navAbout">ABOUT US</a>
+        <a href="products.html" class="py-3 text-gold font-bold border-b border-white/10" data-i18n="navProd">PRODUCT</a>
+        <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10" data-i18n="navPack">PACKAGING</a>
+        <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10" data-i18n="navQual">QUALITY</a>
+        <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10" data-i18n="navBlog">BLOG</a>
+        <a href="contact.html" class="py-3 text-white font-semibold mb-3" data-i18n="navCont">CONTACT</a>
+        <select id="mobile-lang-select" class="bg-dark-green text-gold text-xs font-bold p-2 rounded border border-gold/40 focus:outline-none w-full">
+            <option value="en">English (ENG)</option>
+            <option value="id">Bahasa Indonesia (IDN)</option>
+        </select>
     </div>
-    <ul class="hidden md:flex items-center space-x-6 text-white font-medium text-sm">
-        <li><a href="index.html" class="hover:text-gold transition">HOME</a></li>
-        <li><a href="about.html" class="hover:text-gold transition">ABOUT US</a></li>
-        <li><a href="products.html" class="text-gold font-bold transition">PRODUCT</a></li>
-        <li><a href="packaging.html" class="hover:text-gold transition">PACKAGING</a></li>
-        <li><a href="quality.html" class="hover:text-gold transition">QUALITY</a></li>
-        <li><a href="blog.html" class="hover:text-gold transition">BLOG</a></li>
-        <li><a href="contact.html" class="hover:text-gold transition">CONTACT</a></li>
-    </ul>
-    <button id="menu-btn" class="md:hidden text-white flex flex-col justify-between w-8 h-7 z-50 focus:outline-none" aria-label="Toggle Menu">
-        <span class="w-full h-1 bg-white rounded"></span>
-        <span class="w-full h-1 bg-white rounded"></span>
-        <span class="w-full h-1 bg-white rounded"></span>
-    </button>
-</nav>
-<div id="mobile-menu" class="hidden absolute top-full right-0 w-64 bg-white shadow-2xl rounded-bl-2xl border border-gray-100 flex flex-col py-4 px-6 md:hidden z-40">
-    <a href="index.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100">HOME</a>
-    <a href="about.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100">ABOUT US</a>
-    <a href="products.html" class="py-3 text-gold font-bold border-b border-gray-100">PRODUCT</a>
-    <a href="packaging.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100">PACKAGING</a>
-    <a href="quality.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100">QUALITY</a>
-    <a href="blog.html" class="py-3 text-gray-800 font-semibold border-b border-gray-100">BLOG</a>
-    <a href="contact.html" class="py-3 text-gray-800 font-semibold">CONTACT</a>
-</div>
 </header>
-<!-- NAVBAR END -->
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 z-50" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" class="w-7 h-7 fill-current"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.13-2.115c2.353 1.252 5.02 1.915 7.87 1.915 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.43 0-4.81-0.652-6.892-1.889l-0.494-0.293-5.112 1.33 1.365-4.992-0.321-0.512c-1.341-2.135-2.049-4.622-2.049-7.175 0-7.364 5.992-13.356 13.356-13.356s13.356 5.992 13.356 13.356-5.992 13.356-13.356 13.356z"></path></svg>
 </a>
 
-<!-- HERO -->
-<section class="pt-36 pb-20 bg-darkGreen text-white text-center px-6 reveal">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Export-Grade Natural Coconut Sugar</h1>
-    <p class="max-w-2xl mx-auto text-gray-200 text-lg">Curated with strict technical specifications, low moisture max 2.0%, fine mesh 16-18, hygienically processed for international B2B buyers.</p>
+<!-- IMMERSIVE HERO -->
+<!-- INSERT YOUR BACKGROUND PLANTATION IMAGE FILENAME IN style="background-image: url('YOUR_IMAGE.jpg');" -->
+<section class="immersive-hero relative pt-44 pb-32 text-center px-6 text-white overflow-hidden" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg');">
+    <div class="max-w-4xl mx-auto relative z-10 reveal">
+        <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 inline-block border border-gold/40">Product Catalog</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Export-Grade Organic Coconut Sugar</h1>
+        <p class="text-gray-200 text-lg">Curated exclusively with rigorous technical specifications: maximum moisture content 2.0%, mesh size 16-18, hygienically processed for global B2B buyers.</p>
+    </div>
 </section>
 
-<!-- PRODUCT CONTENT -->
+<!-- CONTENT: TWO DEDICATED COCONUT SUGAR GRANULES (GULA SEMUT) PRESENTATION BLOCKS -->
 <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="reveal-left">
-            <img src="hq720.jpg" alt="Coconut Sugar" class="rounded-2xl shadow-2xl w-full object-cover border-4 border-gray-100">
+    
+    <!-- PRODUCT 1: BULK INDUSTRIAL GRANULES -->
+    <div class="luxury-card p-8 md:p-12 rounded-3xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+        <div class="space-y-6">
+            <span class="text-xs bg-gold/20 text-gold font-bold px-3 py-1 rounded-full uppercase border border-gold/30">Primary Export Product</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-gold">Organic Coconut Palm Sugar Granules (Bulk Gula Semut)</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Harvested from selected coconut trees across premier plantations in Indonesia, traditionally evaporated and hygienically processed, sorted to produce uniform granules with a distinctive caramel aroma and low glycemic index.
+            </p>
+            <ul class="space-y-3 text-sm text-gray-200 font-medium">
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Mesh Size:</strong> <span class="text-gray-300">16 - 18 Mesh (Fine & Uniform Granules)</span></li>
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Moisture Content:</strong> <span class="text-gray-300">Maximum 2.0% (Prevents Clumping in Transit)</span></li>
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Purity:</strong> <span class="text-gray-300">100% Natural Organic, Free from Chemical Additives</span></li>
+            </ul>
+            <a href="contact.html" class="inline-block bg-gold text-dark-green font-bold px-8 py-3.5 rounded-xl shadow-lg hover:bg-yellow-500 transition">Request Bulk Quotation & COA</a>
         </div>
-        <div class="reveal-right">
-            <span class="text-xs bg-primary/10 text-primary font-bold px-3 py-1 rounded-full uppercase tracking-wider">Flagship Product</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-6">Organic & Natural Coconut Palm Sugar</h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">Harvested from coconut tree blossoms (Cocos nucifera) in pristine Indonesian plantations, our coconut sugar is unrefined, chemical-free, and possesses a rich caramel aroma with a low glycemic index (~35).</p>
-            
-            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 mb-8 space-y-3">
-                <h3 class="font-bold text-primary text-lg">Technical Specifications:</h3>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex items-center gap-2">✅ <strong>Mesh Size:</strong> 16 - 18 Mesh (Fine & Uniform granulation)</li>
-                    <li class="flex items-center gap-2">✅ <strong>Moisture Content:</strong> Maximum 2.0% (Prevents clumping)</li>
-                    <li class="flex items-center gap-2">✅ <strong>Purity:</strong> 100% Natural, Unadulterated, No Preservatives</li>
-                    <li class="flex items-center gap-2">✅ <strong>Color:</strong> Golden Brown to Rich Brown</li>
-                </ul>
-            </div>
-            
-            <a href="contact.html" class="bg-primary text-white px-8 py-3.5 rounded-xl font-semibold shadow-md hover:bg-darkGreen transition inline-block">Request Sample & Quotation</a>
+        <!-- INSERT YOUR FIRST PRODUCT IMAGE FILENAME IN src="YOUR_PRODUCT_IMAGE_1.jpg" -->
+        <div class="bg-dark-green/80 p-8 rounded-2xl border border-gold/30 text-center shadow-inner overflow-hidden">
+            <img src="jomonkoikkara-coconut-tree-1538034_1920.jpg" alt="Organic Coconut Sugar Granules Bulk" class="w-full h-64 object-cover rounded-xl shadow-md mb-4 border border-gold/20">
+            <p class="text-gold text-xs font-semibold uppercase tracking-wider">[ Bulk Export Granules Preview ]</p>
         </div>
     </div>
+
+    <!-- PRODUCT 2: RETAIL / OEM POUCH GRANULES -->
+    <div class="luxury-card p-8 md:p-12 rounded-3xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+        <!-- INSERT YOUR SECOND PRODUCT IMAGE FILENAME IN src="YOUR_PRODUCT_IMAGE_2.jpg" -->
+        <div class="bg-dark-green/80 p-8 rounded-2xl border border-gold/30 text-center shadow-inner overflow-hidden order-2 md:order-1">
+            <img src="jomonkoikkara-coconut-tree-1538034_1920.jpg" alt="Organic Coconut Sugar Retail Pouch" class="w-full h-64 object-cover rounded-xl shadow-md mb-4 border border-gold/20">
+            <p class="text-gold text-xs font-semibold uppercase tracking-wider">[ Retail Stand-up Pouch Preview ]</p>
+        </div>
+        <div class="space-y-6 order-1 md:order-2">
+            <span class="text-xs bg-gold/20 text-gold font-bold px-3 py-1 rounded-full uppercase border border-gold/30">Retail & Private Label</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-gold">Organic Coconut Sugar Stand-Up Pouch (OEM)</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Designed for supermarket shelves, organic distributors, and brand owners seeking ready-to-market packaging filled with premium Indonesian coconut sugar granules.
+            </p>
+            <ul class="space-y-3 text-sm text-gray-200 font-medium">
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Available Sizes:</strong> <span class="text-gray-300">250g, 500g, 1kg Resealable Ziplock</span></li>
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Custom Branding:</strong> <span class="text-gray-300">Full OEM / Private Label Support</span></li>
+                <li class="flex items-center gap-3 text-gold">✓ <strong>Compliance:</strong> <span class="text-gray-300">Multi-Language Regulatory Labeling</span></li>
+            </ul>
+            <a href="contact.html" class="inline-block bg-gold text-dark-green font-bold px-8 py-3.5 rounded-xl shadow-lg hover:bg-yellow-500 transition">Request OEM Samples</a>
+        </div>
+    </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-darkGreen text-white py-12 px-6 text-center reveal">
-    <div class="max-w-7xl mx-auto">
-        <p class="font-bold text-lg mb-1">PT Integra Niaga Komoditas</p>
-        <p class="text-gray-300 text-sm mb-4">Indonesian Coconut Sugar Sourcing Partner for Global Markets.</p>
-        <p class="text-gray-400 text-xs">© 2026 PT Integra Niaga Komoditas. All Rights Reserved.</p>
+<footer class="bg-dark-green text-white py-12 px-6 border-t border-gold/30">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+            <h3 class="font-bold text-lg mb-3 text-gold">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">Professional export trading enterprise connecting verified Indonesian local farmer cooperatives with global B2B markets.</p>
+        </div>
+        <div>
+            <h3 class="font-bold text-lg mb-3 text-gold">Contact Information</h3>
+            <p class="text-gray-300 text-sm mb-2">Email: info@integraniaga.online</p>
+            <p class="text-gray-300 text-sm mb-2">WhatsApp: +62 881-7941-803</p>
+            <p class="text-gray-300 text-sm">Location: Pemalang, Central Java, Indonesia</p>
+        </div>
+        <div>
+            <h3 class="font-bold text-lg mb-3 text-gold">Professional Network</h3>
+            <p class="text-gray-300 text-sm mb-3">Connect with our enterprise profile on professional networks.</p>
+            <a href="https://linkedin.com/company/pt-integra-niaga-komoditas" target="_blank" class="text-gold font-semibold text-sm hover:underline">LinkedIn Company Page &rarr;</a>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+        © 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if(menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-    }
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
-</script>
+<script src="script.js"></script>
 </body>
 </html>
 ```
