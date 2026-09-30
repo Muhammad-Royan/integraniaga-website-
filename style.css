@@ -1,85 +1,94 @@
 /* ========================================================
-PT INTEGRA NIAGA KOMODITAS - ULTRA-PREMIUM B2B EXPORT CSS
-======================================================== */
-​@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-​:root {
---primary: #174d2b;
---dark-green: #0b2414;
---emerald-mid: #10361e;
---gold: #c89b3c;
---gold-hover: #b58932;
---light-bg: #f5f8f6;
---card-bg: #0f2e1a;
---charcoal: #0f172a;
+   PT INTEGRA NIAGA KOMODITAS - ULTRA-PREMIUM B2B EXPORT CSS
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #174d2b;
+    --dark-green: #0b2414;
+    --emerald-mid: #10361e;
+    --gold: #c89b3c;
+    --gold-hover: #b58932;
+    --light-bg: #f5f8f6;
+    --card-bg: #0f2e1a;
+    --charcoal: #0f172a;
 }
-​body {
-font-family: 'Plus Jakarta Sans', sans-serif;
-background: linear-gradient(135deg, #0b2414 0%, #174d2b 50%, #0f2e1a 100%);
-color: #f8fafc;
-overflow-x: hidden;
-margin: 0;
-padding: 0;
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #0b2414 0%, #174d2b 50%, #0f2e1a 100%);
+    color: #f8fafc;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
-​/* Luxury Glassmorphic Header */
-.glass-header {
-background: rgba(11, 36, 20, 0.92);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-border-bottom: 1px solid rgba(200, 155, 60, 0.25);
+
+/* Solid Luxury Header */
+.solid-header {
+    background-color: #0b2414 !important;
+    border-bottom: 2px solid #c89b3c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
-​/* Smooth Fade & Slide Animations */
+
+/* Smooth Fade & Slide Animations */
 .reveal {
-opacity: 0;
-transform: translateY(35px);
-transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-will-change: opacity, transform;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
-​.reveal.active {
-opacity: 1;
-transform: translateY(0);
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
-​/* Luxury Card Hover Effects */
+
+/* Luxury Card Hover Effects */
 .luxury-card {
-background: rgba(16, 54, 30, 0.7);
-backdrop-filter: blur(8px);
-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-border: 1px solid rgba(200, 155, 60, 0.3);
+    background: rgba(16, 54, 30, 0.85);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(200, 155, 60, 0.4);
 }
 .luxury-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 25px 50px -12px rgba(200, 155, 60, 0.2);
-border-color: rgba(200, 155, 60, 0.8);
-background: rgba(16, 54, 30, 0.9);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(200, 155, 60, 0.3);
+    border-color: rgba(200, 155, 60, 0.9);
+    background: rgba(16, 54, 30, 0.95);
 }
-​/* Immersive Hero with subtle blur reference */
+
+/* Immersive Hero with subtle blur reference */
 .immersive-hero {
-position: relative;
-background-size: cover;
-background-position: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 .immersive-hero::before {
-content: '';
-position: absolute;
-inset: 0;
-background: linear-gradient(180deg, rgba(11,36,20,0.85) 0%, rgba(11,36,20,0.75) 50%, rgba(11,36,20,0.95) 100%);
-backdrop-filter: blur(3px);
--webkit-backdrop-filter: blur(3px);
-z-index: 1;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,36,20,0.85) 0%, rgba(11,36,20,0.80) 50%, rgba(11,36,20,0.95) 100%);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 }
-​/* Responsive Image Guard */
+
+/* Responsive Image Guard */
 img {
-max-width: 100%;
-height: auto;
-object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-​/* Custom Scrollbar */
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-width: 8px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
-background: #0b2414;
+    background: #0b2414;
 }
 ::-webkit-scrollbar-thumb {
-background: #c89b3c;
-border-radius: 4px;
+    background: #c89b3c;
+    border-radius: 4px;
 }
