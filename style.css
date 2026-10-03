@@ -10,9 +10,10 @@
     --dark-green: #082819;
     --gold: #c89b3c;
     --gold-hover: #b58932;
-    --light-bg: #f3f7f4;
-    --card-bg: rgba(17, 88, 54, 0.85);
-    --charcoal: #0f172a;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #475569;
 }
 
 * {
@@ -25,18 +26,18 @@ html, body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--dark-green);
-    color: #f8fafc;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
-/* Solid Luxury Header - Fixed & Responsive */
+/* Solid Luxury Header */
 .solid-header {
     background-color: var(--dark-green) !important;
     border-bottom: 2px solid var(--gold);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     width: 100%;
     position: fixed;
     top: 0;
@@ -44,7 +45,7 @@ html, body {
     z-index: 1000;
 }
 
-/* Smooth Fade & Slide Animations */
+/* Smooth Scroll Animations (Fade-in / Slide-up) */
 .reveal {
     opacity: 0;
     transform: translateY(35px);
@@ -57,23 +58,24 @@ html, body {
     transform: translateY(0);
 }
 
-/* Luxury Card with Smooth Transition */
+/* Luxury Card */
 .luxury-card {
-    background: var(--card-bg);
+    background: #ffffff;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    border: 1px solid rgba(200, 155, 60, 0.4);
+    border: 1px solid rgba(200, 155, 60, 0.3);
     border-radius: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
 }
 .luxury-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px -10px rgba(200, 155, 60, 0.25);
-    border-color: rgba(200, 155, 60, 0.9);
-    background: rgba(13, 68, 42, 0.95);
+    box-shadow: 0 20px 40px -10px rgba(17, 88, 54, 0.15);
+    border-color: var(--primary-emerald);
 }
 
-/* Premium Buttons with Smooth Rounded & Hover */
+/* Buttons */
 .btn-primary-gold {
     background-color: var(--gold);
     color: var(--dark-green);
@@ -88,12 +90,11 @@ html, body {
 .btn-primary-gold:hover {
     background-color: var(--gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(200, 155, 60, 0.4);
 }
 
 .btn-outline-gold {
     border: 2px solid var(--gold);
-    color: var(--gold);
+    color: var(--primary-emerald);
     font-weight: 700;
     padding: 0.875rem 1.75rem;
     border-radius: 0.75rem;
@@ -102,12 +103,13 @@ html, body {
     text-align: center;
 }
 .btn-outline-gold:hover {
-    background-color: var(--gold);
-    color: var(--dark-green);
+    background-color: var(--primary-emerald);
+    color: #ffffff;
+    border-color: var(--primary-emerald);
     transform: translateY(-2px);
 }
 
-/* Hero Banner with Emerald / Forest Green Modern Gradient */
+/* Hero Banner */
 .immersive-hero {
     position: relative;
     background-size: cover;
@@ -116,6 +118,7 @@ html, body {
     min-height: 75vh;
     display: flex;
     align-items: center;
+    color: #ffffff !important;
 }
 .immersive-hero::before {
     content: '';
@@ -126,22 +129,23 @@ html, body {
     -webkit-backdrop-filter: blur(3px);
     z-index: 1;
 }
+.immersive-hero * {
+    color: #ffffff;
+}
 
-/* Responsive Image Guard */
 img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--dark-green);
+    background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--gold);
+    background: var(--primary-emerald);
     border-radius: 4px;
 }
