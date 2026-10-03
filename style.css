@@ -5,13 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary: #174d2b;
-    --dark-green: #0b2414;
-    --emerald-mid: #10361e;
+    --primary-emerald: #115836;
+    --emerald-hover: #0d442a;
+    --dark-green: #082819;
     --gold: #c89b3c;
     --gold-hover: #b58932;
-    --light-bg: #f5f8f6;
-    --card-bg: #0f2e1a;
+    --light-bg: #f3f7f4;
+    --card-bg: rgba(17, 88, 54, 0.85);
     --charcoal: #0f172a;
 }
 
@@ -25,15 +25,17 @@ html, body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #0b2414;
+    background-color: var(--dark-green);
     color: #f8fafc;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Solid Luxury Header - Fixed & Responsive */
 .solid-header {
-    background-color: #0b2414 !important;
-    border-bottom: 2px solid #c89b3c;
+    background-color: var(--dark-green) !important;
+    border-bottom: 2px solid var(--gold);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
     position: fixed;
@@ -55,41 +57,71 @@ html, body {
     transform: translateY(0);
 }
 
-/* Luxury Card Hover Effects */
+/* Luxury Card with Smooth Transition */
 .luxury-card {
-    background: rgba(16, 54, 30, 0.85);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s ease;
     border: 1px solid rgba(200, 155, 60, 0.4);
+    border-radius: 1.25rem;
 }
 .luxury-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(200, 155, 60, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(200, 155, 60, 0.25);
     border-color: rgba(200, 155, 60, 0.9);
-    background: rgba(16, 54, 30, 0.95);
+    background: rgba(13, 68, 42, 0.95);
 }
 
-/* ========================================================
-   HERO BANNER DENGAN FOTO POHON KELAPA & OVERLAY SAMAR
-   ======================================================== */
+/* Premium Buttons with Smooth Rounded & Hover */
+.btn-primary-gold {
+    background-color: var(--gold);
+    color: var(--dark-green);
+    font-weight: 700;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(200, 155, 60, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+.btn-primary-gold:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(200, 155, 60, 0.4);
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-weight: 700;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+/* Hero Banner with Emerald / Forest Green Modern Gradient */
 .immersive-hero {
     position: relative;
     background-size: cover;
     background-position: center;
     width: 100%;
-    /* Mengatur tinggi minimum agar pas di HP maupun Desktop */
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
 }
-
-/* Overlay gelap & blur samar di atas foto pohon kelapa agar teks kontras dan mewah */
 .immersive-hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(11,36,20,0.85) 0%, rgba(11,36,20,0.75) 50%, rgba(11,36,20,0.95) 100%);
+    background: linear-gradient(180deg, rgba(8, 40, 25, 0.88) 0%, rgba(17, 88, 54, 0.78) 50%, rgba(8, 40, 25, 0.94) 100%);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     z-index: 1;
@@ -107,9 +139,9 @@ img {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #0b2414;
+    background: var(--dark-green);
 }
 ::-webkit-scrollbar-thumb {
-    background: #c89b3c;
+    background: var(--gold);
     border-radius: 4px;
 }
