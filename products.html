@@ -15,21 +15,19 @@
 <header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
         <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-            <img src="logo-perusahaan.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+            <img src="logo-perusahaan.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
             <div>
                 <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
                 <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
             </div>
         </a>
         <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer">
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
+            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
         </button>
         <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
             <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
             <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="product.html" class="py-3 text-gold font-bold border-b border-white/10">PRODUCT</a>
+            <a href="products.html" class="py-3 text-gold font-bold border-b border-white/10">PRODUCT</a>
             <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
             <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
             <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10">BLOG</a>
@@ -53,20 +51,38 @@
 </section>
 
 <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-    <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-300 reveal">
-        <table class="min-w-full border-collapse bg-white text-left text-sm sm:text-base">
-            <thead>
-                <tr class="bg-[#115836] text-white">
-                    <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Parameter</th>
-                    <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Export Standard Specification</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-white"><td class="border border-slate-300 p-3">Moisture Content</td><td class="border border-slate-300 p-3 font-bold text-[#115836]">Maximum 2.0%</td></tr>
-                <tr class="bg-slate-50"><td class="border border-slate-300 p-3">Mesh Size</td><td class="border border-slate-300 p-3">16 - 18 Mesh (Fine Granules)</td></tr>
-                <tr class="bg-white"><td class="border border-slate-300 p-3">Glycemic Index</td><td class="border border-slate-300 p-3">Low GI (~35)</td></tr>
-            </tbody>
-        </table>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 reveal">
+            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Product Specification</span>
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836]">Premium Indonesian Coconut Nectar Derivative</h3>
+            <p class="text-slate-700 leading-relaxed">Our organic coconut sugar is meticulously crafted from fresh, pristine nectar tapped from coconut palms across Central Java. Processed through traditional boiling and modern mechanical sifting, it provides a rich caramel flavor profile and uniform granulation.</p>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl reveal border border-slate-200">
+            <img src="foto-produk-utama.jpg" alt="Product" class="w-full h-80 object-cover">
+        </div>
+    </div>
+
+    <div class="space-y-6 reveal">
+        <div class="text-center space-y-2">
+            <h3 class="text-2xl sm:text-3xl font-bold text-[#115836]">Technical Specification Sheet (CoA Parameter)</h3>
+            <p class="text-slate-600 text-sm sm:text-base">Standard export parameters guaranteed for every wholesale shipment.</p>
+        </div>
+        <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-300">
+            <table class="min-w-full border-collapse bg-white text-left text-sm sm:text-base">
+                <thead>
+                    <tr class="bg-[#115836] text-white">
+                        <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Parameter</th>
+                        <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Export Standard Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white"><td class="border border-slate-300 p-3 font-medium">Product Name</td><td class="border border-slate-300 p-3">Organic Granulated Coconut Sugar (Gula Semut Organik)</td></tr>
+                    <tr class="bg-slate-50"><td class="border border-slate-300 p-3 font-medium">Moisture Content</td><td class="border border-slate-300 p-3 font-bold text-[#115836]">Maximum 2.0% (Optimized for maritime transport)</td></tr>
+                    <tr class="bg-white"><td class="border border-slate-300 p-3 font-medium">Granulation / Mesh Size</td><td class="border border-slate-300 p-3">16 - 18 Mesh (Uniform fine free-flowing granules)</td></tr>
+                    <tr class="bg-slate-50"><td class="border border-slate-300 p-3 font-medium">Glycemic Index (GI)</td><td class="border border-slate-300 p-3">Low GI (Approx. 35)</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 
