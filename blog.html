@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Export Insights & Blog | PT Integra Niaga Komoditas</title>
-    <meta name="description" content="Professional guides, market intelligence, and expert analysis on sourcing organic coconut sugar from Indonesia.">
+    <title>Export Insights & Technical Articles | PT Integra Niaga Komoditas</title>
+    <meta name="description" content="Explore professional articles, global market intelligence, moisture control guides, and supply chain insights by PT Integra Niaga Komoditas.">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
     <script type="application/ld+json">
     {
@@ -17,24 +17,29 @@
     <link rel="icon" type="image/png" href="logo-perusahaan.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { overflow-x: hidden; }
+        h1, h2, h3, h4, p { word-wrap: break-word; overflow-wrap: break-word; }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased overflow-x-hidden bg-slate-50">
 
+<!-- HEADER / NAVBAR -->
 <header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-        <a href="/" class="flex items-center gap-3">
-            <img src="logo-perusahaan.png" alt="Logo PT Integra Niaga Komoditas" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
+        <a href="/" class="flex items-center gap-2 sm:gap-3">
+            <img src="logo-perusahaan.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
             <div>
-                <h1 class="text-white font-bold text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
+                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-8 h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
+        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
             <span class="w-full h-1 bg-white rounded"></span>
             <span class="w-full h-1 bg-white rounded"></span>
             <span class="w-full h-1 bg-white rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-6 w-64 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
+        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
             <a href="/" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
             <a href="about" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
             <a href="product" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
@@ -46,89 +51,113 @@
     </nav>
 </header>
 
-<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition duration-300 z-50" aria-label="WhatsApp">
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl flex items-center justify-center text-xl sm:text-2xl hover:scale-110 transition duration-300 z-50" aria-label="WhatsApp">
     💬
 </a>
 
-<section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-6 text-white overflow-hidden" style="background-image: url('background-pohon-kelapa.jpg');">
-    <div class="max-w-4xl mx-auto relative z-10 reveal w-full">
-        <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 inline-block border border-gold/40">Industry Insights</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">Export Insights & Articles</h1>
-        <p class="text-gray-200 text-lg">Professional guides, market intelligence, and expert analysis on sourcing organic coconut sugar from Indonesia.</p>
+<!-- HERO BLOG -->
+<section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden" style="background-image: url('background-pohon-kelapa.jpg');">
+    <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
+        <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Knowledge Hub</span>
+        <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Export Insights & Technical Articles</h2>
+        <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Explore professional insights regarding organic commodity trade, quality compliance, and global sweetener trends.</p>
     </div>
 </section>
 
-<!-- DAFTAR 5 KOTAK ARTIKEL DENGAN LINK YANG PRESISI -->
-<section class="py-20 px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Artikel 1 -->
-    <div class="luxury-card rounded-3xl p-8 shadow-lg flex flex-col justify-between reveal">
-        <div>
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20">Quality Control</span>
-            <h2 class="text-xl font-bold text-[#115836] mt-4 mb-3">Why Moisture Max 2.0% is Crucial for Coconut Sugar Export</h2>
-            <p class="text-slate-700 text-sm mb-6 leading-relaxed">Discover how strict moisture regulation prevents caking, microbial growth, and degradation during long-distance maritime shipping.</p>
-        </div>
-        <a href="artikel-moisture.html" class="text-[#115836] font-bold text-sm hover:underline flex items-center gap-1">Read Full Article &rarr;</a>
+<!-- MAIN BLOG GRID -->
+<section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-12">
+    <div class="text-center space-y-3 reveal">
+        <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Latest Publications</span>
+        <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836]">Articles & Market Intelligence</h3>
+        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">Read our in-depth guides designed for international B2B buyers and industry partners.</p>
     </div>
 
-    <!-- Artikel 2 -->
-    <div class="luxury-card rounded-3xl p-8 shadow-lg flex flex-col justify-between reveal">
-        <div>
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20">Supply Chain</span>
-            <h2 class="text-xl font-bold text-[#115836] mt-4 mb-3">Bridging Indonesian Farmers to Global B2B Markets</h2>
-            <p class="text-slate-700 text-sm mb-6 leading-relaxed">An inside look at how PT Integra Niaga Komoditas builds robust, transparent partnerships with local farmer cooperatives.</p>
+    <!-- GRID ARTIKEL -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Artikel 1 -->
+        <div class="luxury-card rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal flex flex-col justify-between">
+            <div class="p-6 space-y-4">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Quality Control</span>
+                <h4 class="text-xl font-bold text-[#115836] leading-snug">Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Discover how strict moisture regulation prevents caking, microbial growth, and cargo rejection during international maritime shipping.</p>
+            </div>
+            <div class="p-6 pt-0">
+                <a href="artikel-moisture" class="text-[#115836] font-bold text-sm hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+            </div>
         </div>
-        <a href="artikel-supply.html" class="text-[#115836] font-bold text-sm hover:underline flex items-center gap-1">Read Full Article &rarr;</a>
-    </div>
 
-    <!-- Artikel 3 -->
-    <div class="luxury-card rounded-3xl p-8 shadow-lg flex flex-col justify-between reveal">
-        <div>
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20">Global Trends</span>
-            <h2 class="text-xl font-bold text-[#115836] mt-4 mb-3">Clean-Label Sweeteners: The Rise of Organic Coconut Sugar</h2>
-            <p class="text-slate-700 text-sm mb-6 leading-relaxed">Analyzing why international food manufacturers and artisanal bakeries are shifting toward low-glycemic natural sweeteners.</p>
+        <!-- Artikel 2 -->
+        <div class="luxury-card rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal flex flex-col justify-between">
+            <div class="p-6 space-y-4">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Supply Chain</span>
+                <h4 class="text-xl font-bold text-[#115836] leading-snug">Bridging Indonesian Local Farmers to Global B2B Export Markets</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">An inside look at how PT Integra Niaga Komoditas builds robust, transparent partnerships with local farmer cooperatives.</p>
+            </div>
+            <div class="p-6 pt-0">
+                <a href="artikel-supply" class="text-[#115836] font-bold text-sm hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+            </div>
         </div>
-        <a href="artikel-clean-label.html" class="text-[#115836] font-bold text-sm hover:underline flex items-center gap-1">Read Full Article &rarr;</a>
-    </div>
 
-    <!-- Artikel 4 -->
-    <div class="luxury-card rounded-3xl p-8 shadow-lg flex flex-col justify-between reveal">
-        <div>
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20">Market Intelligence</span>
-            <h2 class="text-xl font-bold text-[#115836] mt-4 mb-3">Global Export Market Trends for Organic Coconut Sugar</h2>
-            <p class="text-slate-700 text-sm mb-6 leading-relaxed">A comprehensive overview of growing demands across North America, Europe, and Asia Pacific for organic sweeteners.</p>
+        <!-- Artikel 3 -->
+        <div class="luxury-card rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal flex flex-col justify-between">
+            <div class="p-6 space-y-4">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Clean-Label</span>
+                <h4 class="text-xl font-bold text-[#115836] leading-snug">Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Analyzing why international food manufacturers are aggressively shifting toward low-glycemic natural clean-label sweeteners.</p>
+            </div>
+            <div class="p-6 pt-0">
+                <a href="artikel-clean-label" class="text-[#115836] font-bold text-sm hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+            </div>
         </div>
-        <a href="artikel-global-market.html" class="text-[#115836] font-bold text-sm hover:underline flex items-center gap-1">Read Full Article &rarr;</a>
-    </div>
 
-    <!-- Artikel 5 -->
-    <div class="luxury-card rounded-3xl p-8 shadow-lg flex flex-col justify-between reveal">
-        <div>
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20">Health & Nutrition</span>
-            <h2 class="text-xl font-bold text-[#115836] mt-4 mb-3">Nutritional Superiority and Low Glycemic Index (GI 35)</h2>
-            <p class="text-slate-700 text-sm mb-6 leading-relaxed">Understanding why low glycemic index and natural mineral retention make coconut sugar superior to refined cane sugar.</p>
+        <!-- Artikel 4 -->
+        <div class="luxury-card rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal flex flex-col justify-between">
+            <div class="p-6 space-y-4">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Market Trends</span>
+                <h4 class="text-xl font-bold text-[#115836] leading-snug">Global Export Market Trends and Major Import Demands</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Comprehensive analysis of global organic coconut sugar export trends and major import volumes across North America and Europe.</p>
+            </div>
+            <div class="p-6 pt-0">
+                <a href="artikel-global-market" class="text-[#115836] font-bold text-sm hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+            </div>
         </div>
-        <a href="artikel-health-benefits.html" class="text-[#115836] font-bold text-sm hover:underline flex items-center gap-1">Read Full Article &rarr;</a>
+
+        <!-- Artikel 5 -->
+        <div class="luxury-card rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal flex flex-col justify-between">
+            <div class="p-6 space-y-4">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Health Science</span>
+                <h4 class="text-xl font-bold text-[#115836] leading-snug">Nutritional Superiority and Low Glycemic Index (GI 35)</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Understanding why low glycemic index and natural mineral retention make coconut sugar superior to refined cane sugar.</p>
+            </div>
+            <div class="p-6 pt-0">
+                <a href="artikel-health-benefits" class="text-[#115836] font-bold text-sm hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<footer class="bg-[#0d3c24] text-white py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+<!-- FOOTER -->
+<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
         <div class="space-y-4">
-            <h3 class="font-bold text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-sm md:text-base leading-relaxed">Professional export trading enterprise connecting verified Indonesian local farmer cooperatives with global B2B markets for pure organic coconut sugar.</p>
+            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">Professional export trading enterprise connecting verified Indonesian local farmer cooperatives with global B2B markets for pure organic coconut sugar.</p>
             <div class="flex gap-4 pt-2">
-                <a href="/" class="text-gold hover:underline text-sm font-semibold">Website</a>
+                <a href="/" class="text-gold hover:underline text-xs sm:text-sm font-semibold">Website</a>
                 <span class="text-gold/40">|</span>
-                <a href="https://instagram.com" target="_blank" class="text-gold hover:underline text-sm font-semibold">Instagram</a>
+                <a href="https://instagram.com" target="_blank" class="text-gold hover:underline text-xs sm:text-sm font-semibold">Instagram</a>
                 <span class="text-gold/40">|</span>
-                <a href="https://wa.me/628817941803" target="_blank" class="text-gold hover:underline text-sm font-semibold">WhatsApp</a>
+                <a href="https://wa.me/628817941803" target="_blank" class="text-gold hover:underline text-xs sm:text-sm font-semibold">WhatsApp</a>
             </div>
         </div>
         <div class="space-y-3">
-            <h3 class="font-bold text-xl text-gold">Address & Contact</h3>
-            <p class="text-gray-300 text-sm md:text-base">Office Location: Pemalang, Central Java, Indonesia</p>
-            <p class="text-gray-300 text-sm md:text-base">Email: info@integraniaga.online</p>
-            <p class="text-gray-300 text-sm md:text-base">WhatsApp: +62 881-7941-803</p>
+            <h3 class="font-bold text-lg sm:text-xl text-gold">Address & Contact</h3>
+            <p class="text-gray-300 text-xs sm:text-sm md:text-base">Office Location: Pemalang, Central Java, Indonesia</p>
+            <p class="text-gray-300 text-xs sm:text-sm md:text-base">Email: info@integraniaga.online</p>
+            <p class="text-gray-300 text-xs sm:text-sm md:text-base">WhatsApp: +62 881-7941-803</p>
         </div>
     </div>
     <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
