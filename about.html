@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | PT Integra Niaga Komoditas</title>
     <meta name="description" content="Learn about PT Integra Niaga Komoditas, a premier organic coconut sugar export trading enterprise based in Pemalang, Central Java, Indonesia.">
+    
+    <!-- PR 1: KODE SEO AGAR NAMA SITUS MUNCUL SEBAGAI "PT Integra Niaga Komoditas" -->
+    <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="About Us | PT Integra Niaga Komoditas">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PT Integra Niaga Komoditas",
+      "url": "https://integraniaga.online/"
+    }
+    </script>
+    
     <link rel="icon" type="image/png" href="upscalemedia-transformed (1).jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <style>body { overflow-x: hidden; }</style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50">
+<!-- PR 3: MENAMBAHKAN FLEX COL & MIN-H-SCREEN AGAR FOOTER MENEMPEL KE BAWAH -->
+<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
 
 <header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-            <img src="upscalemedia-transformed (1).jpeg" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 lg:gap-4">
+            <!-- PR 2: LOGO DIPERBESAR KHUSUS DESKTOP (lg:w-20 lg:h-20) -->
+            <img src="upscalemedia-transformed (1).jpeg" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 lg:w-20 lg:h-20 object-contain bg-white rounded-xl p-1 shadow-md">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <!-- PR 2: TEKS DIPERBESAR KHUSUS DESKTOP (lg:text-2xl) -->
+                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg lg:text-2xl leading-tight m-0">PT Integra Niaga Komoditas</h1>
+                <p class="text-[#c89b3c] text-[10px] sm:text-xs lg:text-sm tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
             </div>
         </a>
         <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer">
@@ -36,34 +53,85 @@
     </nav>
 </header>
 
-<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl z-50">💬</a>
+<!-- TOMBOL WHATSAPP B2B PROFESIONAL -->
+<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#128C7E] hover:bg-[#075E54] text-white w-14 h-14 rounded-full shadow-2xl border-2 border-white flex items-center justify-center z-50 transition-all hover:scale-110">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.125.553 4.183 1.604 6.015L.145 24l6.147-1.613c1.764.957 3.746 1.464 5.739 1.464 6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.84c-1.782 0-3.528-.478-5.056-1.385l-.362-.214-3.754.984.998-3.662-.235-.373C2.585 15.617 2.012 13.856 2.012 12.031c0-5.534 4.504-10.038 10.019-10.038 5.514 0 10.018 4.504 10.018 10.038 0 5.533-4.504 10.019-10.019 10.019zm5.503-7.534c-.302-.151-1.785-.882-2.062-.983-.277-.101-.478-.151-.68.151s-.781.983-.958 1.185c-.176.202-.353.227-.655.076-1.503-.755-2.607-1.378-3.626-2.923-.263-.398.026-.39.317-.676.13-.128.302-.353.453-.529.151-.176.202-.302.302-.504.101-.202.05-.378-.025-.529-.076-.151-.68-1.638-.932-2.243-.245-.589-.494-.509-.68-.518-.176-.009-.378-.009-.579-.009s-.529.076-.806.378c-.277.302-1.058 1.033-1.058 2.519s1.083 2.923 1.234 3.125c.151.202 2.128 3.249 5.156 4.555 1.834.789 2.474.882 3.38.731.782-.129 2.062-.844 2.353-1.663.29-.819.29-1.52.202-1.663-.089-.142-.315-.218-.617-.369z"/>
+    </svg>
+</a>
 
-<section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg');">
-    <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-        <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Corporate Profile</span>
-        <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">About PT Integra Niaga Komoditas</h2>
-        <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Bridging Indonesian agricultural excellence with global B2B organic commodity markets.</p>
-        <div class="pt-4 flex flex-wrap justify-center gap-4">
-            <a href="contact.html" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Inquire Now</a>
-            <a href="https://wa.me/628817941803" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/35 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition duration-300">Direct WhatsApp Inquiry</a>
-        </div>
-    </div>
-</section>
+<!-- PR 3: BUNGKUSAN MAIN CONTENT AGAR FOOTER TERDORONG KE BAWAH -->
+<main class="flex-grow w-full">
 
-<section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 reveal">
-            <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Our Enterprise Identity</span>
-            <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836] leading-snug">Established Exporter of Organic Coconut Sugar from Pemalang</h3>
-            <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
-                Based in <strong>Pemalang, Central Java, Indonesia</strong>, PT Integra Niaga Komoditas was established as a dedicated export trading enterprise focusing on high-grade organic granulated coconut sugar. We serve international buyers, food manufacturers, wholesale distributors, and retail brands seeking authentic, sustainable, and laboratory-tested organic sweeteners.
-            </p>
+    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg');">
+        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
+            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Corporate Profile</span>
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">About PT Integra Niaga Komoditas</h2>
+            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Bridging Indonesian agricultural excellence with global B2B organic commodity markets.</p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Inquire Now</a>
+                <a href="https://wa.me/628817941803" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/35 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition duration-300">Direct WhatsApp Inquiry</a>
+            </div>
         </div>
-        <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 reveal">
-            <img src="FB_IMG_1784100143834.jpg" alt="Operations" class="w-full h-72 sm:h-96 object-cover">
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 reveal">
+                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Our Enterprise Identity</span>
+                <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836] leading-snug">Established Exporter of Organic Coconut Sugar from Pemalang</h3>
+                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                    Based in <strong>Pemalang, Central Java, Indonesia</strong>, PT Integra Niaga Komoditas was established as a dedicated export trading enterprise focusing on high-grade organic granulated coconut sugar. We serve international buyers, food manufacturers, wholesale distributors, and retail brands seeking authentic, sustainable, and laboratory-tested organic sweeteners.
+                </p>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 reveal">
+                <img src="FB_IMG_1784100143834.jpg" alt="Operations" class="w-full h-72 sm:h-96 object-cover">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- PR 4: TAMBAHAN KONTEN VISI & MISI AGAR HALAMAN PANJANG DAN PROFESIONAL -->
+    <section class="py-16 bg-white border-t border-slate-100 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Vision -->
+                <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition reveal">
+                    <div class="w-14 h-14 bg-[#115836]/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-[#115836]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#115836] mb-4">Our Vision</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        To be the leading and most trusted global supplier of premium organic coconut sugar from Indonesia. We envision a sustainable future where our high-quality natural sweeteners empower global food industries while elevating the livelihood of traditional farmers in Central Java.
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition reveal">
+                    <div class="w-14 h-14 bg-[#115836]/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-[#115836]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#115836] mb-4">Our Mission</h3>
+                    <ul class="space-y-4 text-slate-600 text-sm sm:text-base">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Quality Assurance:</strong> Delivering 100% pure organic coconut sugar that meets strict international standards (HACCP, GMP, FDA).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Direct Partnership:</strong> Working directly with verified local farmer cooperatives in Pemalang to ensure fair trade and ethical sourcing.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Global Reliability:</strong> Providing seamless B2B export experiences, transparent tracking, and reliable logistics for wholesale buyers worldwide.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- AKHIR DARI BUNGKUSAN MAIN CONTENT -->
 
 <footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
