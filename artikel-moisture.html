@@ -18,13 +18,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            overflow-x: hidden;
-        }
-        .prose p, .prose h3, .prose h4, h1 {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
+        body { overflow-x: hidden; }
+        .prose p, .prose h3, .prose h4, h1 { word-wrap: break-word; overflow-wrap: break-word; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
@@ -61,7 +56,6 @@
     </svg>
 </a>
 
-<!-- KONTEN UTAMA DENGAN EFEK ANIMASI REVEAL -->
 <main class="flex-grow py-28 sm:py-32 px-4 sm:px-6 md:px-16 max-w-4xl mx-auto space-y-8 sm:space-y-10">
     <div class="space-y-3 sm:space-y-4 reveal">
         <a href="blog" class="text-[#115836] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1">&larr; Back to All Articles</a>
@@ -70,33 +64,31 @@
         <p class="text-slate-500 text-xs sm:text-sm">Published by PT Integra Niaga Komoditas &bull; Quality Assurance & Curation Division</p>
     </div>
 
-    <!-- Foto Utama dengan Animasi -->
     <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal">
-        <!-- FOTO UTAMA DARI INTERNET -->
+        <!-- GANTI DENGAN FOTO DARI INTERNET (Gambar tes lab / kontainer) -->
         <img src="foto-moisture-laboratorium.jpg" alt="Moisture Control and Laboratory Testing of Organic Coconut Sugar" class="w-full h-60 sm:h-80 md:h-[400px] object-cover">
     </div>
 
-    <!-- Teks Isi Artikel dengan Animasi -->
     <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-8 leading-relaxed text-sm sm:text-base md:text-lg reveal">
         <p>
             In the highly specialized realm of international B2B agricultural commodity trade, the difference between a successful, recurring multi-container export contract and a total cargo rejection often hinges on a single technical parameter: <strong>moisture content</strong>. At <strong>PT Integra Niaga Komoditas</strong>, our quality assurance protocols mandate a strict, unyielding maximum moisture threshold of <strong>2.0%</strong> for every single batch of organic granulated coconut sugar (gula semut) dispatched to our global wholesale partners.
         </p>
+
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">1. The Inherent Hygroscopic Nature of Coconut Sugar</h3>
         <p>
-            Understanding why this threshold is non-negotiable requires examining the unique chemical composition and physical behavior of coconut palm nectar derivatives during intercontinental maritime shipping. When handling bulk shipments bound for Europe, North America, or the Middle East, ocean transit can span anywhere from 20 to 45 days. Controlling residual water levels before container sealing is the single most critical factor in guaranteeing cargo stability upon port discharge.
+            Organic coconut sugar is naturally hygroscopic, meaning it possesses a high molecular affinity to absorb water vapor from its surrounding atmosphere. Consisting primarily of sucrose (70–79%) alongside invert sugars like glucose and fructose, it is far more sensitive to relative humidity changes than highly refined white cane sugar. Without proper processing and drying, the granules will act like tiny sponges during transit.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">1. The Inherent Hygroscopic Nature of Organic Coconut Sugar</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">2. The Danger of "Container Rain" During Ocean Transit</h3>
         <p>
-            Organic coconut sugar is naturally hygroscopic, meaning it possesses a high molecular affinity to absorb water vapor from its surrounding atmosphere. Coconut sugar consists primarily of sucrose (70–79%), glucose, fructose, and trace minerals. The presence of natural invert sugars (fructose and glucose) increases its sensitivity to relative humidity compared to highly refined white cane sugar.
-        </p>
-        <p>
-            When a Full Container Load (FCL) embarks on an ocean voyage—crossing tropical ports in Central Java through equatorial ocean lanes to temperate or sub-zero destination ports in Europe or North America—the micro-environment inside the steel container experiences extreme thermal cycling. Daytime heating and night-time cooling cause air inside the container to cycle through dew point transitions, a phenomenon known in maritime freight as <em>"container rain"</em> or <em>cargo sweat</em>.
-        </p>
-        <p>
-            If the initial moisture content of the coconut sugar exceeds 2.0%, the water activity ($a_w$) within the packaging rises sharply above the safe threshold of 0.50. This triggers moisture migration from the core of the bag outward, causing localized dissolution of surface sugar crystals, followed by recrystallization when temperatures drop.
+            When a Full Container Load (FCL) embarks on an ocean voyage—crossing tropical ports in Central Java through equatorial ocean lanes to temperate destination ports in Europe or North America—the micro-environment inside the steel container experiences extreme thermal cycling. Daytime heating and night-time cooling cause the air inside the container to cycle through dew point transitions. This creates condensation on the container ceiling, a phenomenon known in maritime freight as <em>"container rain"</em> or <em>cargo sweat</em>. If the sugar's internal moisture is already high, this external humidity accelerates the degradation process.
         </p>
 
-        <!-- TABEL KOTAK-KOTAK DENGAN ANIMASI -->
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">3. Physical Degradation: Caking and Agglomeration</h3>
+        <p>
+            When moisture content crosses the 2.5% to 3.0% mark, individual sugar granules develop a thin liquid film of concentrated syrup on their surface. As ambient temperatures fluctuate, evaporation occurs, forming rigid crystalline solid bridges between adjacent granules. This process turns entire 25 kg bags into rock-hard solid blocks. For industrial B2B food manufacturers, caked sugar clogs pneumatic conveying systems and hoppers, causing costly factory downtime.
+        </p>
+
         <div class="my-6 sm:my-8 overflow-x-auto reveal">
             <h4 class="text-lg sm:text-xl font-bold text-[#115836] mb-3">Technical Impact Analysis: Moisture Level vs. Transit Stability</h4>
             <div class="inline-block min-w-full align-middle">
@@ -125,11 +117,6 @@
                             <td class="border border-slate-300 p-3 text-red-600 font-semibold">High susceptibility to osmophilic yeast & fermentation</td>
                         </tr>
                         <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Flavor & Color Profile</td>
-                            <td class="border border-slate-300 p-3">Rich caramel aroma, stable golden-brown hue</td>
-                            <td class="border border-slate-300 p-3 text-red-600 font-semibold">Sour off-notes, darkening due to Maillard breakdown</td>
-                        </tr>
-                        <tr class="bg-white">
                             <td class="border border-slate-300 p-3 font-medium text-[#115836]">Customs Clearance Status</td>
                             <td class="border border-slate-300 p-3 font-bold text-[#115836]">Immediate food safety clearance & release</td>
                             <td class="border border-slate-300 p-3 text-red-600 font-semibold">Mandatory quarantine hold or total cargo rejection</td>
@@ -139,70 +126,75 @@
             </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">2. Preventing Caking, Lumping, and Microbiological Spoilage</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">4. Microbiological Spoilage and Fermentation</h3>
         <p>
-            When moisture content crosses the 2.5% to 3.0% mark, individual sugar granules develop a thin liquid film of concentrated syrup on their surface. As ambient temperatures fluctuate during freight, evaporation occurs, forming rigid crystalline solid bridges between adjacent granules. This process, known as <strong>caking or agglomeration</strong>, turns entire 25 kg bags into rock-hard solid blocks.
-        </p>
-        <p>
-            For industrial B2B food manufacturers—such as automated bakeries, chocolate factories, cereal producers, and beverage bottlers—caked sugar is unusable. Their modern production lines feed dry ingredients through automated pneumatic conveying systems, hoppers, and dosing equipment. Hardened sugar blocks clog industrial machinery, causing costly downtime and immediate commercial disputes.
-        </p>
-        <p>
-            Beyond physical damage, excess moisture creates an ideal breeding ground for osmophilic yeasts and wild molds. These micro-organisms thrive in high-sugar, high-humidity environments, converting sucrose into organic acids and alcohol. This results in sour off-flavors, gas generation, swollen packaging bags, and complete rejection by destination port health authorities (such as the US FDA or European EFSA standards).
+            Beyond physical damage, excess moisture creates an ideal breeding ground for osmophilic yeasts and wild molds. These micro-organisms thrive in high-sugar, high-humidity environments, converting sucrose into organic acids and alcohol. This results in sour off-flavors, gas generation, swollen packaging bags, and a complete loss of the rich caramel aroma that defines premium Indonesian coconut sugar.
         </p>
 
-        <!-- Foto Pendukung Kedua dengan Animasi -->
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">5. Customs Rejections and Port Health Regulations</h3>
+        <p>
+            Global food safety authorities, including the US FDA and European EFSA, mandate strict microbiological thresholds for imported sweeteners. Cargoes displaying signs of fermentation, elevated moisture, or mold growth are flagged during routine customs sampling. This leads to mandatory quarantine holds, expensive irradiation treatments, or total cargo destruction at the importer's expense.
+        </p>
+
+        <!-- GANTI DENGAN FOTO DARI INTERNET (Gambar pabrik / inspeksi) -->
         <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 my-6 sm:my-8 reveal">
-            <!-- FOTO PENDUKUNG DARI INTERNET -->
             <img src="foto-pabrik-pengolahan.jpg" alt="Processing Facility Quality Inspection and Packaging Standards" class="w-full h-60 sm:h-72 md:h-80 object-cover">
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">3. PT Integra Niaga Komoditas Quality Mitigation Protocols</h3>
+        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">6. PT Integra Niaga Komoditas Quality Mitigation Protocols</h3>
         <p>
-            To completely eliminate moisture-related risks for our international buyers, <strong>PT Integra Niaga Komoditas</strong> operates a comprehensive quality mitigation and supplier curation framework:
+            To completely eliminate moisture-related risks for our international buyers, <strong>PT Integra Niaga Komoditas</strong> operates a comprehensive quality mitigation framework:
         </p>
         <ul class="list-disc pl-5 sm:pl-6 space-y-3">
-            <li>
-                <strong>Curation of Verified Processing Partners:</strong> We partner exclusively with established, export-ready processing facilities in Central Java that utilize controlled thermal evaporation and mechanical sifting systems.
-            </li>
-            <li>
-                <strong>Calibrated Moisture Testing:</strong> Prior to bagging, lot samples are rigorously tested using digital halogen moisture analyzers to verify that moisture content remains strictly at or below <strong>2.0%</strong>.
-            </li>
-            <li>
-                <strong>Multi-Layered Hermetic Barrier Packaging:</strong> Every batch is enclosed in a food-grade, heat-sealed Polyethylene (PE) inner liner before placement into durable 25 kg multi-wall Kraft paper bags or 20/25 kg corrugated carton boxes. This barrier seals out external humidity.
-            </li>
-            <li>
-                <strong>Container Desiccant Protection:</strong> During Full Container Load (FCL) stuffing, industrial-grade calcium chloride desiccant bags are installed along container walls to absorb airborne ambient condensation during transit.
-            </li>
+            <li><strong>Curation of Verified Partners:</strong> We partner exclusively with established, export-ready processing facilities in Central Java utilizing controlled thermal evaporation.</li>
+            <li><strong>Calibrated Testing:</strong> Prior to bagging, lot samples are rigorously tested using digital halogen moisture analyzers to verify the ≤ 2.0% limit.</li>
+            <li><strong>Hermetic Barrier Packaging:</strong> Every batch is enclosed in a food-grade, heat-sealed Polyethylene (PE) inner liner inside durable Kraft bags or carton boxes to seal out external humidity.</li>
+            <li><strong>Container Desiccant Protection:</strong> Industrial-grade desiccant bags are installed along container walls during stuffing to absorb airborne ambient condensation during transit.</li>
         </ul>
-
         <p class="pt-2 sm:pt-4">
-            By enforcing these strict moisture control standards, <strong>PT Integra Niaga Komoditas</strong> provides global B2B buyers with complete assurance: your bulk organic coconut sugar will arrive free-flowing, pristine, and ready for immediate industrial integration.
+            By enforcing these strict moisture control standards, we provide global B2B buyers with complete assurance: your bulk organic coconut sugar will arrive free-flowing, pristine, and ready for industrial integration.
         </p>
     </div>
 
-    <!-- FORM INQUIRY DENGAN ANIMASI -->
+    <!-- FORM INQUIRY B2B PROFESIONAL (SUDAH DIPERLENGKAP) -->
     <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-xl space-y-6 mt-12 sm:mt-16 border-t-4 border-[#115836] reveal">
         <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-[#115836]">Leave a Reply / Direct Inquiry</h3>
-            <p class="text-slate-600 text-xs sm:text-sm">Have questions regarding our technical specifications or bulk orders? Send a message directly to our team.</p>
+            <h3 class="text-xl sm:text-2xl font-bold text-[#115836]">B2B Trade Inquiry</h3>
+            <p class="text-slate-600 text-xs sm:text-sm">Request specifications, wholesale pricing, or discuss your commercial supply requirements directly with our export team.</p>
         </div>
 
-        <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-4">
+        <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
+                    <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Company Name *</label>
+                    <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Country / Destination *</label>
+                    <input type="text" name="country" placeholder="e.g. United States, Germany" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Business Email *</label>
+                    <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">WhatsApp / Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Estimated Volume (MT / Month)</label>
+                    <input type="text" name="volume" placeholder="e.g. 1 FCL / 15 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                </div>
+            </div>
             <div>
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Comment / Inquiry *</label>
-                <textarea name="comment" rows="4" placeholder="Write your thoughts or inquiry about this article..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
+                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Inquiry Details *</label>
+                <textarea name="message" rows="4" placeholder="Please provide details about your product requirements, packaging preferences, or target port..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Name *</label>
-                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Email *</label>
-                    <input type="email" name="email" placeholder="name@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-            </div>
-            <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Post Comment / Send Inquiry</button>
+            <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Submit B2B Inquiry</button>
         </form>
     </div>
 </main>
