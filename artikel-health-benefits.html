@@ -23,6 +23,10 @@
     <style>
         body { overflow-x: hidden; }
         .prose p, .prose h3, .prose h4, h1 { word-wrap: break-word; overflow-wrap: break-word; }
+        /* CSS ANTI-EROR MOBILE: Memaksa teks reveal muncul di HP jika JavaScript gagal merender */
+        @media (max-width: 768px) {
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
