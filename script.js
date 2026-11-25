@@ -3,7 +3,7 @@
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle Handler
+    // 1. Mobile Navigation Toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
@@ -21,35 +20,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Scroll Reveal Animation Observer
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOptions = {
-        threshold: 0.15, // Muncul saat elemen terlihat 15% di layar
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Uncomment baris bawah jika ingin animasi hanya sekali muncul per reload:
-                // observer.unobserve(entry.target);
+    // 2. Sticky Header Shadow on Scroll
+    const header = document.getElementById('main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+                header.classList.remove('bg-white');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+                header.classList.add('bg-white');
             }
         });
-    }, revealOptions);
+    }
 
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
-    });
+    // 3. Scroll Reveal Animation (Works smoothly on Mobile & Desktop)
+    const revealElements = document.querySelectorAll('.reveal');
 
-    // 3. Header Solid Transition on Scroll
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('shadow-lg');
-        } else {
-            header.classList.remove('shadow-lg');
-        }
-    });
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            const boxTop = el.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    // Gunakan IntersectionObserver + Fallback Scroll Listener agar 100% anti-gagal
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 100);
 });
