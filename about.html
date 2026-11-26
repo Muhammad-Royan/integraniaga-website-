@@ -9,122 +9,233 @@
     <link rel="canonical" href="https://integraniaga.online/about.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
     <meta property="og:title" content="About Us | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/about.html">
     <meta property="og:type" content="website">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url": "https://integraniaga.online/"
     }
     </script>
     
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5.0">
+
     <style>
-        body { overflow-x: hidden; }
-        @media (max-width: 768px) {
-            .reveal { opacity: 1 !important; transform: none !important; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
         }
+
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
+        }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .delay-1 { transition-delay: 0.12s; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3 lg:gap-4">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 lg:w-20 lg:h-20 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-50 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg lg:text-2xl leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs lg:text-sm tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-slate-700 hover:text-[#15603a] transition">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about.html" class="py-3 text-gold font-bold border-b border-white/10">ABOUT US</a>
-            <a href="products.html" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10">BLOG</a>
-            <a href="contact.html" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-4 mt-2 w-60 bg-white shadow-2xl rounded-2xl border border-slate-200 flex flex-col py-3 px-5 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 text-[#15603a] border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 text-slate-700 hover:text-[#15603a]">CONTACT</a>
         </div>
     </nav>
 </header>
 
 <main class="flex-grow w-full">
 
-    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden relative" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg'); background-size: cover; background-position: center;">
-        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Authorized Export Enterprise</span>
-            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">About PT Integra Niaga Komoditas</h2>
-            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Bridging Indonesian agricultural excellence with global B2B organic commodity markets.</p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="contact.html" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Contact Export Desk</a>
+    <!-- FULL-BLEED SUBPAGE HERO -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        <img src="image_78ef1c94.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="PT Integra Niaga Komoditas Operations" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
+            <div class="max-w-xl space-y-5 reveal">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                    <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
+                        <span class="w-full h-1/2 bg-red-600 block"></span>
+                        <span class="w-full h-1/2 bg-white block"></span>
+                    </span>
+                    <span>Authorized Export Enterprise</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
+                    About PT Integra Niaga Komoditas
+                </h1>
+
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+                    Bridging Indonesian agricultural excellence with global B2B organic commodity markets.
+                </p>
+
+                <div class="pt-2">
+                    <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] inline-block text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
+                        Contact Export Desk
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 reveal">
-                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Our Roots & Purpose</span>
-                <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836] leading-snug">Curating Certified Excellence for the Global Market</h3>
+    <!-- OUR ROOTS & PURPOSE -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-5 reveal">
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block border border-[#15603a]/20">
+                    Our Roots &amp; Purpose
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    Curating Certified Excellence for the Global Market
+                </h2>
                 
-                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                     <strong>PT Integra Niaga Komoditas</strong> was born from a profound recognition of the rich agricultural heritage across Central Java. Seeing the massive global demand for premium coconut sugar, we identified the critical need for a highly professional commercial bridge to connect this exceptional regional potential with strict international market standards.
                 </p>
                 
-                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    Operating as an authorized B2B export trading enterprise, our strength lies in meticulous curation. We partner exclusively with fully certified, export-ready local suppliers across the region. This strategic sourcing model allows us to guarantee product consistency, strict moisture control (≤ 2.0%), and absolute compliance with international food safety certifications.
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Operating as an authorized B2B export trading enterprise, our strength lies in meticulous curation. We partner exclusively with fully certified, export-ready local suppliers across the region. This strategic sourcing model allows us to guarantee product consistency, strict moisture control (&le; 2.0%), and absolute compliance with international food safety certifications.
                 </p>
 
-                <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                     Our ultimate value to global wholesale buyers is risk mitigation and supply chain reliability. By navigating the complex local landscape and consolidating only the highest-grade certified organic sugar, we provide our international partners with a seamless, scalable, and worry-free sourcing experience directly from Indonesia.
                 </p>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 reveal">
-                <img src="FB_IMG_1784100143834.jpg" alt="Operations" class="w-full h-72 sm:h-96 object-cover">
+
+            <div class="lg:col-span-5 reveal delay-1">
+                <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100">
+                    <img src="FB_IMG_1784100143834.jpg" alt="PT Integra Niaga Komoditas Operations" class="w-full h-80 sm:h-96 object-cover">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white border-t border-slate-100 pb-24">
+    <!-- VISION & MISSION SECTION -->
+    <section class="py-16 bg-[#f8faf9] border-y border-slate-200/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Vision -->
-                <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition reveal">
-                    <div class="w-14 h-14 bg-[#115836]/10 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-[#115836]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <div class="b2b-card p-8 sm:p-10 rounded-3xl reveal">
+                    <div class="w-12 h-12 bg-[#15603a]/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-[#15603a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-[#115836] mb-4">Our Vision</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-4">Our Vision</h3>
                     <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
                         To be the leading and most trusted global supplier of premium organic coconut sugar from Indonesia. We envision a sustainable future where our meticulously curated natural sweeteners empower global food industries while elevating the livelihood of traditional farming communities across Central Java.
                     </p>
                 </div>
 
                 <!-- Mission -->
-                <div class="bg-slate-50 p-8 sm:p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition reveal">
-                    <div class="w-14 h-14 bg-[#115836]/10 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-[#115836]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <div class="b2b-card p-8 sm:p-10 rounded-3xl reveal delay-1">
+                    <div class="w-12 h-12 bg-[#15603a]/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-[#15603a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-[#115836] mb-4">Our Mission</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-4">Our Mission</h3>
                     <ul class="space-y-4 text-slate-600 text-sm sm:text-base">
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>Quality Assurance:</strong> Delivering 100% pure organic coconut sugar sourced strictly from facilities that meet international standards (HACCP, GMP, FDA).</span>
+                            <svg class="w-5 h-5 text-[#c89b3c] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong class="text-slate-900">Quality Assurance:</strong> Delivering 100% pure organic coconut sugar sourced strictly from facilities that meet international standards (HACCP, GMP, FDA).</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>Strategic Sourcing:</strong> Working with verified and certified local suppliers across the region to ensure scalable volume and consistent product integrity.</span>
+                            <svg class="w-5 h-5 text-[#c89b3c] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong class="text-slate-900">Strategic Sourcing:</strong> Working with verified and certified local suppliers across the region to ensure scalable volume and consistent product integrity.</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-[#c89b3c] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>Global Reliability:</strong> Providing seamless B2B export experiences, transparent tracking, and reliable logistics for wholesale buyers worldwide.</span>
+                            <svg class="w-5 h-5 text-[#c89b3c] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong class="text-slate-900">Global Reliability:</strong> Providing seamless B2B export experiences, transparent tracking, and reliable logistics for wholesale buyers worldwide.</span>
                         </li>
                     </ul>
                 </div>
@@ -132,32 +243,111 @@
         </div>
     </section>
 
+    <!-- DEDICATED CORPORATE LEGALITY & REGISTRATION SECTION -->
+    <section id="legality" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="b2b-card rounded-3xl p-8 sm:p-12 border-t-4 border-[#15603a] reveal">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+                <div>
+                    <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80 inline-block mb-2">
+                        Corporate Compliance &amp; Verification
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Official Legal Entity Registration</h2>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+            </div>
+
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-6">
+                <strong>PT Integra Niaga Komoditas</strong> is a legally established limited liability export trading company authorized by the Ministry of Law and Human Rights of the Republic of Indonesia, operating in full compliance with Indonesian commercial and export regulations.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+                <div class="bg-[#f8faf9] p-5 rounded-2xl border border-slate-200/80">
+                    <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Registered Company Name</span>
+                    <span class="block text-sm sm:text-base font-extrabold text-slate-900 mt-1">PT Integra Niaga Komoditas</span>
+                </div>
+
+                <div class="bg-[#f8faf9] p-5 rounded-2xl border border-slate-200/80">
+                    <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Business Identification Number (NIB)</span>
+                    <span class="block text-sm sm:text-base font-extrabold text-[#15603a] mt-1">2105260123796</span>
+                </div>
+
+                <div class="bg-[#f8faf9] p-5 rounded-2xl border border-slate-200/80">
+                    <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Ministry Decree / AHU Number</span>
+                    <span class="block text-sm sm:text-base font-extrabold text-[#15603a] mt-1">AHU-010223.AH.01.30.Tahun 2026</span>
+                </div>
+
+                <div class="bg-[#f8faf9] p-5 rounded-2xl border border-slate-200/80">
+                    <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Headquarters &amp; Official Contact</span>
+                    <span class="block text-sm font-bold text-slate-900 mt-1">Pemalang, Central Java, Indonesia</span>
+                    <span class="block text-xs text-slate-500 mt-0.5">info@integraniaga.online</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                 Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
             </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [2105260123796]</p>
-                <p><strong>AHU Number:</strong> [AHU-010223.AH.01.30.Tahun 2026]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
