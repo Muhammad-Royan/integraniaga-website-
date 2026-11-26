@@ -45,16 +45,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4.0">
+
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .delay-1 { transition-delay: 0.12s; }
+        .delay-2 { transition-delay: 0.24s; }
+        .delay-3 { transition-delay: 0.36s; }
+    </style>
 </head>
 <body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
 <!-- CLEAN WHITE HEADER -->
 <header id="main-header" class="sticky top-0 left-0 w-full z-50 bg-white border-b border-slate-100 transition-all duration-300">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
-        <!-- Brand Logo -->
         <a href="index.html" class="flex items-center gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-11 h-11 sm:w-12 sm:h-12 object-contain">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
                 <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
                 <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
@@ -94,17 +129,25 @@
 
 <main class="flex-grow w-full">
 
-    <!-- SPLIT-GRADIENT HERO SECTION -->
-    <section class="relative bg-[#0e3824] text-white overflow-hidden">
-        <!-- Background Image on Right Side -->
-        <div class="absolute inset-0 z-0">
-            <img src="hero-coconut-sugar.jpg" onerror="this.src='image_78ef1c94.jpg'" alt="Premium Organic Coconut Sugar in Wooden Bowls" class="w-full h-full object-cover object-right">
-            <div class="absolute inset-0 hero-split-overlay"></div>
+    <!-- HERO SECTION: SPLIT GRADIENT HIJAU PEKAT + FOTO GULA SEMUT ORGANIK -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        
+        <!-- Foto Produk Gula Semut di Kanan (Desktop) & Bawah (Mobile) -->
+        <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-3/5 w-full h-64 sm:h-80 lg:h-full z-0 order-2 lg:order-none">
+            <img src="image_78ef1c94.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1400&q=85';" 
+                 alt="Premium Organic Coconut Sugar in Wooden Bowls" 
+                 class="w-full h-full object-cover object-center">
+            <!-- Gradasi penyatu di Desktop -->
+            <div class="hidden lg:block absolute inset-0" style="background: linear-gradient(90deg, #0d3622 0%, rgba(13,54,34,0.85) 22%, rgba(13,54,34,0.15) 55%, rgba(13,54,34,0.05) 100%);"></div>
+            <!-- Gradasi penyatu di Mobile -->
+            <div class="lg:hidden absolute inset-0" style="background: linear-gradient(180deg, #0d3622 0%, rgba(13,54,34,0.35) 45%, rgba(13,54,34,0.10) 100%);"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24 md:pb-32 relative z-10">
-            <div class="max-w-2xl space-y-6 reveal">
-                <!-- Indonesian Flag Pill Badge -->
+        <!-- Konten Teks Kiri -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 lg:py-24 relative z-10">
+            <div class="max-w-xl space-y-5 reveal">
+                <!-- Badge Bendera Indonesia -->
                 <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
                     <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
                         <span class="w-full h-1/2 bg-red-600 block"></span>
@@ -113,38 +156,38 @@
                     <span>Authorized Indonesian Export Enterprise</span>
                 </div>
 
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-[1.15] tracking-tight">
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight">
                     Your Trusted Partner for Premium Organic Coconut Sugar from Central Java, Indonesia
                 </h1>
 
-                <p class="text-gray-200 text-sm sm:text-base leading-relaxed max-w-xl">
+                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
                     We are a legally registered Indonesian export trading enterprise dedicated to connecting certified local suppliers in Central Java with the global B2B market. We ensure strict quality control, sustainable practices, and direct fair-trade sourcing.
                 </p>
 
                 <div class="pt-2 flex flex-wrap items-center gap-3.5">
-                    <a href="products.html" class="btn-brand-green px-6 py-3 rounded-lg font-semibold text-sm shadow-lg">
+                    <a href="products.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
                         Explore Products
                     </a>
-                    <a href="contact.html" class="bg-white/5 hover:bg-white/15 border border-white/40 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
+                    <a href="contact.html" class="bg-transparent hover:bg-white/10 border border-white/45 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
                         Contact Export Desk
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Subtle Organic Wave Divider -->
-        <div class="hero-curve">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,40 C320,110 680,-10 1200,50 L1200,120 L0,120 Z" class="shape-fill"></path>
+        <!-- Lengkungan Wave Putih di Bawah Hero Banner -->
+        <div class="relative z-20 w-full overflow-hidden leading-none -mt-6 lg:-mt-10">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,30 C350,115 720,-15 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
             </svg>
         </div>
     </section>
 
-    <!-- ASYMMETRIC B2B VALUE & HIGHLIGHTS SECTION -->
-    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <!-- ASYMMETRIC B2B SECTION: PROFIL PERUSAHAAN + KARTU KEUNGGULAN -->
+    <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
-            <!-- Left Column (7 Cols): Company Intro + 3 Spec Cards -->
+            <!-- Kolom Kiri (7 Kolom): About Intro + 3 Kartu Keunggulan -->
             <div class="lg:col-span-7 space-y-8 reveal">
                 <div class="space-y-4">
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
@@ -160,27 +203,27 @@
                     </div>
                 </div>
 
-                <!-- 3 Feature Cards Row -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                    <div class="clean-card p-5 rounded-2xl text-center space-y-2.5 reveal reveal-delay-1">
-                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <!-- 3 Kartu Keunggulan Utama -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                    <div class="b2b-card p-5 rounded-2xl text-center space-y-2.5 reveal delay-1">
+                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <h3 class="font-bold text-slate-900 text-sm">Strict Moisture Control</h3>
                         <p class="text-slate-500 text-xs leading-relaxed">Maximum moisture strictly controlled at &le; 2.0%.</p>
                     </div>
 
-                    <div class="clean-card p-5 rounded-2xl text-center space-y-2.5 reveal reveal-delay-2">
-                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    <div class="b2b-card p-5 rounded-2xl text-center space-y-2.5 reveal delay-2">
+                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <h3 class="font-bold text-slate-900 text-sm">Certified Supplier Network</h3>
                         <p class="text-slate-500 text-xs leading-relaxed">Curated exclusively from verified processing units across Central Java.</p>
                     </div>
 
-                    <div class="clean-card p-5 rounded-2xl text-center space-y-2.5 reveal reveal-delay-3">
-                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    <div class="b2b-card p-5 rounded-2xl text-center space-y-2.5 reveal delay-3">
+                        <div class="w-8 h-8 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <h3 class="font-bold text-slate-900 text-sm">Low Glycemic Index</h3>
                         <p class="text-slate-500 text-xs leading-relaxed">Natural low GI (approx. 35) with retained volcanic trace minerals.</p>
@@ -188,32 +231,32 @@
                 </div>
             </div>
 
-            <!-- Right Column (5 Cols): Core Export Highlights + Why Partner With Us -->
-            <div class="lg:col-span-5 space-y-10 reveal reveal-delay-1">
+            <!-- Kolom Kanan (5 Kolom): Core Export Highlights + Why Partner With Us -->
+            <div class="lg:col-span-5 space-y-9 reveal delay-1">
                 
-                <!-- Block 1: Core Export Highlights -->
+                <!-- Blok 1: Core Export Highlights -->
                 <div class="space-y-4">
                     <h3 class="text-lg font-extrabold text-slate-900 text-center">Core Export Highlights</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                        <div class="clean-card p-4 rounded-xl text-center space-y-2">
-                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <div class="b2b-card p-4 rounded-xl text-center space-y-2">
+                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-900 text-xs leading-snug">Strict Moisture Control</h4>
                             <p class="text-slate-500 text-[11px] leading-normal">Maximum moisture strictly controlled at &le; 2.0%.</p>
                         </div>
 
-                        <div class="clean-card p-4 rounded-xl text-center space-y-2">
-                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <div class="b2b-card p-4 rounded-xl text-center space-y-2">
+                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-900 text-xs leading-snug">Certified Supplier Network</h4>
                             <p class="text-slate-500 text-[11px] leading-normal">Verified processing units across Central Java.</p>
                         </div>
 
-                        <div class="clean-card p-4 rounded-xl text-center space-y-2">
-                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/70 flex items-center justify-center text-[#9a7328]">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <div class="b2b-card p-4 rounded-xl text-center space-y-2">
+                            <div class="w-7 h-7 mx-auto rounded-full bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#9a7328]">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-900 text-xs leading-snug">Low Glycemic Index</h4>
                             <p class="text-slate-500 text-[11px] leading-normal">Natural low GI (approx. 35) with volcanic minerals.</p>
@@ -221,10 +264,10 @@
                     </div>
                 </div>
 
-                <!-- Block 2: Why Partner With Us? -->
+                <!-- Blok 2: Why Partner With Us? -->
                 <div class="space-y-4">
                     <h3 class="text-lg font-extrabold text-slate-900 text-center">Why Partner With Us?</h3>
-                    <div class="clean-card rounded-2xl overflow-hidden grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
+                    <div class="b2b-card rounded-2xl overflow-hidden grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
                         
                         <div class="p-4 text-center space-y-2">
                             <div class="w-8 h-8 mx-auto text-[#15603a] flex items-center justify-center">
@@ -261,7 +304,7 @@
 </main>
 
 <!-- CLEAN COMPACT FOOTER -->
-<footer class="bg-[#0e3824] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
         <div class="space-y-1.5 max-w-md">
             <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
@@ -280,7 +323,45 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
-```
