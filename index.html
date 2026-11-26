@@ -45,7 +45,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="style.css?v=5.0">
 
     <style>
         body {
@@ -53,6 +53,29 @@
             overflow-x: hidden;
             background-color: #ffffff;
             color: #1e293b;
+        }
+
+        /* Hero Full Background Overlay: Hijau pekat hanya di belakang teks kiri, jernih di kanan */
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
         }
 
         .b2b-card {
@@ -129,26 +152,23 @@
 
 <main class="flex-grow w-full">
 
-    <!-- HERO SECTION: SPLIT GRADIENT HIJAU PEKAT + FOTO GULA SEMUT ORGANIK -->
+    <!-- FULL-BLEED HERO BANNER (PERSIS CONTOH DI HP & DESKTOP) -->
     <section class="relative bg-[#0d3622] text-white overflow-hidden">
         
-        <!-- Foto Produk Gula Semut di Kanan (Desktop) & Bawah (Mobile) -->
-        <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-3/5 w-full h-64 sm:h-80 lg:h-full z-0 order-2 lg:order-none">
-            <img src="image_78ef1c94.jpg" 
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1400&q=85';" 
-                 alt="Premium Organic Coconut Sugar in Wooden Bowls" 
-                 class="w-full h-full object-cover object-center">
-            <!-- Gradasi penyatu di Desktop -->
-            <div class="hidden lg:block absolute inset-0" style="background: linear-gradient(90deg, #0d3622 0%, rgba(13,54,34,0.85) 22%, rgba(13,54,34,0.15) 55%, rgba(13,54,34,0.05) 100%);"></div>
-            <!-- Gradasi penyatu di Mobile -->
-            <div class="lg:hidden absolute inset-0" style="background: linear-gradient(180deg, #0d3622 0%, rgba(13,54,34,0.35) 45%, rgba(13,54,34,0.10) 100%);"></div>
-        </div>
+        <!-- Foto Full Background -->
+        <img src="image_78ef1c94.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="Premium Organic Coconut Sugar in Wooden Bowls" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <!-- Lapisan Gradasi Hijau Tua di Sisi Teks Kiri (Foto Kanan Tetap Jernih Alami) -->
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
 
-        <!-- Konten Teks Kiri -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 lg:py-24 relative z-10">
+        <!-- Konten Teks Mengambang di Atas Banner -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
             <div class="max-w-xl space-y-5 reveal">
                 <!-- Badge Bendera Indonesia -->
-                <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
                     <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
                         <span class="w-full h-1/2 bg-red-600 block"></span>
                         <span class="w-full h-1/2 bg-white block"></span>
@@ -156,11 +176,11 @@
                     <span>Authorized Indonesian Export Enterprise</span>
                 </div>
 
-                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight">
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
                     Your Trusted Partner for Premium Organic Coconut Sugar from Central Java, Indonesia
                 </h1>
 
-                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
                     We are a legally registered Indonesian export trading enterprise dedicated to connecting certified local suppliers in Central Java with the global B2B market. We ensure strict quality control, sustainable practices, and direct fair-trade sourcing.
                 </p>
 
@@ -168,7 +188,7 @@
                     <a href="products.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
                         Explore Products
                     </a>
-                    <a href="contact.html" class="bg-transparent hover:bg-white/10 border border-white/45 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
+                    <a href="contact.html" class="bg-black/20 hover:bg-white/15 backdrop-blur-xs border border-white/50 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
                         Contact Export Desk
                     </a>
                 </div>
@@ -176,9 +196,9 @@
         </div>
 
         <!-- Lengkungan Wave Putih di Bawah Hero Banner -->
-        <div class="relative z-20 w-full overflow-hidden leading-none -mt-6 lg:-mt-10">
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
             <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,30 C350,115 720,-15 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
             </svg>
         </div>
     </section>
