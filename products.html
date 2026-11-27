@@ -9,150 +9,481 @@
     <link rel="canonical" href="https://integraniaga.online/products.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
     <meta property="og:title" content="Organic Coconut Sugar Products & Specifications | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/products.html">
     <meta property="og:type" content="website">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url": "https://integraniaga.online/"
     }
     </script>
 
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5.0">
     <style>
-        body { overflow-x: hidden; }
-        @media (max-width: 768px) {
-            .reveal { opacity: 1 !important; transform: none !important; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
         }
+
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
+        }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .delay-1 { transition-delay: 0.12s; }
+        .delay-2 { transition-delay: 0.24s; }
+        .delay-3 { transition-delay: 0.36s; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3 lg:gap-4">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 lg:w-20 lg:h-20 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg lg:text-2xl leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs lg:text-sm tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-slate-700 hover:text-[#15603a] transition">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="products.html" class="py-3 text-gold font-bold border-b border-white/10">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10">BLOG</a>
-            <a href="contact.html" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-4 mt-2 w-60 bg-white shadow-2xl rounded-2xl border border-slate-200 flex flex-col py-3 px-5 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 text-[#15603a] border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 text-slate-700 hover:text-[#15603a]">CONTACT</a>
         </div>
     </nav>
 </header>
 
 <main class="flex-grow w-full">
 
-    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden relative" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg'); background-size: cover; background-position: center;">
-        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Export Product Catalog</span>
-            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Organic Granulated Coconut Sugar</h2>
-            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Connecting international wholesale buyers directly with verified certified suppliers across Central Java, Indonesia.</p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="contact.html" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Request Quotation</a>
-                <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/35 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition duration-300">Contact Export Desk</a>
+    <!-- FULL-BLEED HERO BANNER -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        <img src="hero-sugar.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="Organic Granulated Coconut Sugar" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
+            <div class="max-w-xl space-y-5 reveal">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                    <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
+                        <span class="w-full h-1/2 bg-red-600 block"></span>
+                        <span class="w-full h-1/2 bg-white block"></span>
+                    </span>
+                    <span>Export Product Catalog</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
+                    Organic Granulated Coconut Sugar
+                </h1>
+
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+                    Connecting international wholesale buyers directly with verified certified suppliers across Central Java, Indonesia.
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3.5">
+                    <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
+                        Request Quotation
+                    </a>
+                    <a href="contact.html" class="bg-black/20 hover:bg-white/15 backdrop-blur-xs border border-white/50 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
+                        Contact Export Desk
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 reveal">
-                <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Product Specification</span>
-                <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836]">Premium Indonesian Coconut Nectar Derivative</h3>
-                <p class="text-slate-700 leading-relaxed">Our organic coconut sugar is meticulously crafted from fresh, pristine nectar tapped from coconut palms across Central Java. Processed through traditional boiling and modern mechanical sifting, it provides a rich caramel flavor profile and uniform granulation.</p>
+    <!-- PRODUCT SPECIFICATION INTRO -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-24">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-5 reveal">
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block border border-[#15603a]/20">
+                    Product Specification
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    Premium Indonesian Coconut Nectar Derivative
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Our organic coconut sugar is meticulously crafted from fresh, pristine nectar tapped from coconut palms across Central Java. Processed through traditional boiling and modern mechanical sifting, it provides a rich caramel flavor profile and uniform granulation.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="bg-[#f8faf9] p-4 rounded-2xl border border-slate-200/80">
+                        <span class="block text-xs font-bold text-slate-400 uppercase">Origin</span>
+                        <span class="block text-sm font-extrabold text-slate-900 mt-0.5">Central Java, Indonesia</span>
+                    </div>
+                    <div class="bg-[#f8faf9] p-4 rounded-2xl border border-slate-200/80">
+                        <span class="block text-xs font-bold text-slate-400 uppercase">Ingredients</span>
+                        <span class="block text-sm font-extrabold text-[#15603a] mt-0.5">100% Pure Organic Sap</span>
+                    </div>
+                </div>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-xl reveal border border-slate-200">
-                <img src="FB_IMG_1784100089910.jpg" alt="Product" class="w-full h-80 object-cover">
+            <div class="lg:col-span-6 reveal delay-1">
+                <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100">
+                    <img src="FB_IMG_1784100089910.jpg" alt="Organic Granulated Coconut Sugar Product" class="w-full h-80 sm:h-96 object-cover">
+                </div>
             </div>
         </div>
 
+        <!-- AVAILABLE GRADES & MESH CUSTOMIZATION -->
+        <div class="space-y-10 reveal">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80 inline-block">
+                    Tailored to Industrial Needs
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Available Granulation &amp; Color Grades</h3>
+                <p class="text-slate-600 text-sm sm:text-base">Customizable mesh sizing and natural caramel shade selection for food manufacturers and wholesale brands.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="b2b-card p-7 rounded-3xl space-y-4 reveal delay-1 border-t-4 border-[#15603a]">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-[#15603a]/10 text-[#15603a] px-3 py-1 rounded-full">Standard Export</span>
+                        <span class="text-xs font-bold text-slate-400">16 – 18 Mesh</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-slate-900">Fine Granulated Grade</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our flagship export grade featuring uniform, free-flowing granules ideal for retail packaging, beverage blending, coffee shops, and general culinary applications.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li>&bull; <strong>Color:</strong> Golden Brown to Rich Amber</li>
+                        <li>&bull; <strong>Moisture:</strong> Strictly &le; 2.0%</li>
+                    </ul>
+                </div>
+
+                <div class="b2b-card p-7 rounded-3xl space-y-4 reveal delay-2 border-t-4 border-[#c89b3c]">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-amber-50 text-[#9a7328] px-3 py-1 rounded-full">Industrial Grade</span>
+                        <span class="text-xs font-bold text-slate-400">20+ Mesh</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-slate-900">Ultra-Fine Powdered Grade</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Finely sifted texture engineered for rapid dissolution and smooth integration in chocolate tempering, dry bakery mixes, confectionery, and dairy alternatives.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li>&bull; <strong>Color:</strong> Light Golden / Natural Caramel</li>
+                        <li>&bull; <strong>Moisture:</strong> Strictly &le; 2.0%</li>
+                    </ul>
+                </div>
+
+                <div class="b2b-card p-7 rounded-3xl space-y-4 reveal delay-3 border-t-4 border-slate-800">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-700 px-3 py-1 rounded-full">Custom Spec</span>
+                        <span class="text-xs font-bold text-slate-400">14 – 24 Mesh</span>
+                    </div>
+                    <h4 class="text-xl font-extrabold text-slate-900">Custom OEM / Factory Spec</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tailored granulation sizing and controlled caramelization level produced on demand to match your exact R&amp;D formulation and laboratory parameters.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li>&bull; <strong>Color:</strong> Light, Medium, or Dark Roast</li>
+                        <li>&bull; <strong>MOQ:</strong> Available for FCL orders</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPREHENSIVE TECHNICAL SPECIFICATION SHEET (CoA) -->
         <div class="space-y-6 reveal">
             <div class="text-center space-y-2">
-                <h3 class="text-2xl sm:text-3xl font-bold text-[#115836]">Technical Specification Sheet (CoA Parameter)</h3>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Technical Specification Sheet (CoA Parameter)</h3>
                 <p class="text-slate-600 text-sm sm:text-base">Standard export parameters guaranteed for every wholesale shipment.</p>
             </div>
-            <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-300">
+            <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-200">
                 <table class="min-w-full border-collapse bg-white text-left text-sm sm:text-base">
                     <thead>
-                        <tr class="bg-[#115836] text-white">
-                            <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Parameter</th>
-                            <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Export Standard Specification</th>
+                        <tr class="bg-[#0d3622] text-white">
+                            <th class="border-b border-slate-200 p-4 font-semibold w-1/3">Parameter</th>
+                            <th class="border-b border-slate-200 p-4 font-semibold">Export Standard Specification</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="bg-white"><td class="border border-slate-300 p-3 font-medium">Product Name</td><td class="border border-slate-300 p-3">Organic Granulated Coconut Sugar (Gula Semut Organik)</td></tr>
-                        <tr class="bg-slate-50"><td class="border border-slate-300 p-3 font-medium">Moisture Content</td><td class="border border-slate-300 p-3 font-bold text-[#115836]">Maximum 2.0% (Optimized for maritime transport)</td></tr>
-                        <tr class="bg-white"><td class="border border-slate-300 p-3 font-medium">Granulation / Mesh Size</td><td class="border border-slate-300 p-3">16 - 18 Mesh (Uniform fine free-flowing granules)</td></tr>
-                        <tr class="bg-slate-50"><td class="border border-slate-300 p-3 font-medium">Glycemic Index (GI)</td><td class="border border-slate-300 p-3">Low GI (Approx. 35)</td></tr>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Product Name</td>
+                            <td class="p-4 text-slate-600">Organic Granulated Coconut Sugar (Gula Semut Organik)</td>
+                        </tr>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-semibold text-slate-800">Raw Material</td>
+                            <td class="p-4 text-slate-600">100% Pure Organic Coconut Blossom Nectar (<em>Cocos nucifera</em>)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Moisture Content</td>
+                            <td class="p-4 font-bold text-[#15603a]">Maximum 2.0% (Optimized for maritime transport)</td>
+                        </tr>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-semibold text-slate-800">Granulation / Mesh Size</td>
+                            <td class="p-4 text-slate-600">16 - 18 Mesh (Uniform fine free-flowing granules; custom mesh available)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Glycemic Index (GI)</td>
+                            <td class="p-4 text-slate-600">Low GI (Approx. 35)</td>
+                        </tr>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-semibold text-slate-800">Sucrose Content</td>
+                            <td class="p-4 text-slate-600">78% – 85% (Natural unrefined sucrose)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Reducing Sugar</td>
+                            <td class="p-4 text-slate-600">Max 6.0%</td>
+                        </tr>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-semibold text-slate-800">Ash Content</td>
+                            <td class="p-4 text-slate-600">Max 2.0% (Rich in natural potassium, magnesium, zinc, and iron)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Color &amp; Aroma</td>
+                            <td class="p-4 text-slate-600">Golden Brown to Rich Amber; distinctive sweet caramel aroma, free from burnt odor</td>
+                        </tr>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-semibold text-slate-800">Additives &amp; Preservatives</td>
+                            <td class="p-4 text-slate-600">None (100% Sulfite-Free, Non-GMO, No Artificial Flavoring or Anti-Caking Agents)</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-4 font-semibold text-slate-800">Shelf Life &amp; Storage</td>
+                            <td class="p-4 text-slate-600">24 Months from production date when stored in cool, dry conditions (&lt; 25&deg;C, RH &lt; 65%)</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- CERTIFICATION BOXES -->
-        <div class="py-4 px-2 max-w-5xl mx-auto reveal">
-            <div class="text-center mb-6">
-                <h3 class="text-lg sm:text-xl font-bold text-[#115836]">Trusted by International Standards</h3>
-                <p class="text-slate-600 text-xs sm:text-sm">Compliance and quality assurance certifications for global export.</p>
+        <!-- INDUSTRIAL APPLICATIONS -->
+        <div class="space-y-10 reveal">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-[#15603a]/20 inline-block">
+                    Commercial Versatility
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">B2B &amp; Industrial Applications</h3>
+                <p class="text-slate-600 text-sm sm:text-base">A clean-label, 1:1 natural replacement for refined cane sugar across global food and beverage sectors.</p>
             </div>
-            <div class="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-5">
-                <div class="bg-white border-2 border-[#115836] px-3 py-2 rounded-xl shadow-md flex flex-col items-center justify-center w-20 sm:w-24 h-18 sm:h-20 text-center">
-                    <span class="text-[10px] sm:text-xs font-extrabold text-[#115836] tracking-wider uppercase">FDA</span>
-                    <span class="text-[7px] sm:text-[8px] bg-[#115836] text-white px-1.5 py-0.5 rounded-full mt-1 font-semibold tracking-tighter">REGISTERED</span>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="b2b-card p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center font-bold text-lg">01</div>
+                    <h4 class="font-extrabold text-slate-900 text-base">Chocolate &amp; Confectionery</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Enhances artisan bean-to-bar chocolates, pralines, and organic snack bars with deep caramel notes without overpowering cacao profiles.</p>
                 </div>
-                <div class="bg-white border-2 border-[#115836] px-3 py-2 rounded-xl shadow-md flex flex-col items-center justify-center w-20 sm:w-24 h-18 sm:h-20 text-center">
-                    <span class="text-[10px] sm:text-xs font-extrabold text-[#115836] tracking-wider uppercase">HALAL</span>
-                    <span class="text-[7px] sm:text-[8px] bg-[#115836] text-white px-1.5 py-0.5 rounded-full mt-1 font-semibold tracking-tighter">CERTIFIED</span>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center font-bold text-lg">02</div>
+                    <h4 class="font-extrabold text-slate-900 text-base">Bakery &amp; Pastry</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Provides superior moisture retention, rich golden browning, and natural sweetness in cookies, cakes, granolas, and gluten-free baking.</p>
                 </div>
-                <div class="bg-white border-2 border-[#115836] px-3 py-2 rounded-xl shadow-md flex flex-col items-center justify-center w-20 sm:w-24 h-18 sm:h-20 text-center">
-                    <span class="text-[10px] sm:text-xs font-extrabold text-[#115836] tracking-wider uppercase">GMP</span>
-                    <span class="text-[7px] sm:text-[8px] bg-[#115836] text-white px-1.5 py-0.5 rounded-full mt-1 font-semibold tracking-tighter">QUALITY</span>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center font-bold text-lg">03</div>
+                    <h4 class="font-extrabold text-slate-900 text-base">Beverages &amp; Coffee</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Dissolves cleanly in specialty coffee blends, RTD teas, functional health drinks, plant-based milks, and organic syrups.</p>
                 </div>
-                <div class="bg-white border-2 border-[#115836] px-3 py-2 rounded-xl shadow-md flex flex-col items-center justify-center w-20 sm:w-24 h-18 sm:h-20 text-center">
-                    <span class="text-[10px] sm:text-xs font-extrabold text-[#115836] tracking-wider uppercase">HACCP</span>
-                    <span class="text-[7px] sm:text-[8px] bg-[#115836] text-white px-1.5 py-0.5 rounded-full mt-1 font-semibold tracking-tighter">FOOD SAFE</span>
-                </div>
-                <div class="bg-white border-2 border-[#115836] px-3 py-2 rounded-xl shadow-md flex flex-col items-center justify-center w-20 sm:w-24 h-18 sm:h-20 text-center">
-                    <span class="text-[10px] sm:text-xs font-extrabold text-[#115836] tracking-wider uppercase">USDA</span>
-                    <span class="text-[7px] sm:text-[8px] bg-[#115836] text-white px-1.5 py-0.5 rounded-full mt-1 font-semibold tracking-tighter">ORGANIC</span>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center font-bold text-lg">04</div>
+                    <h4 class="font-extrabold text-slate-900 text-base">Retail &amp; Private Label</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Supplied in bulk master bags for repacking or custom OEM stand-up pouches tailored for organic supermarkets and health stores.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CERTIFICATION LOGO IMAGES -->
-        <div class="py-4 px-2 max-w-5xl mx-auto reveal border-t border-slate-200 mt-6 pt-6">
-            <div class="flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-8">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-200">
-                    <img src="fda-approved-logo-pharmaceuticals-companies-pharm-healthcare-medical-231049935.jpg" alt="FDA" class="max-h-full max-w-full object-contain">
+        <!-- EXPORT TRADE TERMS & LOGISTICS SUMMARY -->
+        <div class="bg-[#0d3622] text-white rounded-3xl p-8 sm:p-12 shadow-xl reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs bg-white/10 text-[#c89b3c] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/15 inline-block">
+                        Wholesale Supply Terms
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                        Export Capabilities &amp; Commercial Terms
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We support flexible incoterms (FOB, CIF, CFR) and complete export documentation to ensure seamless customs clearance at your destination port.
+                    </p>
+                    <div class="pt-2">
+                        <a href="contact.html" class="inline-block bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-xl font-semibold text-sm transition">
+                            Request Sample &amp; Quotation &rarr;
+                        </a>
+                    </div>
                 </div>
-                <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-200">
-                    <img src="Halal Indonesia (Portrait) – Logo.jpeg" alt="Halal" class="max-h-full max-w-full object-contain">
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                        <span class="block text-xs font-bold uppercase text-[#c89b3c]">Supply Capacity</span>
+                        <span class="block text-base font-extrabold text-white mt-1">Up to 100 MT / Month</span>
+                        <span class="block text-xs text-gray-300 mt-1">Scalable year-round harvest network</span>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                        <span class="block text-xs font-bold uppercase text-[#c89b3c]">Minimum Order (MOQ)</span>
+                        <span class="block text-base font-extrabold text-white mt-1">1 MT (LCL) / 18–20 MT (20ft FCL)</span>
+                        <span class="block text-xs text-gray-300 mt-1">Trial wholesale orders supported</span>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                        <span class="block text-xs font-bold uppercase text-[#c89b3c]">Port of Loading</span>
+                        <span class="block text-base font-extrabold text-white mt-1">Tanjung Emas / Tanjung Priok</span>
+                        <span class="block text-xs text-gray-300 mt-1">Semarang &amp; Jakarta, Indonesia</span>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                        <span class="block text-xs font-bold uppercase text-[#c89b3c]">Export Documents</span>
+                        <span class="block text-base font-extrabold text-white mt-1">CoA, COO, Phytosanitary, Health</span>
+                        <span class="block text-xs text-gray-300 mt-1">Complete commercial &amp; customs set</span>
+                    </div>
                 </div>
-                <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-200">
-                    <img src="Certified-GMP-Logo-PNG-Transparent-Image.png" alt="GMP" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-200">
-                    <img src="IMG_20261004_222154.png" alt="HACCP" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-200">
-                    <img src="usfws-usda-organic-logo.png" alt="USDA" class="max-h-full max-w-full object-contain">
-                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE CERTIFICATION LOGOS (CLICKABLE POP-UP MODAL) -->
+        <div class="bg-[#f8faf9] rounded-3xl p-8 sm:p-12 border border-slate-200/80 reveal">
+            <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+                <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80 inline-block">
+                    Verified Partner Standards
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Trusted by International Standards</h3>
+                <p class="text-slate-600 text-xs sm:text-sm">Compliance and quality assurance certifications for global export. <strong>Click any certification badge below to inspect details.</strong></p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                
+                <!-- 1. FDA -->
+                <button type="button" onclick="openCertModal('fda')" class="b2b-card group p-5 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer focus:outline-none">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1.5 mb-3">
+                        <img src="fda-approved-logo-pharmaceuticals-companies-pharm-healthcare-medical-231049935.jpg" alt="FDA" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+                    </div>
+                    <div>
+                        <span class="block text-xs font-extrabold text-slate-900 uppercase tracking-wider">FDA</span>
+                        <span class="inline-block text-[10px] bg-[#15603a] text-white px-2.5 py-0.5 rounded-full mt-1 font-semibold">REGISTERED</span>
+                        <span class="block text-[10px] text-[#15603a] font-medium mt-2 group-hover:underline">Click to inspect &rarr;</span>
+                    </div>
+                </button>
+
+                <!-- 2. HALAL -->
+                <button type="button" onclick="openCertModal('halal')" class="b2b-card group p-5 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer focus:outline-none">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1.5 mb-3">
+                        <img src="Halal Indonesia (Portrait) – Logo.jpeg" alt="Halal" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+                    </div>
+                    <div>
+                        <span class="block text-xs font-extrabold text-slate-900 uppercase tracking-wider">HALAL</span>
+                        <span class="inline-block text-[10px] bg-[#15603a] text-white px-2.5 py-0.5 rounded-full mt-1 font-semibold">CERTIFIED</span>
+                        <span class="block text-[10px] text-[#15603a] font-medium mt-2 group-hover:underline">Click to inspect &rarr;</span>
+                    </div>
+                </button>
+
+                <!-- 3. GMP -->
+                <button type="button" onclick="openCertModal('gmp')" class="b2b-card group p-5 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer focus:outline-none">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1.5 mb-3">
+                        <img src="Certified-GMP-Logo-PNG-Transparent-Image.png" alt="GMP" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+                    </div>
+                    <div>
+                        <span class="block text-xs font-extrabold text-slate-900 uppercase tracking-wider">GMP</span>
+                        <span class="inline-block text-[10px] bg-[#15603a] text-white px-2.5 py-0.5 rounded-full mt-1 font-semibold">QUALITY</span>
+                        <span class="block text-[10px] text-[#15603a] font-medium mt-2 group-hover:underline">Click to inspect &rarr;</span>
+                    </div>
+                </button>
+
+                <!-- 4. HACCP -->
+                <button type="button" onclick="openCertModal('haccp')" class="b2b-card group p-5 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer focus:outline-none">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1.5 mb-3">
+                        <img src="IMG_20261004_222154.png" alt="HACCP" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+                    </div>
+                    <div>
+                        <span class="block text-xs font-extrabold text-slate-900 uppercase tracking-wider">HACCP</span>
+                        <span class="inline-block text-[10px] bg-[#15603a] text-white px-2.5 py-0.5 rounded-full mt-1 font-semibold">FOOD SAFE</span>
+                        <span class="block text-[10px] text-[#15603a] font-medium mt-2 group-hover:underline">Click to inspect &rarr;</span>
+                    </div>
+                </button>
+
+                <!-- 5. USDA ORGANIC -->
+                <button type="button" onclick="openCertModal('usda')" class="b2b-card group p-5 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer focus:outline-none col-span-2 sm:col-span-1">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center p-1.5 mb-3">
+                        <img src="usfws-usda-organic-logo.png" alt="USDA" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform">
+                    </div>
+                    <div>
+                        <span class="block text-xs font-extrabold text-slate-900 uppercase tracking-wider">USDA</span>
+                        <span class="inline-block text-[10px] bg-[#15603a] text-white px-2.5 py-0.5 rounded-full mt-1 font-semibold">ORGANIC</span>
+                        <span class="block text-[10px] text-[#15603a] font-medium mt-2 group-hover:underline">Click to inspect &rarr;</span>
+                    </div>
+                </button>
+
             </div>
         </div>
 
@@ -160,30 +491,151 @@
 
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
-                Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
-            </p>
-        </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
+<!-- POP-UP MODAL UNTUK DETAIL SERTIFIKASI -->
+<div id="cert-modal" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4" onclick="closeCertModal()">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative transform transition-all" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeCertModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-lg cursor-pointer" aria-label="Close modal">
+            &times;
+        </button>
+
+        <div class="text-center space-y-4">
+            <div class="w-28 h-28 mx-auto bg-slate-50 rounded-2xl border border-slate-200 p-3 flex items-center justify-center">
+                <img id="modal-cert-img" src="" alt="Certification Logo" class="max-h-full max-w-full object-contain">
+            </div>
+
+            <div>
+                <span id="modal-cert-badge" class="inline-block text-[11px] bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider"></span>
+                <h3 id="modal-cert-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-2"></h3>
+            </div>
+
+            <p id="modal-cert-desc" class="text-slate-600 text-sm leading-relaxed"></p>
+
+            <div class="bg-[#f8faf9] p-3.5 rounded-xl border border-slate-200/80 text-xs text-slate-600">
+                Official certificate copies and batch Certificate of Analysis (CoA) are available upon B2B buyer verification.
+            </div>
+
+            <div class="pt-2 flex gap-3">
+                <a href="contact.html" class="flex-1 bg-[#15603a] hover:bg-[#0f472b] text-white py-2.5 px-4 rounded-xl font-semibold text-xs sm:text-sm transition">
+                    Request Document Copy
+                </a>
+                <button type="button" onclick="closeCertModal()" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold text-xs sm:text-sm cursor-pointer">
+                    Close
+                </button>
             </div>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+</div>
+
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
+            </p>
+        </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+const certData = {
+    fda: {
+        img: 'fda-approved-logo-pharmaceuticals-companies-pharm-healthcare-medical-231049935.jpg',
+        badge: 'US Export Compliance',
+        title: 'FDA Registered Facility',
+        desc: 'Our curated processing partner facilities in Central Java maintain active U.S. Food and Drug Administration (FDA) registration, ensuring smooth customs clearance for North American wholesale buyers.'
+    },
+    halal: {
+        img: 'Halal Indonesia (Portrait) – Logo.jpeg',
+        badge: 'BPJPH / Halal Indonesia',
+        title: 'Halal Certified Commodity',
+        desc: '100% pure coconut palm sap harvested and processed in strict compliance with Halal standards without any synthetic additives, preservatives, or cross-contamination.'
+    },
+    gmp: {
+        img: 'Certified-GMP-Logo-PNG-Transparent-Image.png',
+        badge: 'Manufacturing Excellence',
+        title: 'Good Manufacturing Practice (GMP)',
+        desc: 'Every stage from sap collection, hygienic boiling, mechanical granulation, to moisture-controlled sifting adheres strictly to Good Manufacturing Practice protocols.'
+    },
+    haccp: {
+        img: 'IMG_20261004_222154.png',
+        badge: 'Food Safety Management',
+        title: 'HACCP Food Safe Certified',
+        desc: 'Hazard Analysis and Critical Control Points (HACCP) systems are strictly enforced across our supplier network to guarantee microbiological safety and strict moisture control (≤ 2.0%).'
+    },
+    usda: {
+        img: 'usfws-usda-organic-logo.png',
+        badge: '100% Organic Integrity',
+        title: 'USDA Organic Certified Supply',
+        desc: 'Sourced directly from certified organic coconut farming cooperatives in Central Java grown without synthetic pesticides, chemical fertilizers, or GMO inputs.'
+    }
+};
+
+function openCertModal(key) {
+    const data = certData[key];
+    if (!data) return;
+    document.getElementById('modal-cert-img').src = data.img;
+    document.getElementById('modal-cert-badge').textContent = data.badge;
+    document.getElementById('modal-cert-title').textContent = data.title;
+    document.getElementById('modal-cert-desc').textContent = data.desc;
+    document.getElementById('cert-modal').classList.remove('hidden');
+}
+
+function closeCertModal() {
+    document.getElementById('cert-modal').classList.add('hidden');
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCertModal();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
