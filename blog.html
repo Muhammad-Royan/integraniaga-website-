@@ -7,144 +7,476 @@
     <meta name="description" content="Explore professional articles, global market intelligence, moisture control guides, and supply chain insights.">
     
     <link rel="canonical" href="https://integraniaga.online/blog.html">
+    <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="Export Insights & Technical Articles | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/blog.html">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
+      "url": "https://integraniaga.online/"
+    }
+    </script>
     
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <style>
-        body { overflow-x: hidden; }
-        /* CSS ANIMASI REVEAL */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
+        }
+
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (ORIGIN SCALE-POP)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: top right;
+            opacity: 0;
+            transform: scale(0.35) translateY(-10px);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(12px);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.05s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.09s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.13s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.17s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.21s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.25s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.29s; }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
         }
         .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
+        .delay-1 { transition-delay: 0.12s; }
+        .delay-2 { transition-delay: 0.24s; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer">
-            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="products.html" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog.html" class="py-3 text-gold font-bold border-b border-white/10">BLOG</a>
-            <a href="contact.html" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50">CONTACT</a>
         </div>
     </nav>
 </header>
 
 <main class="flex-grow w-full">
-    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg'); background-size: cover; background-position: center;">
-        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Knowledge Hub</span>
-            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Export Insights & Technical Articles</h2>
-            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Explore all 5 professional guides regarding organic commodity trade, quality compliance, and global sweetener trends.</p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="contact.html" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Contact Us</a>
-                <a href="https://wa.me/628817941803" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/35 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition duration-300">Direct WhatsApp Inquiry</a>
+
+    <!-- FULL-BLEED HERO BANNER -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        <img src="image_78ef1c94.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="Export Insights & Technical Articles" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
+            <div class="max-w-xl space-y-5 reveal">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                    <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
+                        <span class="w-full h-1/2 bg-red-600 block"></span>
+                        <span class="w-full h-1/2 bg-white block"></span>
+                    </span>
+                    <span>Knowledge Hub</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
+                    Export Insights &amp; Technical Articles
+                </h1>
+
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+                    Explore all 5 professional guides regarding organic commodity trade, quality compliance, and global sweetener trends.
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3.5">
+                    <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
+                        Contact Us
+                    </a>
+                    <a href="https://wa.me/628817941803" target="_blank" rel="noopener noreferrer" class="bg-black/20 hover:bg-white/15 backdrop-blur-xs border border-white/50 text-white px-6 py-3 rounded-lg font-semibold text-sm transition duration-200">
+                        Direct WhatsApp Inquiry
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-black/50 z-0"></div> <!-- Overlay gelap untuk memastikan teks terbaca jelas di atas gambar -->
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
     </section>
 
-    <!-- GRID LENGKAP 5 ARTIKEL -->
-    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- ARTICLES GRID SECTION -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+        
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-200 pb-8 reveal">
+            <div class="space-y-2 max-w-2xl">
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block border border-[#15603a]/20">
+                    B2B Commodity Intelligence
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900">Technical Briefings &amp; Trade Guides</h2>
+                <p class="text-slate-600 text-sm sm:text-base">In-depth publications authored for international food manufacturers, importers, and procurement teams.</p>
+            </div>
+
+            <!-- SINGLE SLEEK DROPDOWN & SEARCH BAR -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+                <!-- Search Input -->
+                <div class="relative flex-1 sm:w-56">
+                    <input type="text" id="article-search" oninput="filterArticles()" placeholder="Search articles..." class="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#15603a] focus:ring-2 focus:ring-[#15603a]/15 bg-white">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"></path></svg>
+                </div>
+
+                <!-- Dropdown Menu (All -> Klik muncul opsi ke bawah) -->
+                <div class="relative sm:w-56">
+                    <select id="category-select" onchange="filterArticles()" aria-label="Filter Articles by Topic" class="w-full appearance-none bg-[#15603a] text-white font-bold text-xs sm:text-sm pl-4 pr-10 py-2.5 rounded-xl border border-[#15603a] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#15603a]/30 cursor-pointer">
+                        <option value="all" class="bg-white text-slate-800 font-semibold">All Articles (5)</option>
+                        <option value="quality-control" class="bg-white text-slate-800 font-semibold">Quality Control</option>
+                        <option value="supply-chain" class="bg-white text-slate-800 font-semibold">Supply Chain</option>
+                        <option value="clean-label" class="bg-white text-slate-800 font-semibold">Clean-Label</option>
+                        <option value="market-trends" class="bg-white text-slate-800 font-semibold">Market Trends</option>
+                        <option value="health-science" class="bg-white text-slate-800 font-semibold">Health Science</option>
+                    </select>
+                    <svg class="w-4 h-4 text-white absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMPTY SEARCH STATE -->
+        <div id="no-results" class="hidden text-center py-12 bg-[#f8faf9] rounded-3xl border border-slate-200 space-y-3">
+            <p class="text-slate-700 font-bold text-base">No matching technical guides found.</p>
+            <button type="button" onclick="resetArticleFilter()" class="text-xs font-bold text-[#15603a] hover:underline cursor-pointer">Show All 5 Articles &rarr;</button>
+        </div>
+
+        <!-- GRID LENGKAP 5 ARTIKEL -->
+        <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Artikel 1 -->
-            <div class="luxury-card p-6 rounded-3xl shadow-lg reveal space-y-4 flex flex-col justify-between">
-                <div>
-                    <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase">Quality Control</span>
-                    <h3 class="text-xl font-bold text-[#115836] mt-3">Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting</h3>
-                    <p class="text-slate-600 text-sm mt-3">Discover how strict moisture regulation prevents caking, microbial growth, and cargo rejection during maritime shipping.</p>
+            <article data-category="quality-control" class="article-card b2b-card p-7 sm:p-8 rounded-3xl reveal space-y-5 flex flex-col justify-between border-t-4 border-[#15603a]">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Quality Control</span>
+                        <span class="text-xs font-semibold text-slate-400">Guide 01</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 leading-snug">
+                        <a href="artikel-moisture.html" class="hover:text-[#15603a] transition">Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting</a>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Discover how strict moisture regulation prevents caking, microbial growth, and cargo rejection during maritime shipping.
+                    </p>
                 </div>
-                <a href="artikel-moisture.html" class="text-[#115836] font-bold text-sm hover:underline pt-4 inline-block">Read Full Article &rarr;</a>
-            </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="artikel-moisture.html" class="text-[#15603a] font-bold text-sm hover:underline inline-flex items-center gap-1.5">
+                        Read Full Article <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
 
             <!-- Artikel 2 -->
-            <div class="luxury-card p-6 rounded-3xl shadow-lg reveal space-y-4 flex flex-col justify-between">
-                <div>
-                    <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase">Supply Chain</span>
-                    <h3 class="text-xl font-bold text-[#115836] mt-3">Bridging Certified Indonesian Suppliers to Global B2B Export Markets</h3>
-                    <p class="text-slate-600 text-sm mt-3">An inside look at how PT Integra Niaga Komoditas builds robust, transparent supply chains with certified processing facilities.</p>
+            <article data-category="supply-chain" class="article-card b2b-card p-7 sm:p-8 rounded-3xl reveal delay-1 space-y-5 flex flex-col justify-between border-t-4 border-[#c89b3c]">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80">Supply Chain</span>
+                        <span class="text-xs font-semibold text-slate-400">Guide 02</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 leading-snug">
+                        <a href="artikel-supply.html" class="hover:text-[#15603a] transition">Bridging Certified Indonesian Suppliers to Global B2B Export Markets</a>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        An inside look at how PT Integra Niaga Komoditas builds robust, transparent supply chains with certified processing facilities.
+                    </p>
                 </div>
-                <a href="artikel-supply.html" class="text-[#115836] font-bold text-sm hover:underline pt-4 inline-block">Read Full Article &rarr;</a>
-            </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="artikel-supply.html" class="text-[#15603a] font-bold text-sm hover:underline inline-flex items-center gap-1.5">
+                        Read Full Article <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
 
             <!-- Artikel 3 -->
-            <div class="luxury-card p-6 rounded-3xl shadow-lg reveal space-y-4 flex flex-col justify-between">
-                <div>
-                    <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase">Clean-Label</span>
-                    <h3 class="text-xl font-bold text-[#115836] mt-3">Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar</h3>
-                    <p class="text-slate-600 text-sm mt-3">Analyzing why international food manufacturers are aggressively shifting toward low-glycemic natural clean-label sweeteners.</p>
+            <article data-category="clean-label" class="article-card b2b-card p-7 sm:p-8 rounded-3xl reveal delay-2 space-y-5 flex flex-col justify-between border-t-4 border-[#15603a]">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Clean-Label</span>
+                        <span class="text-xs font-semibold text-slate-400">Guide 03</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 leading-snug">
+                        <a href="artikel-clean-label.html" class="hover:text-[#15603a] transition">Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar</a>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Analyzing why international food manufacturers are aggressively shifting toward low-glycemic natural clean-label sweeteners.
+                    </p>
                 </div>
-                <a href="artikel-clean-label.html" class="text-[#115836] font-bold text-sm hover:underline pt-4 inline-block">Read Full Article &rarr;</a>
-            </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="artikel-clean-label.html" class="text-[#15603a] font-bold text-sm hover:underline inline-flex items-center gap-1.5">
+                        Read Full Article <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
 
             <!-- Artikel 4 -->
-            <div class="luxury-card p-6 rounded-3xl shadow-lg reveal space-y-4 flex flex-col justify-between">
-                <div>
-                    <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase">Market Trends</span>
-                    <h3 class="text-xl font-bold text-[#115836] mt-3">Global Export Market Trends and Major Import Demands</h3>
-                    <p class="text-slate-600 text-sm mt-3">Comprehensive analysis of global organic coconut sugar export trends and import volumes across North America and Europe.</p>
+            <article data-category="market-trends" class="article-card b2b-card p-7 sm:p-8 rounded-3xl reveal space-y-5 flex flex-col justify-between border-t-4 border-[#c89b3c]">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80">Market Trends</span>
+                        <span class="text-xs font-semibold text-slate-400">Guide 04</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 leading-snug">
+                        <a href="artikel-global-market.html" class="hover:text-[#15603a] transition">Global Export Market Trends and Major Import Demands</a>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Comprehensive analysis of global organic coconut sugar export trends and import volumes across North America and Europe.
+                    </p>
                 </div>
-                <a href="artikel-global-market.html" class="text-[#115836] font-bold text-sm hover:underline pt-4 inline-block">Read Full Article &rarr;</a>
-            </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="artikel-global-market.html" class="text-[#15603a] font-bold text-sm hover:underline inline-flex items-center gap-1.5">
+                        Read Full Article <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
 
             <!-- Artikel 5 -->
-            <div class="luxury-card p-6 rounded-3xl shadow-lg reveal space-y-4 flex flex-col justify-between">
-                <div>
-                    <span class="text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase">Health Science</span>
-                    <h3 class="text-xl font-bold text-[#115836] mt-3">Nutritional Superiority and Low Glycemic Index (GI 35)</h3>
-                    <p class="text-slate-600 text-sm mt-3">Understanding why low glycemic index and natural volcanic mineral retention make coconut sugar superior to refined cane sugar.</p>
+            <article data-category="health-science" class="article-card b2b-card p-7 sm:p-8 rounded-3xl reveal delay-1 space-y-5 flex flex-col justify-between border-t-4 border-[#15603a]">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Health Science</span>
+                        <span class="text-xs font-semibold text-slate-400">Guide 05</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 leading-snug">
+                        <a href="artikel-health-benefits.html" class="hover:text-[#15603a] transition">Nutritional Superiority and Low Glycemic Index (GI 35)</a>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Understanding why low glycemic index and natural volcanic mineral retention make coconut sugar superior to refined cane sugar.
+                    </p>
                 </div>
-                <a href="artikel-health-benefits.html" class="text-[#115836] font-bold text-sm hover:underline pt-4 inline-block">Read Full Article &rarr;</a>
-            </div>
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="artikel-health-benefits.html" class="text-[#15603a] font-bold text-sm hover:underline inline-flex items-center gap-1.5">
+                        Read Full Article <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
 
         </div>
+
     </section>
+
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.</p>
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
+            </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function filterArticles() {
+    const selectedCategory = document.getElementById('category-select').value;
+    const searchQuery = document.getElementById('article-search').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.article-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const matchesCategory = (selectedCategory === 'all' || card.dataset.category === selectedCategory);
+        const textContent = card.textContent.toLowerCase();
+        const matchesSearch = (searchQuery === '' || textContent.includes(searchQuery));
+
+        if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    const noResults = document.getElementById('no-results');
+    if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+    } else {
+        noResults.classList.add('hidden');
+    }
+}
+
+function resetArticleFilter() {
+    document.getElementById('category-select').value = 'all';
+    document.getElementById('article-search').value = '';
+    filterArticles();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
