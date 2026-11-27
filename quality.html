@@ -9,131 +9,372 @@
     <link rel="canonical" href="https://integraniaga.online/quality.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
     <meta property="og:title" content="Quality Assurance & Standards | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/quality.html">
     <meta property="og:type" content="website">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url": "https://integraniaga.online/"
     }
     </script>
 
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5.0">
     <style>
-        body { overflow-x: hidden; }
-        @media (max-width: 768px) {
-            .reveal { opacity: 1 !important; transform: none !important; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
         }
+
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
+        }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .delay-1 { transition-delay: 0.12s; }
+        .delay-2 { transition-delay: 0.24s; }
+        .delay-3 { transition-delay: 0.36s; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3 lg:gap-4">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 lg:w-20 lg:h-20 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg lg:text-2xl leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs lg:text-sm tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">QUALITY</a>
+            <a href="blog.html" class="text-slate-700 hover:text-[#15603a] transition">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="products.html" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-gold font-bold border-b border-white/10">QUALITY</a>
-            <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10">BLOG</a>
-            <a href="contact.html" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-4 mt-2 w-60 bg-white shadow-2xl rounded-2xl border border-slate-200 flex flex-col py-3 px-5 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 text-[#15603a] border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 text-slate-700 hover:text-[#15603a]">CONTACT</a>
         </div>
     </nav>
 </header>
 
 <main class="flex-grow w-full">
 
-    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden relative" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg'); background-size: cover; background-position: center;">
-        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Quality Assurance</span>
-            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Rigorous Quality Control Standards</h2>
-            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">Uncompromising supplier curation and inspection protocols ensuring pristine export compliance.</p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="contact.html" class="bg-white/10 hover:bg-white/20 border border-white/35 text-white px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition duration-300">Contact Export Desk</a>
+    <!-- FULL-BLEED HERO BANNER -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        <img src="hero-sugar.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="Rigorous Quality Control Standards" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
+            <div class="max-w-xl space-y-5 reveal">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                    <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
+                        <span class="w-full h-1/2 bg-red-600 block"></span>
+                        <span class="w-full h-1/2 bg-white block"></span>
+                    </span>
+                    <span>Quality Assurance</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
+                    Rigorous Quality Control Standards
+                </h1>
+
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+                    Uncompromising supplier curation and inspection protocols ensuring pristine export compliance.
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3.5">
+                    <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200">
+                        Contact Export Desk
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
+    <!-- MOISTURE CONTROL & SUPPLY CAPABILITY + FEATURED LAB INSPECTION PHOTO -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-24">
         
-        <div class="max-w-4xl mx-auto text-center space-y-6 reveal">
-            <span class="text-xs bg-[#c89b3c]/10 text-[#c89b3c] font-bold px-3 py-1 rounded-full uppercase border border-[#c89b3c]/20 inline-block">Moisture Control & Supply Capability</span>
-            <h3 class="text-2xl sm:text-4xl font-extrabold text-[#115836] leading-snug">Prevention of Caking & Scalable Supply</h3>
-            <p class="text-slate-700 leading-relaxed text-sm sm:text-base text-left sm:text-center">Organic coconut sugar is naturally hygroscopic. Without strict moisture control, international ocean freight can lead to moisture absorption, caking, and cargo spoilage.</p>
-            <p class="text-slate-700 leading-relaxed text-sm sm:text-base text-left sm:text-center">As an authorized B2B export trading enterprise, we mitigate this risk entirely. We exclusively curate our products from certified local suppliers capable of strictly maintaining a maximum moisture content of 2.0%, ensuring the granules remain free-flowing upon arrival at your destination port.</p>
-            <p class="text-slate-700 leading-relaxed text-sm sm:text-base text-left sm:text-center">Our consolidated supplier network across Central Java ensures a scalable supply capacity of up to <strong>100 Metric Tons (MT) / Month</strong>, allowing us to consistently fulfill large-scale international wholesale contracts.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="lg:col-span-6 space-y-5 reveal">
+                <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider border border-amber-200/80 inline-block">
+                    Moisture Control &amp; Supply Capability
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    Prevention of Caking &amp; Scalable Supply
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    Organic coconut sugar is naturally hygroscopic. Without strict moisture control, international ocean freight can lead to moisture absorption, caking, and cargo spoilage.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    As an authorized B2B export trading enterprise, we mitigate this risk entirely. We exclusively curate our products from certified local suppliers capable of strictly maintaining a maximum moisture content of 2.0%, ensuring the granules remain free-flowing upon arrival at your destination port.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    Our consolidated supplier network across Central Java ensures a scalable supply capacity of up to <strong class="text-slate-900">100 Metric Tons (MT) / Month</strong>, allowing us to consistently fulfill large-scale international wholesale contracts.
+                </p>
+            </div>
+
+            <!-- KARTU FOTO LABORATORIUM & CERTIFICATE OF ANALYSIS (PROPORSIONAL 16:10) -->
+            <div class="lg:col-span-6 reveal delay-1">
+                <div class="b2b-card rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white">
+                    <div class="aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                        <img src="quality-inspection.jpg" 
+                             onerror="this.onerror=null; this.src='225132.jpg';" 
+                             alt="Laboratory Moisture Testing and Certificate of Analysis for Organic Coconut Sugar" 
+                             class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 sm:p-5 bg-[#f8faf9] border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <span class="block text-xs sm:text-sm font-extrabold text-slate-900">Laboratory Moisture &amp; CoA Verification</span>
+                            <span class="block text-[11px] sm:text-xs text-slate-500">Pre-shipment batch testing for export quality assurance</span>
+                        </div>
+                        <span class="inline-flex items-center self-start sm:self-center text-xs font-extrabold text-[#15603a] bg-[#15603a]/10 border border-[#15603a]/20 px-3 py-1 rounded-full shrink-0">
+                            Moisture &le; 2.0%
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto reveal">
-            <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm text-center space-y-2">
-                <div class="text-3xl font-extrabold text-[#115836]">≤ 2.0%</div>
-                <div class="text-xs uppercase font-bold text-[#c89b3c] tracking-wider">Moisture Content</div>
-                <p class="text-xs text-slate-500">Strictly tested to prevent caking during ocean transport.</p>
+        <!-- 4 CORE METRIC CARDS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto reveal">
+            <div class="b2b-card p-7 rounded-3xl text-center space-y-2.5 border-t-4 border-[#15603a]">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#15603a]">&le; 2.0%</div>
+                <div class="text-xs uppercase font-bold text-[#9a7328] tracking-wider">Moisture Content</div>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Strictly tested to prevent caking during ocean transport.</p>
             </div>
             
-            <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm text-center space-y-2">
-                <div class="text-3xl font-extrabold text-[#115836]">100 MT</div>
-                <div class="text-xs uppercase font-bold text-[#c89b3c] tracking-wider">Monthly Capacity</div>
-                <p class="text-xs text-slate-500">Scalable wholesale volume to fulfill container loads.</p>
+            <div class="b2b-card p-7 rounded-3xl text-center space-y-2.5 border-t-4 border-[#c89b3c] reveal delay-1">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#15603a]">100 MT</div>
+                <div class="text-xs uppercase font-bold text-[#9a7328] tracking-wider">Monthly Capacity</div>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Scalable wholesale volume to fulfill container loads.</p>
             </div>
 
-            <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm text-center space-y-2">
-                <div class="text-3xl font-extrabold text-[#115836]">16 - 18</div>
-                <div class="text-xs uppercase font-bold text-[#c89b3c] tracking-wider">Mesh Granulation</div>
-                <p class="text-xs text-slate-500">Uniform, fine free-flowing granules via mechanical sieving.</p>
+            <div class="b2b-card p-7 rounded-3xl text-center space-y-2.5 border-t-4 border-[#15603a] reveal delay-2">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#15603a]">16 - 18</div>
+                <div class="text-xs uppercase font-bold text-[#9a7328] tracking-wider">Mesh Granulation</div>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Uniform, fine free-flowing granules via mechanical sieving.</p>
             </div>
 
-            <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm text-center space-y-2">
-                <div class="text-3xl font-extrabold text-[#115836]">24 Months</div>
-                <div class="text-xs uppercase font-bold text-[#c89b3c] tracking-wider">Product Shelf Life</div>
-                <p class="text-xs text-slate-500">Optimal shelf life stored in export-grade packaging.</p>
+            <div class="b2b-card p-7 rounded-3xl text-center space-y-2.5 border-t-4 border-[#c89b3c] reveal delay-3">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#15603a]">24 Months</div>
+                <div class="text-xs uppercase font-bold text-[#9a7328] tracking-wider">Product Shelf Life</div>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Optimal shelf life stored in export-grade packaging.</p>
             </div>
         </div>
 
-        <div class="max-w-5xl mx-auto space-y-6 reveal mt-12">
+        <!-- 5-STAGE END-TO-END QUALITY WORKFLOW -->
+        <div class="space-y-10 reveal">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block border border-[#15603a]/20">
+                    Farm-to-Port Control
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">5-Stage Production &amp; Quality Workflow</h3>
+                <p class="text-slate-600 text-sm sm:text-base">Every step of processing across our curated supplier network is monitored against strict international food safety benchmarks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="b2b-card p-6 rounded-2xl space-y-3 reveal">
+                    <span class="inline-block text-xs font-extrabold bg-[#15603a] text-white px-2.5 py-1 rounded-lg">STEP 01</span>
+                    <h4 class="font-extrabold text-slate-900 text-base">Fresh Nectar Tapping</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Morning sap collection from certified organic coconut groves in Central Java with natural pH monitoring to prevent premature fermentation.</p>
+                </div>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3 reveal delay-1">
+                    <span class="inline-block text-xs font-extrabold bg-[#15603a] text-white px-2.5 py-1 rounded-lg">STEP 02</span>
+                    <h4 class="font-extrabold text-slate-900 text-base">Hygienic Boiling</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Controlled thermal evaporation in food-grade stainless vessels without synthetic preservatives, bleaching agents, or sulfites.</p>
+                </div>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3 reveal delay-1">
+                    <span class="inline-block text-xs font-extrabold bg-[#15603a] text-white px-2.5 py-1 rounded-lg">STEP 03</span>
+                    <h4 class="font-extrabold text-slate-900 text-base">Drying &amp; Granulation</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Precision drying and mechanical sifting through 16–18 mesh stainless screens to achieve uniform, free-flowing crystals.</p>
+                </div>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3 reveal delay-2">
+                    <span class="inline-block text-xs font-extrabold bg-[#c89b3c] text-white px-2.5 py-1 rounded-lg">STEP 04</span>
+                    <h4 class="font-extrabold text-slate-900 text-base">Moisture &amp; Metal Check</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Digital moisture analyzer verification (&le; 2.0%) and metal-detector screening prior to final bulk packaging.</p>
+                </div>
+
+                <div class="b2b-card p-6 rounded-2xl space-y-3 reveal delay-3">
+                    <span class="inline-block text-xs font-extrabold bg-[#0d3622] text-[#c89b3c] px-2.5 py-1 rounded-lg">STEP 05</span>
+                    <h4 class="font-extrabold text-slate-900 text-base">Hermetic Sealing</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Immediate heat-sealing inside food-grade PE inner liners and multi-wall kraft bags or export cartons for container stuffing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOD SAFETY, LAB TESTING & BATCH TRACEABILITY -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal">
+            <div class="b2b-card p-8 sm:p-10 rounded-3xl space-y-5 border-t-4 border-[#15603a]">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-[#15603a]/10 text-[#15603a] flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">Food Safety &amp; Lab Testing</h3>
+                </div>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Every export lot undergoes strict laboratory verification to meet North American, European, and Asian import regulations:
+                </p>
+                <ul class="space-y-3 text-slate-600 text-sm">
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#15603a] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">100% Purity Guarantee:</strong> Zero cane sugar blending, zero maltodextrin, zero sulfites, and no synthetic anti-caking agents.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#15603a] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">Microbiological &amp; Heavy Metal Compliance:</strong> Tested against international food-grade thresholds (TPC, Yeast &amp; Mold, Salmonella, Lead, Arsenic).</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#15603a] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">Batch Certificate of Analysis (CoA):</strong> Issued for every shipment with exact moisture, sucrose, and mesh readings.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="b2b-card p-8 sm:p-10 rounded-3xl space-y-5 border-t-4 border-[#c89b3c]">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-amber-50 text-[#9a7328] flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">Full Batch Traceability &amp; Retention</h3>
+                </div>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Transparency is central to our role as a commercial bridge between Central Java farming cooperatives and global food manufacturers:
+                </p>
+                <ul class="space-y-3 text-slate-600 text-sm">
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#c89b3c] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">Unique Lot Coding:</strong> Every 20kg–25kg bag carries a traceable batch number linking back to the processing facility and production date.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#c89b3c] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">Pre-Shipment Retention Samples:</strong> Sealed reference samples are retained for quality verification and buyer audit confidence.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-5 h-5 text-[#c89b3c] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong class="text-slate-900">Third-Party Inspection Ready:</strong> Full cooperation with independent surveyors (such as SGS, Sucofindo, or Intertek) upon buyer request.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- QUALITY VERIFICATION CHECKPOINTS TABLE -->
+        <div class="max-w-5xl mx-auto space-y-6 reveal">
             <div class="text-center space-y-2">
-                <h3 class="text-2xl sm:text-3xl font-bold text-[#115836]">Quality Verification Checkpoints</h3>
+                <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block border border-[#15603a]/20">
+                    Inspection Framework
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Quality Verification Checkpoints</h3>
                 <p class="text-slate-600 text-sm sm:text-base">Our exhaustive pre-shipment curation framework for global wholesale buyers.</p>
             </div>
-            <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-300 mt-6">
+            <div class="overflow-x-auto shadow-lg rounded-2xl border border-slate-200 mt-6">
                 <table class="min-w-full border-collapse bg-white text-left text-sm sm:text-base">
                     <thead>
-                        <tr class="bg-[#115836] text-white">
-                            <th class="border border-slate-300 p-3 sm:p-4 font-semibold w-1/3">Inspection Stage</th>
-                            <th class="border border-slate-300 p-3 sm:p-4 font-semibold">Verification Action</th>
+                        <tr class="bg-[#0d3622] text-white">
+                            <th class="p-4 font-semibold w-1/3">Inspection Stage</th>
+                            <th class="p-4 font-semibold">Verification Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-slate-200">
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">1. Certified Supplier Selection</td>
-                            <td class="border border-slate-300 p-3">Partnering exclusively with verified Central Java facilities adhering to international food safety and hygiene standards.</td>
+                            <td class="p-4 font-bold text-slate-900">1. Certified Supplier Selection</td>
+                            <td class="p-4 text-slate-600">Partnering exclusively with verified Central Java facilities adhering to international food safety and hygiene standards.</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">2. Moisture Validation</td>
-                            <td class="border border-slate-300 p-3 font-bold text-[#115836]">Strict screening to guarantee moisture content remains at ≤ 2.0% prior to packaging.</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-bold text-slate-900">2. Moisture Validation</td>
+                            <td class="p-4 font-bold text-[#15603a]">Strict screening to guarantee moisture content remains at &le; 2.0% prior to packaging.</td>
                         </tr>
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">3. Granule Consistency</td>
-                            <td class="border border-slate-300 p-3">Ensuring uniform 16-18 mesh free-flowing granules via mechanical sieving.</td>
+                            <td class="p-4 font-bold text-slate-900">3. Granule Consistency</td>
+                            <td class="p-4 text-slate-600">Ensuring uniform 16-18 mesh free-flowing granules via mechanical sieving.</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">4. Pre-Shipment Audit</td>
-                            <td class="border border-slate-300 p-3">Comprehensive physical quality validation and export documentation readiness before container loading.</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-4 font-bold text-slate-900">4. Pre-Shipment Audit</td>
+                            <td class="p-4 text-slate-600">Comprehensive physical quality validation and export documentation readiness before container loading.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -143,30 +384,65 @@
 
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                 Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
             </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
