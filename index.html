@@ -78,6 +78,57 @@
             }
         }
 
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (RADIAL FAN UNFOLD)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: 92% 0%;
+            opacity: 0;
+            transform: perspective(600px) rotate(-14deg) scale(0.15);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.45s cubic-bezier(0.22, 1.35, 0.36, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: perspective(600px) rotate(0deg) scale(1);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(14px) rotate(-2deg);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.04s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.08s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.12s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.16s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.20s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.24s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.28s; }
+
         .b2b-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -130,22 +181,22 @@
             <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
         </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
-            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
-            <span class="w-full h-0.5 bg-slate-800 rounded"></span>
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
 
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-4 mt-2 w-60 bg-white shadow-2xl rounded-2xl border border-slate-200 flex flex-col py-3 px-5 z-50 text-xs font-bold tracking-wider uppercase">
-            <a href="index.html" class="py-3 text-[#15603a] border-b border-slate-100">HOME</a>
-            <a href="about.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">ABOUT US</a>
-            <a href="products.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">QUALITY</a>
-            <a href="blog.html" class="py-3 text-slate-700 hover:text-[#15603a] border-b border-slate-100">BLOG</a>
-            <a href="contact.html" class="py-3 text-slate-700 hover:text-[#15603a]">CONTACT</a>
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50">CONTACT</a>
         </div>
     </nav>
 </header>
@@ -351,11 +402,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
         });
         document.addEventListener('click', (e) => {
             if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
             }
         });
     }
