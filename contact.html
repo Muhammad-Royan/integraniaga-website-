@@ -7,146 +7,407 @@
     <meta name="description" content="Get in touch with PT Integra Niaga Komoditas in Pemalang, Central Java for wholesale orders, quotation samples, and export partnerships.">
     
     <link rel="canonical" href="https://integraniaga.online/contact.html">
+    <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="Contact Us & B2B Inquiries | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/contact.html">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
+      "url": "https://integraniaga.online/"
+    }
+    </script>
     
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <style>
-        body { overflow-x: hidden; }
-        /* CSS ANIMASI REVEAL */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+
+        .hero-natural-overlay {
+            background: linear-gradient(
+                90deg,
+                #0d3622 0%,
+                #0d3622 36%,
+                rgba(13, 54, 34, 0.85) 52%,
+                rgba(13, 54, 34, 0.15) 75%,
+                rgba(0, 0, 0, 0.05) 100%
+            );
+        }
+
+        @media (max-width: 1024px) {
+            .hero-natural-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(13, 54, 34, 0.90) 0%,
+                    rgba(13, 54, 34, 0.78) 55%,
+                    rgba(13, 54, 34, 0.45) 100%
+                );
+            }
+        }
+
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (ORIGIN SCALE-POP)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: top right;
+            opacity: 0;
+            transform: scale(0.35) translateY(-10px);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(12px);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.05s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.09s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.13s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.17s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.21s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.25s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.29s; }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .b2b-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(21, 96, 58, 0.35);
+            box-shadow: 0 12px 26px -4px rgba(13, 54, 34, 0.10);
+        }
+
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
         }
         .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
+        .delay-1 { transition-delay: 0.12s; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer">
-            <span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span><span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-slate-700 hover:text-[#15603a] transition">BLOG</a>
+            <a href="contact.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="index.html" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about.html" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="products.html" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging.html" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality.html" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog.html" class="py-3 text-white font-semibold border-b border-white/10">BLOG</a>
-            <a href="contact.html" class="py-3 text-gold font-bold border-b border-white/10">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5">CONTACT</a>
         </div>
     </nav>
 </header>
 
 <main class="flex-grow w-full">
-    <section class="immersive-hero pt-36 pb-24 md:pt-48 md:pb-36 text-center px-4 sm:px-6 text-white overflow-hidden relative" style="background-image: url('jomonkoikkara-coconut-tree-1538034_1920.jpg'); background-size: cover; background-position: center;">
-        <div class="max-w-4xl mx-auto relative z-10 reveal w-full space-y-4">
-            <span class="bg-gold/20 text-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block border border-gold/40">Get in Touch</span>
-            <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Contact Our Export Desk</h2>
-            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto">We are ready to assist international wholesale buyers, distributors, and partners with prompt quotations and sample requests.</p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/628817941803" target="_blank" class="btn-primary-gold px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base">Start WhatsApp Chat</a>
+
+    <!-- FULL-BLEED HERO BANNER -->
+    <section class="relative bg-[#0d3622] text-white overflow-hidden">
+        <img src="hero-sugar.jpg" 
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1600&q=90';" 
+             alt="Contact PT Integra Niaga Komoditas Export Desk" 
+             class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0">
+        
+        <div class="hero-natural-overlay absolute inset-0 z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 sm:py-20 lg:py-28 relative z-20">
+            <div class="max-w-xl space-y-5 reveal">
+                <div class="inline-flex items-center gap-2.5 bg-black/25 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-100">
+                    <span class="w-4 h-4 rounded-full overflow-hidden inline-flex flex-col border border-white/30 shrink-0">
+                        <span class="w-full h-1/2 bg-red-600 block"></span>
+                        <span class="w-full h-1/2 bg-white block"></span>
+                    </span>
+                    <span>Get in Touch</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-[1.18] tracking-tight drop-shadow-sm">
+                    Contact Our Export Desk
+                </h1>
+
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+                    We are ready to assist international wholesale buyers, distributors, and partners with prompt quotations and sample requests.
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3.5">
+                    <a href="#b2b-inquiry-form" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition duration-200 inline-flex items-center gap-2">
+                        <span>Request Official Quotation</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-black/50 z-0"></div> <!-- Overlay -->
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="relative block w-full h-8 sm:h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,35 C380,115 740,-10 1200,55 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
     </section>
 
-    <section class="py-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto space-y-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <!-- TWO-CHANNEL B2B COMMUNICATION SECTION -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             
-            <!-- Sisi Kiri: Company Info -->
-            <div class="luxury-card p-8 rounded-3xl shadow-xl space-y-6 reveal border-t-4 border-[#115836]">
+            <!-- Sisi Kiri (5 Kolom): Direct Export Desk & Quick WhatsApp Channel -->
+            <div class="lg:col-span-5 b2b-card p-8 sm:p-10 rounded-3xl space-y-6 reveal border-t-4 border-[#15603a]">
                 <div>
-                    <h3 class="text-2xl font-extrabold text-[#115836]">PT Integra Niaga Komoditas</h3>
-                    <p class="text-xs text-[#c89b3c] font-bold uppercase tracking-wider mt-1">Indonesian Coconut Sugar Exporter</p>
+                    <span class="text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                        Direct Export Desk
+                    </span>
+                    <h2 class="text-2xl font-extrabold text-slate-900">PT Integra Niaga Komoditas</h2>
+                    <p class="text-xs text-[#9a7328] font-bold uppercase tracking-wider mt-1">Indonesian Coconut Sugar Exporter</p>
                 </div>
-                <p class="text-slate-700 text-sm leading-relaxed">
+
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                     Professional export trading enterprise connecting verified Indonesian certified suppliers in Central Java with global B2B markets for pure organic coconut sugar.
                 </p>
-                <div class="border-t border-slate-200 pt-4 space-y-3 text-sm text-slate-700">
-                    <p><strong>Office Location:</strong><br>Pemalang, Central Java, Indonesia</p>
-                    <p><strong>Email Address:</strong><br>info@integraniaga.online</p>
-                    <p><strong>WhatsApp Support:</strong><br>+62 881-7941-803</p>
+
+                <div class="border-t border-slate-200 pt-6 space-y-5 text-sm text-slate-700">
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-[#f8faf9] border border-slate-200 text-[#15603a] flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <strong class="block text-slate-900">Office Location</strong>
+                            <span class="text-slate-600">Pemalang, Central Java, Indonesia</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-[#f8faf9] border border-slate-200 text-[#15603a] flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <strong class="block text-slate-900">Official Email</strong>
+                            <a href="mailto:info@integraniaga.online" class="text-[#15603a] font-semibold hover:underline">info@integraniaga.online</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-[#f8faf9] border border-slate-200 text-[#15603a] flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <strong class="block text-slate-900">Export Desk Hours</strong>
+                            <span class="text-slate-600">Mon – Fri, 08:00 – 17:00 WIB (GMT+7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fast-Track WhatsApp Box -->
+                <div class="bg-[#f8faf9] p-5 rounded-2xl border border-slate-200/90 space-y-3">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-slate-900">Fast-Track WhatsApp</span>
+                        <span class="text-[11px] font-semibold text-[#15603a]">+62 881-7941-803</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Best for urgent questions, shipping schedule checks, or sample coordination. For formal FOB/CIF quotes and documentation, use the official form on the right.
+                    </p>
+                    <a href="https://wa.me/628817941803" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-white hover:bg-[#15603a] text-[#15603a] hover:text-white border border-[#15603a]/40 py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm transition duration-200">
+                        Message Export Desk on WhatsApp &rarr;
+                    </a>
                 </div>
             </div>
 
-            <!-- Sisi Kanan: B2B Form -->
-            <div class="luxury-card p-8 rounded-3xl shadow-xl reveal border-t-4 border-[#115836]">
-                <h3 class="text-xl font-bold text-[#115836] mb-4">Send a B2B Inquiry</h3>
+            <!-- Sisi Kanan (7 Kolom): Official B2B RFQ / Inquiry Form -->
+            <div id="b2b-inquiry-form" class="lg:col-span-7 b2b-card p-8 sm:p-10 rounded-3xl reveal delay-1 border-t-4 border-[#c89b3c] scroll-mt-24">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                    <div>
+                        <span class="text-xs bg-amber-50 text-[#9a7328] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200/80 inline-block mb-2">
+                            Formal Procurement Channel
+                        </span>
+                        <h2 class="text-2xl font-extrabold text-slate-900">Send a B2B Inquiry</h2>
+                        <p class="text-slate-500 text-xs sm:text-sm mt-1">Request official FOB/CIF pricing, batch CoA specifications, or export sample dispatch.</p>
+                    </div>
+                </div>
+
                 <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
-                            <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">Full Name *</label>
+                            <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Company Name *</label>
-                            <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">Company Name *</label>
+                            <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Country / Destination *</label>
-                            <input type="text" name="country" placeholder="e.g. Germany" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">Country / Destination Port *</label>
+                            <input type="text" name="country" placeholder="e.g. Germany / Hamburg" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Business Email *</label>
-                            <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">Business Email *</label>
+                            <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp / Phone</label>
-                            <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">WhatsApp / Phone</label>
+                            <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Volume (MT / Month)</label>
-                            <input type="text" name="volume" placeholder="e.g. 1 FCL / 15 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">Volume (MT / Month)</label>
+                            <input type="text" name="volume" placeholder="e.g. 1 FCL / 18–20 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Inquiry Details *</label>
-                        <textarea name="message" rows="4" placeholder="Please provide details about your product requirements, packaging preferences..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">Inquiry Details *</label>
+                        <textarea name="message" rows="4" placeholder="Please specify mesh grade (e.g. 16–18 mesh), bulk packaging preference (25kg kraft bag or carton), incoterms (FOB/CIF), or sample request..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#15603a]/20 focus:border-[#15603a] focus:outline-none bg-[#f8faf9] text-slate-900 text-sm transition"></textarea>
                     </div>
-                    <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Submit B2B Inquiry</button>
+                    <button type="submit" class="w-full bg-[#15603a] hover:bg-[#0f472b] text-white py-3.5 rounded-xl text-center cursor-pointer text-sm sm:text-base font-bold shadow-md transition duration-200">
+                        Submit B2B Inquiry
+                    </button>
+                    <p class="text-[11px] text-slate-500 text-center">
+                        Our export desk reviews formal inquiries and responds via official email within <strong>1&times;24 business hours</strong>.
+                    </p>
                 </form>
             </div>
 
         </div>
     </section>
+
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.</p>
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
+            </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
