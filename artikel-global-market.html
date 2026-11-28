@@ -5,216 +5,346 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Export Market Trends & Major Import Demands | PT Integra Niaga Komoditas</title>
     <meta name="description" content="Comprehensive analysis of global organic coconut sugar export trends, major import volumes across North America, Europe, and Asia Pacific.">
+    
+    <!-- CANONICAL LINK SPESIFIK UNTUK ARTIKEL INI -->
+    <link rel="canonical" href="https://integraniaga.online/artikel-global-market.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="Global Export Market Trends & Major Import Demands | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/artikel-global-market.html">
+    <meta property="og:type" content="article">
     <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
       "@type" : "WebSite",
       "name" : "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url" : "https://integraniaga.online/"
     }
     </script>
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <style>
-        body { overflow-x: hidden; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
         .prose p, .prose h3, .prose h4, h1 { word-wrap: break-word; overflow-wrap: break-word; }
+
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (ORIGIN SCALE-POP)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: top right;
+            opacity: 0;
+            transform: scale(0.35) translateY(-10px);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(12px);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.05s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.09s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.13s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.17s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.21s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.25s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.29s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="/" class="flex items-center gap-2 sm:gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="/" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="product" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog" class="py-3 text-gold font-bold border-b border-white/10">BLOG</a>
-            <a href="contact" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50">CONTACT</a>
         </div>
     </nav>
 </header>
 
-<a href="https://wa.me/628817941803" target="_blank" class="fixed bottom-6 right-6 bg-[#128C7E] hover:bg-[#075E54] text-white w-14 h-14 rounded-full shadow-2xl border-2 border-white flex items-center justify-center text-2xl z-50 transition-all hover:scale-110" aria-label="WhatsApp">
-    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.125.553 4.183 1.604 6.015L.145 24l6.147-1.613c1.764.957 3.746 1.464 5.739 1.464 6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.84c-1.782 0-3.528-.478-5.056-1.385l-.362-.214-3.754.984.998-3.662-.235-.373C2.585 15.617 2.012 13.856 2.012 12.031c0-5.534 4.504-10.038 10.019-10.038 5.514 0 10.018 4.504 10.018 10.038 0 5.533-4.504 10.019-10.019 10.019zm5.503-7.534c-.302-.151-1.785-.882-2.062-.983-.277-.101-.478-.151-.68.151s-.781.983-.958 1.185c-.176.202-.353.227-.655.076-1.503-.755-2.607-1.378-3.626-2.923-.263-.398.026-.39.317-.676.13-.128.302-.353.453-.529.151-.176.202-.302.302-.504.101-.202.05-.378-.025-.529-.076-.151-.68-1.638-.932-2.243-.245-.589-.494-.509-.68-.518-.176-.009-.378-.009-.579-.009s-.529.076-.806.378c-.277.302-1.058 1.033-1.058 2.519s1.083 2.923 1.234 3.125c.151.202 2.128 3.249 5.156 4.555 1.834.789 2.474.882 3.38.731.782-.129 2.062-.844 2.353-1.663.29-.819.29-1.52.202-1.663-.089-.142-.315-.218-.617-.369z"/>
-    </svg>
-</a>
-
-<main class="flex-grow py-28 sm:py-32 px-4 sm:px-6 md:px-16 max-w-4xl mx-auto space-y-8 sm:space-y-10">
-    <div class="space-y-3 sm:space-y-4 reveal">
-        <a href="blog" class="text-[#115836] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1">&larr; Back to All Articles</a>
-        <span class="text-[11px] sm:text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Market Intelligence & Import Analysis</span>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#115836] leading-snug sm:leading-tight break-words">Global Export Market Trends and Major Import Demands for Organic Coconut Sugar</h1>
-        <p class="text-slate-500 text-xs sm:text-sm">Published by PT Integra Niaga Komoditas &bull; Global Trade Intelligence Division</p>
+<main class="flex-grow py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-8 sm:space-y-10">
+    
+    <!-- ARTICLE HEADER -->
+    <div class="space-y-4 reveal">
+        <a href="blog.html" class="text-[#15603a] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1.5">
+            <span>&larr;</span> <span>Back to All Articles</span>
+        </a>
+        <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <span class="text-[11px] sm:text-xs bg-amber-50 text-[#9a7328] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider border border-amber-200/80">
+                Market Intelligence &amp; Import Analysis
+            </span>
+            <span class="text-xs font-semibold text-slate-400">Guide 04</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-snug sm:leading-tight break-words">
+            Global Export Market Trends and Major Import Demands for Organic Coconut Sugar
+        </h1>
+        <p class="text-slate-500 text-xs sm:text-sm border-b border-slate-200 pb-5">
+            Published by <strong class="text-slate-700">PT Integra Niaga Komoditas</strong> &bull; Global Trade Intelligence Division
+        </p>
     </div>
 
-    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal">
-        <img src="foto-peta-logistik-global.jpg" alt="Global Import Demands and Trade Logistics for Organic Coconut Sugar" class="w-full h-60 sm:h-80 md:h-[400px] object-cover">
+    <!-- HERO IMAGE -->
+    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 reveal">
+        <img src="foto-peta-logistik-global.jpg" 
+             onerror="this.onerror=null; this.src='FB_IMG_1784100143834.jpg';" 
+             alt="Global Import Demands and Trade Logistics for Organic Coconut Sugar" 
+             class="w-full h-60 sm:h-80 md:h-[420px] object-cover">
     </div>
 
-    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-8 leading-relaxed text-sm sm:text-base md:text-lg reveal">
+    <!-- ARTICLE BODY -->
+    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-7 leading-relaxed text-sm sm:text-base md:text-[17px] reveal">
         <p>
             The international landscape for natural sweeteners has undergone a profound structural shift over the past decade. As lifestyle-related metabolic disorders rise and modern consumers aggressively scrutinize product labels, food and beverage manufacturers worldwide are seeking unrefined, nutrient-dense alternatives to conventional white cane sugar. Among these, organic coconut sugar (gula semut) has emerged as a premier commodity in global commerce.
         </p>
         <p>
-            As a professional B2B export trading enterprise, <strong>PT Integra Niaga Komoditas</strong> monitors these macroeconomic indicators meticulously, allowing us to align our Indonesian production capacity and supply network precisely with the largest import hubs across the globe.
+            As a professional B2B export trading enterprise, <strong class="text-slate-900">PT Integra Niaga Komoditas</strong> monitors these macroeconomic indicators meticulously, allowing us to align our Indonesian production capacity and supply network precisely with the largest import hubs across the globe.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">1. Macroeconomic Growth and Global Market Valuation</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">1. Macroeconomic Growth and Global Market Valuation</h3>
         <p>
             According to global agricultural trade analytics, the market valuation for organic coconut sugar continues to expand at a robust compound annual growth rate (CAGR) of approximately 8.78%. Driven by rising health consciousness and clean-label mandates in industrial food processing, international demand has transformed organic coconut sugar from a niche specialty item into a mainstream bulk commodity traded across continents.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">2. North American Import Hubs and Compliance Demands</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">2. North American Import Hubs and Compliance Demands</h3>
         <p>
             North America (United States and Canada) represents one of the largest import markets for organic coconut sugar. Demand is heavily concentrated in functional foods, sports nutrition, clean-label snack manufacturing, and specialty coffee chains. Importers in this region enforce rigorous requirements, demanding strict USDA Organic verification, FDA facility registrations, and dependable multi-container delivery schedules.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">3. European Union Sustainability and Regulatory Standards</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">3. European Union Sustainability and Regulatory Standards</h3>
         <p>
             The European Union (spanning key import gateways in Germany, the Netherlands, France, and the UK) is characterized by high consumer awareness regarding environmental sustainability and fair-trade practices. European import demand centers heavily on certified organic status, meticulous pesticide-free laboratory screening, and transparent supply chain documentation to satisfy stringent EU food safety directives.
         </p>
 
-        <div class="my-6 sm:my-8 overflow-x-auto reveal">
-            <h4 class="text-lg sm:text-xl font-bold text-[#115836] mb-3">Global Import Market Comparison Table</h4>
-            <div class="inline-block min-w-full align-middle">
-                <table class="min-w-full border-collapse border border-slate-300 text-left text-xs sm:text-sm md:text-base">
+        <!-- GLOBAL IMPORT MARKET TABLE -->
+        <div class="my-8 space-y-3 reveal">
+            <h4 class="text-lg sm:text-xl font-extrabold text-slate-900">Global Import Market Comparison Table</h4>
+            <div class="overflow-x-auto shadow-md rounded-2xl border border-slate-200">
+                <table class="min-w-full border-collapse bg-white text-left text-xs sm:text-sm md:text-base">
                     <thead>
-                        <tr class="bg-[#115836] text-white">
-                            <th class="border border-slate-300 p-3 font-semibold">Destination Region</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Primary Import Drivers</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Key Regulatory Compliance</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Dominant Packaging Preference</th>
+                        <tr class="bg-[#0d3622] text-white">
+                            <th class="p-3.5 sm:p-4 font-semibold">Destination Region</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Primary Import Drivers</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Key Regulatory Compliance</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Dominant Packaging Preference</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-slate-200">
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">North America</td>
-                            <td class="border border-slate-300 p-3">Functional foods, snacks, retail packaging</td>
-                            <td class="border border-slate-300 p-3">USDA Organic, FDA facility registration</td>
-                            <td class="border border-slate-300 p-3">25kg Kraft Bags / Retail Pouches</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">North America</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Functional foods, snacks, retail packaging</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">USDA Organic, FDA facility registration</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">25kg Kraft Bags / Retail Pouches</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">European Union</td>
-                            <td class="border border-slate-300 p-3">Confectionery, baking, ethical sourcing</td>
-                            <td class="border border-slate-300 p-3">EU Organic, Fair Trade audits</td>
-                            <td class="border border-slate-300 p-3 text-emerald-700 font-semibold">Multi-wall Kraft Paper Bags with PE Liner</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">European Union</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Confectionery, baking, ethical sourcing</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">EU Organic, Fair Trade audits</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Multi-wall Kraft Paper Bags with PE Liner</td>
                         </tr>
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Asia Pacific</td>
-                            <td class="border border-slate-300 p-3">Artisanal beverages, food processing</td>
-                            <td class="border border-slate-300 p-3">HACCP, Halal, Phytosanitary clearance</td>
-                            <td class="border border-slate-300 p-3">Bulk 25kg Master Cartons</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Asia Pacific</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Artisanal beverages, food processing</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">HACCP, Halal, Phytosanitary clearance</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Bulk 25kg Master Cartons</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">4. Asia Pacific Expansion and Logistical Efficiencies</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">4. Asia Pacific Expansion and Logistical Efficiencies</h3>
         <p>
             The Asia Pacific region—led by dynamic markets in Japan, South Korea, Australia, and the Middle East—is experiencing rapid consumption growth. This expansion is fueled by rising disposable incomes, premium artisanal bakeries, and health-oriented beverage formulations. Proximity to Indonesian export ports grants regional importers significant logistical cost efficiencies and shorter transit timeframes.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">5. Supply Chain Resilience and Indonesia's Export Dominance</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">5. Supply Chain Resilience and Indonesia's Export Dominance</h3>
         <p>
             As the world's leading archipelagic producer of coconut products, Indonesia holds an unmatched competitive advantage in raw sap abundance and traditional refining expertise. However, modern international buyers do not purchase based on volume alone; they evaluate structural reliability, moisture stabilization (Max 2.0%), and transparent facility curation. Fluctuations in global logistics further emphasize working directly with established export traders.
         </p>
 
-        <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 my-6 sm:my-8 reveal">
-            <img src="foto-kontainer-ekspor.jpg" alt="Global Container Shipping and Export Logistics" class="w-full h-60 sm:h-72 md:h-80 object-cover">
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-200 bg-slate-100 my-8 reveal">
+            <img src="foto-kontainer-ekspor.jpg" 
+                 onerror="this.onerror=null; this.src='packaging-carton.jpg';" 
+                 alt="Global Container Shipping and Export Logistics" 
+                 class="w-full h-60 sm:h-72 md:h-80 object-cover">
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">6. Strategic Positioning of PT Integra Niaga Komoditas</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">6. Strategic Positioning of PT Integra Niaga Komoditas</h3>
         <p>
-            Positioned strategically in Central Java, <strong>PT Integra Niaga Komoditas</strong> bridges the gap between Indonesian certified agricultural producers and international import corporations. By implementing stringent laboratory testing, moisture control protocols, and robust container stuffing standards, we ensure that every wholesale shipment meets the unyielding expectations of global markets. We invite international buyers and distributors to partner with us for secure, transparent, and long-term commodity trade.
+            Positioned strategically in Central Java, <strong class="text-slate-900">PT Integra Niaga Komoditas</strong> bridges the gap between Indonesian certified agricultural producers and international import corporations. By implementing stringent laboratory testing, moisture control protocols, and robust container stuffing standards, we ensure that every wholesale shipment meets the unyielding expectations of global markets. We invite international buyers and distributors to partner with us for secure, transparent, and long-term commodity trade.
         </p>
     </div>
 
-    <!-- FORM INQUIRY B2B PROFESIONAL -->
-    <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-xl space-y-6 mt-12 sm:mt-16 border-t-4 border-[#115836] reveal">
-        <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-[#115836]">B2B Trade Inquiry</h3>
-            <p class="text-slate-600 text-xs sm:text-sm">Request specifications, wholesale pricing, or discuss your commercial supply requirements directly with our export team.</p>
+    <!-- CLEAN B2B CALL-TO-ACTION CARD -->
+    <div class="bg-[#0d3622] text-white p-8 sm:p-10 rounded-3xl shadow-xl mt-12 sm:mt-16 reveal">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="space-y-2 max-w-xl">
+                <span class="text-xs bg-white/10 text-[#c89b3c] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/15 inline-block">
+                    Global FCL &amp; LCL Export Desk
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Sourcing Bulk Organic Coconut Sugar for Your Market?</h3>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    Request FOB/CIF container pricing, destination port transit estimates, and export compliance documents directly from our team.
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 shrink-0">
+                <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition">
+                    Request FOB / CIF Quote &rarr;
+                </a>
+                <a href="packaging.html" class="bg-white/10 hover:bg-white/20 border border-white/25 text-white px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition">
+                    Container Loadability
+                </a>
+            </div>
         </div>
-
-        <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
-                    <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Company Name *</label>
-                    <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Country / Destination *</label>
-                    <input type="text" name="country" placeholder="e.g. United States, Germany" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Business Email *</label>
-                    <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">WhatsApp / Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Estimated Volume (MT / Month)</label>
-                    <input type="text" name="volume" placeholder="e.g. 1 FCL / 15 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-            </div>
-            <div>
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Inquiry Details *</label>
-                <textarea name="message" rows="4" placeholder="Please provide details about your product requirements, packaging preferences, or target port..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
-            </div>
-            <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Submit B2B Inquiry</button>
-        </form>
     </div>
+
 </main>
 
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.</p>
-            <div class="flex gap-4 pt-2">
-                <a href="/" class="text-gold hover:underline text-xs sm:text-sm font-semibold">Website</a>
-                <span class="text-gold/40">|</span>
-                <a href="https://instagram.com" target="_blank" class="text-gold hover:underline text-xs sm:text-sm font-semibold">Instagram</a>
-                <span class="text-gold/40">|</span>
-                <a href="https://wa.me/628817941803" target="_blank" class="text-gold hover:underline text-xs sm:text-sm font-semibold">WhatsApp</a>
-            </div>
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
+            </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Address & Contact</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base">Office Location: Pemalang, Central Java, Indonesia</p>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base">Email: info@integraniaga.online</p>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base">WhatsApp: +62 881-7941-803</p>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
