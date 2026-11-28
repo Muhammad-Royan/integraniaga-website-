@@ -9,219 +9,357 @@
     <!-- CANONICAL LINK SPESIFIK UNTUK ARTIKEL INI -->
     <link rel="canonical" href="https://integraniaga.online/artikel-moisture.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/artikel-moisture.html">
+    <meta property="og:type" content="article">
     <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
       "@type" : "WebSite",
       "name" : "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url" : "https://integraniaga.online/"
     }
     </script>
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- MATHJAX SCRIPT AGAR SIMBOL ILMIAH WATER ACTIVITY TAMPIL SEMPURNA -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <style>
-        body { overflow-x: hidden; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
         .prose p, .prose h3, .prose h4, h1 { word-wrap: break-word; overflow-wrap: break-word; }
+
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (ORIGIN SCALE-POP)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: top right;
+            opacity: 0;
+            transform: scale(0.35) translateY(-10px);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(12px);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.05s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.09s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.13s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.17s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.21s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.25s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.29s; }
+
+        .b2b-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="/" class="flex items-center gap-2 sm:gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="/" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="product" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog" class="py-3 text-gold font-bold border-b border-white/10">BLOG</a>
-            <a href="contact" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50">CONTACT</a>
         </div>
     </nav>
 </header>
 
-<main class="flex-grow py-28 sm:py-32 px-4 sm:px-6 md:px-16 max-w-4xl mx-auto space-y-8 sm:space-y-10">
-    <div class="space-y-3 sm:space-y-4 reveal">
-        <a href="blog" class="text-[#115836] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1">&larr; Back to All Articles</a>
-        <span class="text-[11px] sm:text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Quality Control & Technical Standards</span>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#115836] leading-snug sm:leading-tight break-words">Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting</h1>
-        <p class="text-slate-500 text-xs sm:text-sm">Published by PT Integra Niaga Komoditas &bull; Quality Assurance & Curation Division</p>
+<main class="flex-grow py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-8 sm:space-y-10">
+    
+    <!-- ARTICLE HEADER -->
+    <div class="space-y-4 reveal">
+        <a href="blog.html" class="text-[#15603a] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1.5">
+            <span>&larr;</span> <span>Back to All Articles</span>
+        </a>
+        <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <span class="text-[11px] sm:text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider border border-[#15603a]/20">
+                Quality Control &amp; Technical Standards
+            </span>
+            <span class="text-xs font-semibold text-slate-400">Guide 01</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-snug sm:leading-tight break-words">
+            Why Moisture Max 2.0% is Crucial for Coconut Sugar Exporting
+        </h1>
+        <p class="text-slate-500 text-xs sm:text-sm border-b border-slate-200 pb-5">
+            Published by <strong class="text-slate-700">PT Integra Niaga Komoditas</strong> &bull; Quality Assurance &amp; Curation Division
+        </p>
     </div>
 
-    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal">
-        <img src="foto-moisture-laboratorium.jpg" alt="Moisture Control and Laboratory Testing of Organic Coconut Sugar" class="w-full h-60 sm:h-80 md:h-[400px] object-cover">
+    <!-- HERO IMAGE -->
+    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 reveal">
+        <img src="foto-moisture-laboratorium.jpg" 
+             onerror="this.onerror=null; this.src='quality-inspection.jpg';" 
+             alt="Moisture Control and Laboratory Testing of Organic Coconut Sugar" 
+             class="w-full h-60 sm:h-80 md:h-[420px] object-cover">
     </div>
 
-    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-8 leading-relaxed text-sm sm:text-base md:text-lg reveal">
+    <!-- ARTICLE BODY -->
+    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-7 leading-relaxed text-sm sm:text-base md:text-[17px] reveal">
         <p>
-            In the highly specialized realm of international B2B agricultural commodity trade, the difference between a successful, recurring multi-container export contract and a total cargo rejection often hinges on a single technical parameter: <strong>moisture content</strong>. At <strong>PT Integra Niaga Komoditas</strong>, our quality assurance protocols mandate a strict, unyielding maximum moisture threshold of <strong>2.0%</strong> for every single batch of organic granulated coconut sugar (gula semut) dispatched to our global wholesale partners.
+            In the highly specialized realm of international B2B agricultural commodity trade, the difference between a successful, recurring multi-container export contract and a total cargo rejection often hinges on a single technical parameter: <strong class="text-slate-900">moisture content</strong>. At <strong class="text-slate-900">PT Integra Niaga Komoditas</strong>, our quality assurance protocols mandate a strict, unyielding maximum moisture threshold of <strong class="text-[#15603a]">2.0%</strong> for every single batch of organic granulated coconut sugar (gula semut) dispatched to our global wholesale partners.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">1. The Inherent Hygroscopic Nature of Coconut Sugar</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">1. The Inherent Hygroscopic Nature of Coconut Sugar</h3>
         <p>
             Organic coconut sugar is naturally hygroscopic, meaning it possesses a high molecular affinity to absorb water vapor from its surrounding atmosphere. Consisting primarily of sucrose (70–79%) alongside invert sugars like glucose and fructose, it is far more sensitive to relative humidity changes than highly refined white cane sugar. Without proper processing and drying, the granules will act like tiny sponges during transit.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">2. The Danger of "Container Rain" During Ocean Transit</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">2. The Danger of "Container Rain" During Ocean Transit</h3>
         <p>
             When a Full Container Load (FCL) embarks on an ocean voyage—crossing tropical ports in Central Java through equatorial ocean lanes to temperate destination ports in Europe or North America—the micro-environment inside the steel container experiences extreme thermal cycling. Daytime heating and night-time cooling cause the air inside the container to cycle through dew point transitions. This creates condensation on the container ceiling, a phenomenon known in maritime freight as <em>"container rain"</em> or <em>cargo sweat</em>. If the sugar's internal moisture is already high, this external humidity accelerates the degradation process.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">3. Physical Degradation: Caking and Agglomeration</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">3. Physical Degradation: Caking and Agglomeration</h3>
         <p>
             When moisture content crosses the 2.5% to 3.0% mark, individual sugar granules develop a thin liquid film of concentrated syrup on their surface. As ambient temperatures fluctuate, evaporation occurs, forming rigid crystalline solid bridges between adjacent granules. This process turns entire 25 kg bags into rock-hard solid blocks. For industrial B2B food manufacturers, caked sugar clogs pneumatic conveying systems and hoppers, causing costly factory downtime.
         </p>
 
-        <div class="my-6 sm:my-8 overflow-x-auto reveal">
-            <h4 class="text-lg sm:text-xl font-bold text-[#115836] mb-3">Technical Impact Analysis: Moisture Level vs. Transit Stability</h4>
-            <div class="inline-block min-w-full align-middle">
-                <table class="min-w-full border-collapse border border-slate-300 text-left text-xs sm:text-sm md:text-base">
+        <!-- TECHNICAL COMPARISON TABLE -->
+        <div class="my-8 space-y-3 reveal">
+            <h4 class="text-lg sm:text-xl font-extrabold text-slate-900">Technical Impact Analysis: Moisture Level vs. Transit Stability</h4>
+            <div class="overflow-x-auto shadow-md rounded-2xl border border-slate-200">
+                <table class="min-w-full border-collapse bg-white text-left text-xs sm:text-sm md:text-base">
                     <thead>
-                        <tr class="bg-[#115836] text-white">
-                            <th class="border border-slate-300 p-3 font-semibold">Parameter / Aspect</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Export Standard (Moisture ≤ 2.0%)</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Substandard (Moisture > 3.0%)</th>
+                        <tr class="bg-[#0d3622] text-white">
+                            <th class="p-3.5 sm:p-4 font-semibold">Parameter / Aspect</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Export Standard (Moisture &le; 2.0%)</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Substandard (Moisture &gt; 3.0%)</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-slate-200">
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Physical Granule State</td>
-                            <td class="border border-slate-300 p-3">Free-flowing, uniform fine granules (16-18 mesh)</td>
-                            <td class="border border-slate-300 p-3 text-red-600 font-semibold">Severe caking, hardening, and solid block formation</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Physical Granule State</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Free-flowing, uniform fine granules (16-18 mesh)</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Severe caking, hardening, and solid block formation</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Water Activity (\(a_w\))</td>
-                            <td class="border border-slate-300 p-3">Maintained strictly below \(a_w = 0.50\)</td>
-                            <td class="border border-slate-300 p-3 text-red-600 font-semibold">Elevated above \(a_w = 0.65\) (High microbial risk)</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Water Activity (\(a_w\))</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Maintained strictly below \(a_w = 0.50\)</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Elevated above \(a_w = 0.65\) (High microbial risk)</td>
                         </tr>
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Microbiological Integrity</td>
-                            <td class="border border-slate-300 p-3">Sterile, zero mold, yeast, or fermentation growth</td>
-                            <td class="border border-slate-300 p-3 text-red-600 font-semibold">High susceptibility to osmophilic yeast & fermentation</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Microbiological Integrity</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Sterile, zero mold, yeast, or fermentation growth</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">High susceptibility to osmophilic yeast &amp; fermentation</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Customs Clearance Status</td>
-                            <td class="border border-slate-300 p-3 font-bold text-[#115836]">Immediate food safety clearance & release</td>
-                            <td class="border border-slate-300 p-3 text-red-600 font-semibold">Mandatory quarantine hold or total cargo rejection</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Customs Clearance Status</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Immediate food safety clearance &amp; release</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Mandatory quarantine hold or total cargo rejection</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">4. Microbiological Spoilage and Fermentation</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">4. Microbiological Spoilage and Fermentation</h3>
         <p>
             Beyond physical damage, excess moisture creates an ideal breeding ground for osmophilic yeasts and wild molds. These micro-organisms thrive in high-sugar, high-humidity environments, converting sucrose into organic acids and alcohol. This results in sour off-flavors, gas generation, swollen packaging bags, and a complete loss of the rich caramel aroma that defines premium Indonesian coconut sugar.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">5. Customs Rejections and Port Health Regulations</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">5. Customs Rejections and Port Health Regulations</h3>
         <p>
             Global food safety authorities, including the US FDA and European EFSA, mandate strict microbiological thresholds for imported sweeteners. Cargoes displaying signs of fermentation, elevated moisture, or mold growth are flagged during routine customs sampling. This leads to mandatory quarantine holds, expensive irradiation treatments, or total cargo destruction at the importer's expense.
         </p>
 
-        <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 my-6 sm:my-8 reveal">
-            <img src="foto-pabrik-pengolahan.jpg" alt="Processing Facility Quality Inspection and Packaging Standards" class="w-full h-60 sm:h-72 md:h-80 object-cover">
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-200 bg-slate-100 my-8 reveal">
+            <img src="foto-pabrik-pengolahan.jpg" 
+                 onerror="this.onerror=null; this.src='FB_IMG_1784100143834.jpg';" 
+                 alt="Processing Facility Quality Inspection and Packaging Standards" 
+                 class="w-full h-60 sm:h-72 md:h-80 object-cover">
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">6. PT Integra Niaga Komoditas Quality Mitigation Protocols</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">6. PT Integra Niaga Komoditas Quality Mitigation Protocols</h3>
         <p>
-            To completely eliminate moisture-related risks for our international buyers, <strong>PT Integra Niaga Komoditas</strong> operates a comprehensive quality mitigation framework:
+            To completely eliminate moisture-related risks for our international buyers, <strong class="text-slate-900">PT Integra Niaga Komoditas</strong> operates a comprehensive quality mitigation framework:
         </p>
         <ul class="list-disc pl-5 sm:pl-6 space-y-3">
-            <li><strong>Curation of Verified Partners:</strong> We partner exclusively with established, export-ready processing facilities in Central Java utilizing controlled thermal evaporation.</li>
-            <li><strong>Calibrated Testing:</strong> Prior to bagging, lot samples are rigorously tested using digital halogen moisture analyzers to verify the ≤ 2.0% limit.</li>
-            <li><strong>Hermetic Barrier Packaging:</strong> Every batch is enclosed in a food-grade, heat-sealed Polyethylene (PE) inner liner inside durable Kraft bags or carton boxes to seal out external humidity.</li>
-            <li><strong>Container Desiccant Protection:</strong> Industrial-grade desiccant bags are installed along container walls during stuffing to absorb airborne ambient condensation during transit.</li>
+            <li><strong class="text-slate-900">Curation of Verified Partners:</strong> We partner exclusively with established, export-ready processing facilities in Central Java utilizing controlled thermal evaporation.</li>
+            <li><strong class="text-slate-900">Calibrated Testing:</strong> Prior to bagging, lot samples are rigorously tested using digital halogen moisture analyzers to verify the &le; 2.0% limit.</li>
+            <li><strong class="text-slate-900">Hermetic Barrier Packaging:</strong> Every batch is enclosed in a food-grade, heat-sealed Polyethylene (PE) inner liner inside durable Kraft bags or carton boxes to seal out external humidity.</li>
+            <li><strong class="text-slate-900">Container Desiccant Protection:</strong> Industrial-grade desiccant bags are installed along container walls during stuffing to absorb airborne ambient condensation during transit.</li>
         </ul>
-        <p class="pt-2 sm:pt-4">
+        <p class="pt-2">
             By enforcing these strict moisture control standards, we provide global B2B buyers with complete assurance: your bulk organic coconut sugar will arrive free-flowing, pristine, and ready for industrial integration.
         </p>
     </div>
 
-    <!-- FORM INQUIRY B2B PROFESIONAL -->
-    <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-xl space-y-6 mt-12 sm:mt-16 border-t-4 border-[#115836] reveal">
-        <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-[#115836]">B2B Trade Inquiry</h3>
-            <p class="text-slate-600 text-xs sm:text-sm">Request specifications, wholesale pricing, or discuss your commercial supply requirements directly with our export team.</p>
+    <!-- CLEAN B2B CALL-TO-ACTION CARD (PENGGANTI FORM PANJANG) -->
+    <div class="bg-[#0d3622] text-white p-8 sm:p-10 rounded-3xl shadow-xl mt-12 sm:mt-16 reveal">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="space-y-2 max-w-xl">
+                <span class="text-xs bg-white/10 text-[#c89b3c] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/15 inline-block">
+                    Export Supply &amp; CoA Verification
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Need Batch CoA or Wholesale Pricing?</h3>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    Connect directly with our export desk in Central Java for moisture laboratory reports, FOB/CIF quotations, and sample dispatch.
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 shrink-0">
+                <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition">
+                    Contact Export Desk &rarr;
+                </a>
+                <a href="products.html" class="bg-white/10 hover:bg-white/20 border border-white/25 text-white px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition">
+                    View Specs
+                </a>
+            </div>
         </div>
-
-        <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
-                    <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Company Name *</label>
-                    <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Country / Destination *</label>
-                    <input type="text" name="country" placeholder="e.g. United States, Germany" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Business Email *</label>
-                    <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">WhatsApp / Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Estimated Volume (MT / Month)</label>
-                    <input type="text" name="volume" placeholder="e.g. 1 FCL / 15 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-            </div>
-            <div>
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Inquiry Details *</label>
-                <textarea name="message" rows="4" placeholder="Please provide details about your product requirements, packaging preferences, or target port..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
-            </div>
-            <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Submit B2B Inquiry</button>
-        </form>
     </div>
+
 </main>
 
-<!-- FOOTER B2B RESMI (NIB & AHU) -->
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                 Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
             </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
