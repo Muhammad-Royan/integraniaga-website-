@@ -9,218 +9,351 @@
     <!-- CANONICAL LINK SPESIFIK UNTUK ARTIKEL INI -->
     <link rel="canonical" href="https://integraniaga.online/artikel-clean-label.html">
     <meta property="og:site_name" content="PT Integra Niaga Komoditas">
+    <meta property="og:title" content="Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar | PT Integra Niaga Komoditas">
+    <meta property="og:url" content="https://integraniaga.online/artikel-clean-label.html">
+    <meta property="og:type" content="article">
     <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
       "@type" : "WebSite",
       "name" : "PT Integra Niaga Komoditas",
+      "alternateName": ["Integra Niaga Komoditas", "PT Integra Niaga"],
       "url" : "https://integraniaga.online/"
     }
     </script>
     <link rel="icon" type="image/png" href="file_0000000083188211be4abf4dc874088b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6.0">
     <style>
-        body { overflow-x: hidden; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
         .prose p, .prose h3, .prose h4, h1 { word-wrap: break-word; overflow-wrap: break-word; }
+
+        /* =========================================================
+           ANIMASI MENU MOBILE "KIPAS MEKAR" (ORIGIN SCALE-POP)
+           ========================================================= */
+        .hamburger-line {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+            transform-origin: center;
+        }
+        #menu-btn.is-open .line-1 {
+            transform: translateY(9px) rotate(45deg);
+        }
+        #menu-btn.is-open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #menu-btn.is-open .line-3 {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .fan-menu {
+            transform-origin: top right;
+            opacity: 0;
+            transform: scale(0.35) translateY(-10px);
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.28s ease,
+                        visibility 0.35s;
+        }
+        .fan-menu.is-open {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .fan-menu a {
+            opacity: 0;
+            transform: translateX(12px);
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease, background-color 0.2s ease;
+        }
+        .fan-menu.is-open a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fan-menu.is-open a:nth-child(1) { transition-delay: 0.05s; }
+        .fan-menu.is-open a:nth-child(2) { transition-delay: 0.09s; }
+        .fan-menu.is-open a:nth-child(3) { transition-delay: 0.13s; }
+        .fan-menu.is-open a:nth-child(4) { transition-delay: 0.17s; }
+        .fan-menu.is-open a:nth-child(5) { transition-delay: 0.21s; }
+        .fan-menu.is-open a:nth-child(6) { transition-delay: 0.25s; }
+        .fan-menu.is-open a:nth-child(7) { transition-delay: 0.29s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden bg-slate-50 flex flex-col min-h-screen">
+<body class="antialiased bg-white text-slate-800 flex flex-col min-h-screen">
 
-<header class="fixed top-0 left-0 w-full z-50 solid-header transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative">
-        <a href="/" class="flex items-center gap-2 sm:gap-3">
-            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow-md">
+<!-- CLEAN WHITE HEADER -->
+<header id="main-header" class="sticky top-0 left-0 w-full z-40 bg-white border-b border-slate-100 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center relative">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="file_0000000083188211be4abf4dc874088b.png" alt="Logo PT Integra Niaga Komoditas" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
             <div>
-                <h1 class="text-white font-bold text-xs sm:text-base md:text-lg leading-tight m-0">PT Integra Niaga Komoditas</h1>
-                <p class="text-[#c89b3c] text-[10px] sm:text-xs tracking-wider uppercase font-semibold m-0">Indonesian Coconut Sugar Supplier</p>
+                <span class="block text-slate-900 font-extrabold text-sm sm:text-lg tracking-tight leading-tight">PT Integra Niaga Komoditas</span>
+                <span class="block text-slate-500 text-[11px] sm:text-xs font-medium tracking-wide">Indonesian Coconut Sugar Supplier</span>
             </div>
         </a>
-        <button id="menu-btn" class="text-white flex flex-col justify-between w-7 h-5 sm:w-8 sm:h-6 z-50 focus:outline-none cursor-pointer" aria-label="Toggle Menu">
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
-            <span class="w-full h-1 bg-white rounded"></span>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="text-slate-700 hover:text-[#15603a] transition">HOME</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#15603a] transition">ABOUT US</a>
+            <a href="products.html" class="text-slate-700 hover:text-[#15603a] transition">PRODUCT</a>
+            <a href="packaging.html" class="text-slate-700 hover:text-[#15603a] transition">PACKAGING</a>
+            <a href="quality.html" class="text-slate-700 hover:text-[#15603a] transition">QUALITY</a>
+            <a href="blog.html" class="text-[#15603a] border-b-2 border-[#15603a] pb-1">BLOG</a>
+            <a href="contact.html" class="text-slate-700 hover:text-[#15603a] transition">CONTACT</a>
+        </div>
+
+        <!-- Mobile Hamburger Button (Animasi Garis -> X) -->
+        <button id="menu-btn" class="lg:hidden text-slate-800 flex flex-col justify-between w-6 h-5 focus:outline-none cursor-pointer relative z-50" aria-label="Toggle Menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-2 w-full h-0.5 bg-slate-800 rounded"></span>
+            <span class="hamburger-line line-3 w-full h-0.5 bg-slate-800 rounded"></span>
         </button>
-        <div id="mobile-menu" class="hidden absolute top-full right-4 w-60 bg-[#082819] shadow-2xl rounded-2xl border border-gold/40 flex flex-col py-4 px-6 z-40">
-            <a href="/" class="py-3 text-white font-semibold border-b border-white/10">HOME</a>
-            <a href="about" class="py-3 text-white font-semibold border-b border-white/10">ABOUT US</a>
-            <a href="product" class="py-3 text-white font-semibold border-b border-white/10">PRODUCT</a>
-            <a href="packaging" class="py-3 text-white font-semibold border-b border-white/10">PACKAGING</a>
-            <a href="quality" class="py-3 text-white font-semibold border-b border-white/10">QUALITY</a>
-            <a href="blog" class="py-3 text-gold font-bold border-b border-white/10">BLOG</a>
-            <a href="contact" class="py-3 text-white font-semibold mb-3">CONTACT</a>
+
+        <!-- Mobile Dropdown Menu (Animasi Kipas Mekar dari Pojok Kanan Atas) -->
+        <div id="mobile-menu" class="fan-menu lg:hidden absolute top-full right-4 mt-2 w-64 bg-white shadow-2xl rounded-2xl border border-slate-200/90 flex flex-col py-3 px-4 z-50 text-xs font-bold tracking-wider uppercase">
+            <a href="index.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">HOME</a>
+            <a href="about.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">ABOUT US</a>
+            <a href="products.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PRODUCT</a>
+            <a href="packaging.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">PACKAGING</a>
+            <a href="quality.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50 border-b border-slate-100">QUALITY</a>
+            <a href="blog.html" class="py-3 px-2 rounded-lg text-[#15603a] bg-[#15603a]/5 border-b border-slate-100">BLOG</a>
+            <a href="contact.html" class="py-3 px-2 rounded-lg text-slate-700 hover:text-[#15603a] hover:bg-slate-50">CONTACT</a>
         </div>
     </nav>
 </header>
 
-<main class="flex-grow py-28 sm:py-32 px-4 sm:px-6 md:px-16 max-w-4xl mx-auto space-y-8 sm:space-y-10">
-    <div class="space-y-3 sm:space-y-4 reveal">
-        <a href="blog" class="text-[#115836] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1">&larr; Back to All Articles</a>
-        <span class="text-[11px] sm:text-xs bg-[#115836]/10 text-[#115836] font-bold px-3 py-1 rounded-full uppercase border border-[#115836]/20 inline-block">Global Trends & Clean-Label</span>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#115836] leading-snug sm:leading-tight break-words">Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar</h1>
-        <p class="text-slate-500 text-xs sm:text-sm">Published by PT Integra Niaga Komoditas &bull; Industry Intelligence Division</p>
+<main class="flex-grow py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-8 sm:space-y-10">
+    
+    <!-- ARTICLE HEADER -->
+    <div class="space-y-4 reveal">
+        <a href="blog.html" class="text-[#15603a] font-bold text-xs sm:text-sm hover:underline inline-flex items-center gap-1.5">
+            <span>&larr;</span> <span>Back to All Articles</span>
+        </a>
+        <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <span class="text-[11px] sm:text-xs bg-[#15603a]/10 text-[#15603a] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider border border-[#15603a]/20">
+                Global Trends &amp; Clean-Label
+            </span>
+            <span class="text-xs font-semibold text-slate-400">Guide 03</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-snug sm:leading-tight break-words">
+            Clean-Label Sweeteners: The Worldwide Rise of Organic Coconut Sugar
+        </h1>
+        <p class="text-slate-500 text-xs sm:text-sm border-b border-slate-200 pb-5">
+            Published by <strong class="text-slate-700">PT Integra Niaga Komoditas</strong> &bull; Industry Intelligence Division
+        </p>
     </div>
 
-    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 reveal">
-        <img src="foto-pemanis-alami.jpg" alt="Clean-Label Natural Sweeteners and Organic Coconut Sugar" class="w-full h-60 sm:h-80 md:h-[400px] object-cover">
+    <!-- HERO IMAGE -->
+    <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 reveal">
+        <img src="foto-pemanis-alami.jpg" 
+             onerror="this.onerror=null; this.src='FB_IMG_1784100089910.jpg';" 
+             alt="Clean-Label Natural Sweeteners and Organic Coconut Sugar" 
+             class="w-full h-60 sm:h-80 md:h-[420px] object-cover">
     </div>
 
-    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-8 leading-relaxed text-sm sm:text-base md:text-lg reveal">
+    <!-- ARTICLE BODY -->
+    <div class="prose max-w-none text-slate-700 space-y-6 sm:space-y-7 leading-relaxed text-sm sm:text-base md:text-[17px] reveal">
         <p>
             The global food and beverage manufacturing sector is currently undergoing a fundamental transformation. Driven by shifting consumer behaviors, brand executives and product developers are actively steering away from artificial additives, chemical sweeteners, and highly processed refined cane sugar. In its place, the concept of "clean-label" sourcing has taken center stage across international markets.
         </p>
         <p>
-            As a professional B2B export trading enterprise, <strong>PT Integra Niaga Komoditas</strong> closely monitors these industrial shifts to provide global wholesale buyers with pure, unadulterated natural ingredients that meet strict modern compliance and transparency standards.
+            As a professional B2B export trading enterprise, <strong class="text-slate-900">PT Integra Niaga Komoditas</strong> closely monitors these industrial shifts to provide global wholesale buyers with pure, unadulterated natural ingredients that meet strict modern compliance and transparency standards.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">1. Defining "Clean-Label" in Modern Food Processing</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">1. Defining "Clean-Label" in Modern Food Processing</h3>
         <p>
             A clean-label ingredient is defined by minimal mechanical processing, absolute transparency of origin, and an absence of synthetic chemicals, bleaching agents, or artificial preservatives. Organic coconut sugar fits this stringent criteria effortlessly. Produced through the traditional evaporation of fresh coconut palm nectar followed by crystallization and mechanical sieving, it retains its natural state without chemical enhancements.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">2. Consumer Demand for Ingredient Transparency</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">2. Consumer Demand for Ingredient Transparency</h3>
         <p>
             Modern consumers across North America, Europe, and Asia actively read product ingredient labels. They reject complex chemical names and artificial additives in favor of recognizable, wholesome ingredients. Organic coconut sugar provides a clear, understandable label statement (e.g., "Organic Coconut Palm Sugar") that builds immediate consumer trust and strengthens brand loyalty.
         </p>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">3. Functional Advantages for Food Formulators</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">3. Functional Advantages for Food Formulators</h3>
         <p>
             Beyond marketing appeal, organic coconut sugar offers distinct functional advantages in food manufacturing. It acts as a direct 1:1 functional replacement for regular cane sugar. Its rich, buttery caramel profile enhances flavor complexity in baked goods, chocolates, and beverages without requiring artificial flavoring agents or masking additives.
         </p>
 
-        <div class="my-6 sm:my-8 overflow-x-auto reveal">
-            <h4 class="text-lg sm:text-xl font-bold text-[#115836] mb-3">Comparison: Refined Cane Sugar vs. Clean-Label Coconut Sugar</h4>
-            <div class="inline-block min-w-full align-middle">
-                <table class="min-w-full border-collapse border border-slate-300 text-left text-xs sm:text-sm md:text-base">
+        <!-- CLEAN-LABEL COMPARISON TABLE -->
+        <div class="my-8 space-y-3 reveal">
+            <h4 class="text-lg sm:text-xl font-extrabold text-slate-900">Comparison: Refined Cane Sugar vs. Clean-Label Coconut Sugar</h4>
+            <div class="overflow-x-auto shadow-md rounded-2xl border border-slate-200">
+                <table class="min-w-full border-collapse bg-white text-left text-xs sm:text-sm md:text-base">
                     <thead>
-                        <tr class="bg-[#115836] text-white">
-                            <th class="border border-slate-300 p-3 font-semibold">Evaluation Metric</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Refined White Cane Sugar</th>
-                            <th class="border border-slate-300 p-3 font-semibold">Organic Coconut Sugar (Clean-Label)</th>
+                        <tr class="bg-[#0d3622] text-white">
+                            <th class="p-3.5 sm:p-4 font-semibold">Evaluation Metric</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Refined White Cane Sugar</th>
+                            <th class="p-3.5 sm:p-4 font-semibold">Organic Coconut Sugar (Clean-Label)</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="divide-y divide-slate-200">
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Processing Level</td>
-                            <td class="border border-slate-300 p-3">Highly refined, chemical bleaching & filtration</td>
-                            <td class="border border-slate-300 p-3 text-emerald-700 font-semibold">Minimal thermal evaporation & natural crystallization</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Processing Level</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Highly refined, chemical bleaching &amp; filtration</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Minimal thermal evaporation &amp; natural crystallization</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Glycemic Profile</td>
-                            <td class="border border-slate-300 p-3">High GI (approx. 60–65)</td>
-                            <td class="border border-slate-300 p-3 text-emerald-700 font-semibold">Low GI (approx. 35)</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Glycemic Profile</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">High GI (approx. 60–65)</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Low GI (approx. 35)</td>
                         </tr>
                         <tr class="bg-white">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Nutritional Retention</td>
-                            <td class="border border-slate-300 p-3">Stripped of all natural trace minerals</td>
-                            <td class="border border-slate-300 p-3 text-emerald-700 font-semibold">Retains potassium, magnesium, iron, and zinc</td>
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Nutritional Retention</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Stripped of all natural trace minerals</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Retains potassium, magnesium, iron, and zinc</td>
                         </tr>
-                        <tr class="bg-slate-50">
-                            <td class="border border-slate-300 p-3 font-medium text-[#115836]">Market Acceptance</td>
-                            <td class="border border-slate-300 p-3">Declining preference in health-conscious markets</td>
-                            <td class="border border-slate-300 p-3 text-emerald-700 font-semibold">High demand across premium retail & artisan sectors</td>
+                        <tr class="bg-[#f8faf9]">
+                            <td class="p-3.5 sm:p-4 font-bold text-slate-900">Market Acceptance</td>
+                            <td class="p-3.5 sm:p-4 text-slate-700">Declining preference in health-conscious markets</td>
+                            <td class="p-3.5 sm:p-4 font-semibold text-slate-900">High demand across premium retail &amp; artisan sectors</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">4. Industrial Applications Across Diverse Sectors</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">4. Industrial Applications Across Diverse Sectors</h3>
         <p>
             International food manufacturers utilize organic coconut sugar across numerous commercial product lines:
         </p>
         <ul class="list-disc pl-5 sm:pl-6 space-y-3">
-            <li><strong>Artisanal Bakeries & Confectionery:</strong> Providing a rich caramel aroma and ideal texture in cookies, organic chocolates, and specialty baked goods.</li>
-            <li><strong>Health Beverage Formulations:</strong> Serving as a natural sweetening agent in specialty coffee mixes, functional teas, and organic nutritional drinks.</li>
-            <li><strong>Gourmet Sauces & Marinades:</strong> Enhancing depth of flavor in premium dressings and organic culinary preparations.</li>
+            <li><strong class="text-slate-900">Artisanal Bakeries &amp; Confectionery:</strong> Providing a rich caramel aroma and ideal texture in cookies, organic chocolates, and specialty baked goods.</li>
+            <li><strong class="text-slate-900">Health Beverage Formulations:</strong> Serving as a natural sweetening agent in specialty coffee mixes, functional teas, and organic nutritional drinks.</li>
+            <li><strong class="text-slate-900">Gourmet Sauces &amp; Marinades:</strong> Enhancing depth of flavor in premium dressings and organic culinary preparations.</li>
         </ul>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">5. Regulatory Compliance and Global Market Standards</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">5. Regulatory Compliance and Global Market Standards</h3>
         <p>
-            Meeting clean-label requirements involves more than just natural ingredients; it requires uncompromised documentation and quality consistency. By sourcing exclusively from certified processing facilities in Central Java that enforce strict moisture control (≤ 2.0%), we ensure that every shipment complies with international food safety standards.
+            Meeting clean-label requirements involves more than just natural ingredients; it requires uncompromised documentation and quality consistency. By sourcing exclusively from certified processing facilities in Central Java that enforce strict moisture control (&le; 2.0%), we ensure that every shipment complies with international food safety standards.
         </p>
 
-        <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 my-6 sm:my-8 reveal">
-            <img src="foto-kemasan-industri.jpg" alt="Industrial Bulk Packaging for Clean-Label Supply" class="w-full h-60 sm:h-72 md:h-80 object-cover">
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-200 bg-slate-100 my-8 reveal">
+            <img src="foto-kemasan-industri.jpg" 
+                 onerror="this.onerror=null; this.src='packaging-kraft.jpg';" 
+                 alt="Industrial Bulk Packaging for Clean-Label Supply" 
+                 class="w-full h-60 sm:h-72 md:h-80 object-cover">
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-bold text-[#115836] pt-2 sm:pt-4">6. Partnering for Sustainable Clean-Label Growth</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 pt-3">6. Partnering for Sustainable Clean-Label Growth</h3>
         <p>
-            At <strong>PT Integra Niaga Komoditas</strong>, we bridge the gap between Indonesian certified agricultural producers and global brand owners. We provide reliable bulk volumes, customized export packaging, and uncompromising quality assurance, empowering your brand to lead the clean-label movement.
+            At <strong class="text-slate-900">PT Integra Niaga Komoditas</strong>, we bridge the gap between Indonesian certified agricultural producers and global brand owners. We provide reliable bulk volumes, customized export packaging, and uncompromising quality assurance, empowering your brand to lead the clean-label movement.
         </p>
-        <p class="pt-2 sm:pt-4">
+        <p class="pt-2">
             The transition toward clean-label sweeteners is not merely a temporary market fad; it is the definitive standard of modern global food manufacturing.
         </p>
     </div>
 
-    <!-- FORM INQUIRY B2B PROFESIONAL -->
-    <div class="luxury-card p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-xl space-y-6 mt-12 sm:mt-16 border-t-4 border-[#115836] reveal">
-        <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-[#115836]">B2B Trade Inquiry</h3>
-            <p class="text-slate-600 text-xs sm:text-sm">Request specifications, wholesale pricing, or discuss your commercial supply requirements directly with our export team.</p>
+    <!-- CLEAN B2B CALL-TO-ACTION CARD -->
+    <div class="bg-[#0d3622] text-white p-8 sm:p-10 rounded-3xl shadow-xl mt-12 sm:mt-16 reveal">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="space-y-2 max-w-xl">
+                <span class="text-xs bg-white/10 text-[#c89b3c] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-white/15 inline-block">
+                    Clean-Label Ingredient Supply
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Formulating a Clean-Label Product Line?</h3>
+                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    Request R&amp;D product samples, mesh specifications, and wholesale bulk quotations directly from our export desk.
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 shrink-0">
+                <a href="contact.html" class="bg-[#186a40] hover:bg-[#125231] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition">
+                    Request Sample &amp; Quote &rarr;
+                </a>
+                <a href="products.html" class="bg-white/10 hover:bg-white/20 border border-white/25 text-white px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition">
+                    Product Specs
+                </a>
+            </div>
         </div>
-
-        <form action="https://formspree.io/f/MASUKAN_KODE_ANDA_DISINI" method="POST" class="space-y-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
-                    <input type="text" name="name" placeholder="John Doe" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Company Name *</label>
-                    <input type="text" name="company" placeholder="e.g. Global Foods Ltd." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Country / Destination *</label>
-                    <input type="text" name="country" placeholder="e.g. United States, Germany" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Business Email *</label>
-                    <input type="email" name="email" placeholder="john@company.com" required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">WhatsApp / Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+1 234 567 8900" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Estimated Volume (MT / Month)</label>
-                    <input type="text" name="volume" placeholder="e.g. 1 FCL / 15 MT" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm">
-                </div>
-            </div>
-            <div>
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Inquiry Details *</label>
-                <textarea name="message" rows="4" placeholder="Please provide details about your product requirements, packaging preferences, or target port..." required class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#115836] focus:outline-none bg-slate-50 text-slate-900 text-sm"></textarea>
-            </div>
-            <button type="submit" class="w-full btn-primary-gold py-3.5 text-center cursor-pointer text-sm sm:text-base font-bold">Submit B2B Inquiry</button>
-        </form>
     </div>
+
 </main>
 
-<!-- FOOTER B2B RESMI (NIB & AHU) -->
-<footer class="bg-[#0d3c24] text-white py-12 sm:py-16 px-6 md:px-16 border-t border-gold/30 mt-auto">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div class="space-y-4">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">PT Integra Niaga Komoditas</h3>
-            <p class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+<!-- CLEAN COMPACT FOOTER -->
+<footer class="bg-[#0d3622] text-white py-10 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+        <div class="space-y-1.5 max-w-md">
+            <h3 class="font-bold text-base sm:text-lg text-[#c89b3c]">PT Integra Niaga Komoditas</h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                 Professional export trading enterprise connecting verified Indonesian certified suppliers with global B2B markets for pure organic coconut sugar.
             </p>
         </div>
-        <div class="space-y-3">
-            <h3 class="font-bold text-lg sm:text-xl text-gold">Legal Information</h3>
-            <div class="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed space-y-1">
-                <p>Authorized by the Ministry of Law and Human Rights of the Republic of Indonesia</p>
-                <p><strong>Business Identification Number (NIB):</strong> [MASUKKAN_NOMOR_NIB]</p>
-                <p><strong>AHU Number:</strong> [MASUKKAN_NOMOR_AHU]</p>
-                <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
-                <p><strong>Official Email:</strong> info@integraniaga.online</p>
-            </div>
+        <div class="text-gray-300 text-xs sm:text-sm space-y-1 md:text-right">
+            <p><strong>Office Address:</strong> Pemalang, Central Java, Indonesia</p>
+            <p><strong>Official Email:</strong> info@integraniaga.online</p>
+            <p class="text-xs text-gray-400 pt-1"><a href="about.html#legality" class="text-[#c89b3c] hover:underline">View Corporate Legality &amp; Registration &rarr;</a></p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-gold/20 text-center text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto pt-6 text-center text-gray-400 text-xs">
         &copy; 2026 PT Integra Niaga Komoditas. All Rights Reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            menuBtn.classList.toggle('is-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('is-open');
+                menuBtn.classList.remove('is-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const triggerReveal = () => {
+        const triggerBottom = window.innerHeight * 0.92;
+        revealElements.forEach((el) => {
+            if (el.getBoundingClientRect().top < triggerBottom) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('scroll', triggerReveal, { passive: true });
+    setTimeout(triggerReveal, 80);
+});
+</script>
 </body>
 </html>
